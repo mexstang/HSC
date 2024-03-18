@@ -15,7 +15,7 @@
         <label>SUGGESTIONS</label>
         <order>10</order>
         <record_script/>
-        <sc_cat_item display_value="HSC suggestions">72e2e1c69334c2105d94371efaba109d</sc_cat_item>
+        <sc_cat_item display_value="HSC Suggestions">72e2e1c69334c2105d94371efaba109d</sc_cat_item>
         <sc_category/>
         <short_description/>
         <sp_page display_value="hsc_suggestions">42fe286c933082105d94371efaba104f</sp_page>
