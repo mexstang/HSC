@@ -56,8 +56,9 @@
         <record/>
         <record_producer_table>incident</record_producer_table>
         <reference>sys_user_group</reference>
-        <reference_qual>null</reference_qual>
-        <reference_qual_condition table="sys_user_group">null<item endquery="false" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <reference_qual>nameSTARTSWITHHSC^EQ</reference_qual>
+        <reference_qual_condition table="sys_user_group">nameSTARTSWITHHSC^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="STARTSWITH" or="false" value="HSC"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </reference_qual_condition>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -78,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-11 23:50:54</sys_created_on>
         <sys_id>3a70854393700a105d94371efaba10c5</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>ASSIGNMENT GROUP</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>item_option_new_3a70854393700a105d94371efaba10c5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-12 00:27:44</sys_updated_on>
+        <sys_updated_on>2024-03-14 22:54:22</sys_updated_on>
         <table/>
         <tooltip/>
         <type>8</type>
