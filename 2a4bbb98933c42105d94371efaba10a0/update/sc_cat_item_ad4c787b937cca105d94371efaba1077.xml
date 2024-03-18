@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="HSC UNIFORMS, BOOTS, ACCESSORIES">ba2540339378ca105d94371efaba101f</category>
+        <checked_out/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>SAFETY GLASSES</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_save_as_draft>false</no_save_as_draft>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="Mr Lo">6816f79cc0a8016401c5a33be04be441</owner>
+        <picture>335c30bb937cca105d94371efaba1026</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=ad4c787b937cca105d94371efaba1077&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <short_description/>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state/>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:32</sys_created_on>
+        <sys_id>ad4c787b937cca105d94371efaba1077</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SAFETY GLASSES</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sc_cat_item_ad4c787b937cca105d94371efaba1077</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-14 07:15:45</sys_updated_on>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <version>2</version>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=ad4c787b937cca105d94371efaba1077"/>
+    <fx_price action="delete_multiple" query="id=ad4c787b937cca105d94371efaba1077"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>ad4c787b937cca105d94371efaba1077</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:32</sys_created_on>
+        <sys_id>645c7c7b937cca105d94371efaba10cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-14 07:15:32</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>ad4c787b937cca105d94371efaba1077</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:32</sys_created_on>
+        <sys_id>ac5c7c7b937cca105d94371efaba10cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-14 07:15:32</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#efefef</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>picture</file_name>
+        <hash>4b41d30fa2c445af75f326a35afb7c0d73fd82dc3401ccf691ad7831f4414f7f</hash>
+        <image_height>225</image_height>
+        <image_width>225</image_width>
+        <size_bytes>3832</size_bytes>
+        <size_compressed>3568</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:45</sys_created_on>
+        <sys_id>335c30bb937cca105d94371efaba1026</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-14 07:15:45</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>ad4c787b937cca105d94371efaba1077</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="picture" sys_id="335c30bb937cca105d94371efaba1026">335c30bb937cca105d94371efaba1026</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:45</sys_created_on>
+        <sys_id>735c30bb937cca105d94371efaba1026</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>rVd5NNvruv4FRXVT89zS1hQa3a2ppmqrRZKNSiRIlLaKipKaa2iUVvdpDC0iiqBERBF21TxWZ0ONQUnRmIMaap6aY5+7zr1rn/vXOfc+37jeZ33vetf3vd9az8v9wv0GiMIsoBYACAQAoP0GcFnAQ+Agv4DoYVHRw4cPiwoL788iIiKH/7GKSolLy0pLSUnJHtVUllVQPSIldez0cVWwlpG2toyS3lmdkwYaEG0DkJCQ0IEDB0T2u5achJzWvw3ua0BMEGADbF7QcYBHDMQrBuK+AxT/DFBgf/wPQDy8fPwCggf22UuiAA+IF8THz88vIHAA9E9WTPzAsdMX+AUk7K77SR4/E5WYc+Ii4kb0ko5/Ui71JVvKHOkW0PxG90FZ97LMvhdJ0F/8/4k/rWL/2zoE/MIL2g+OVwwwA0aU/0IqX/rnLkr0Xw/+hxDvwGmdwYH9fPKeSvAered8aKeq24SUu9udrEb4M1QX8tO+jQQ1lL2opBr1TdRcTEjdtRTVWcJdzRmIrzcz90RQucCZcq9IlYH2j77baw3kcAUszEXnBaLynIgy/nXA5QFsxo2SmWE7apY9xKuyCX8yx5y+44/JsdmeKs5byZdexdmaGNwQpk0I2PKm3ypJGgl3ZYl37P1M9LEdn33H4AJTGcGTHoHu1ntFGbP+kXWGvxqdV9w6WrpteasC25HvFmcx4FVtOrxMys0m/1j0CMqpqPS5bI5jddSHFjJTGjpSOsShF3M38Dvn8ffv7sly9PJ7aSwMqp8ag6CQ08tvbtko1m+a+N5e/5d7ofu56I5NG+RryeHff1v2rbUWXKALGIyq0yKEMs9wgdziZbCFdtxUbkYyXb6LtETe5SD0PHpYOmUFnK8nm00sKo/KTxbVtR/2zBu+5vAgsKBViH5QN50OD9F/pbYr84k5rDm0oVd4wdnZvhql0EqhyXs3XzAxM6j/ck9pkGW0UEz3w+BQ6oWiqBNCejptmFHKdLCD1LsvkrUG7oJGuJ5Hj1XyaNbQFnUKDNEWYfiHYVnnzf7qYR9vzPRh+GqYlGbBuekcU7ULZUZlLClnyeJpGISmWVHYHU3Ex8aSqxLmjxy72RNNhJ1+UkhCQE/xVUutgZ4XhxHrSTTWVyyCiOg+a1MRauPk2O7s9rA/ZForeCq839ScVbBn+h3KZP6Y6Xp4jH7oILjGZNp4typAf93i/GtIWNag6IfrLvknJJkl7gfUktqz4kwXCTrxO0nYuFLq3pHywWXSyZlCsYKx6TkmJX+c4oH0aTw1FnbzDt/g8XxoXsJTdeTJyv5PlY1UTRn76y6kxmLyZlOFHGQ5leiV6ijLm7lt/bJkW6cc7DyEIhV0ao8UV6Oiva82BFadcwnP+6P/+3K3T5OlFwZRl1OrJ4F4QKjQTLxLUR3LiuhX4g81dZtX+i6c6XfZEoXzW42912bK0B2Cr5ELfp5ABqn2ZF+qXzUqe1+xAhNu6KqFi0bGh2WdOn9E6K95cWNPa2ZPoX1uzTPOItdpAxpgYasWuvE1+2+Kaz2EOOfbs9mW6tZwbe1zFfKxLVwA0hmq/3ZO80ebaHEdDH7otwqbdNegnSs/2N98GS+uw2ZJBf0JBfDs/rga2Klki3SOp7nWEAzRNcvawyzF+n0cdbXb2nVU0MptcJ/fSSFWmIr7f+TczFRceY+qIUDUwm3skhBxpHHVZ62Qsy0h+dWUxw6e7CnhN65BC4SxHbfV5Fu3N9KlZpFObfOTswajmoh2ld2uI9fve5lGDdzesPgxIpVqRFJytyMc9DhDsFFr/rJ3fb6uWDVIXuLutnHKF91RiC0T3/rbL6UnVMAVKjRpmkwDDKI78ODS0PkosTwvUFRU1FNZw8jiq49nFGzGSDpC/uk1VX5hztftZjEYdj4mt+nK7AHVERyhKVi7Vn+gyynQ43uRbiPNegnfDNXjAnd+GShqTOICXo5viodW061Zw6p1nBupjAQY9IOL/MtPLR2+s215ix6uMBQ2PuYd1SdIP9sT5tPSUzDZrPd4Zd15ZE/dKn//WY4SmKzgylgDKU7P3dZYMg5690JY59c4Cfxas5f56RwblPt6oemhzxc8bEfzhMnI6lIhv4AXZ3ujxw1bLLQ+N3xIq5mLnp2SLa+i4QaKNPuwjJPjccdq3DrVwKGhfqFI1HtcVcDCCzNqdGTAIHG4XeTRYIbHEOcztj+G8HnMN4OZu7vpf2rwwZqtb0renPozZgFbhi6GU8h4EtbmTd58ZXDNXBlQA0AqrVIcd6kJqIpAipGVhUYpCn9yYc7IW9NoZFdbSeaTYNtNVicrxyJ0vCTG0LNTYyl4wAGrzzGxW3X6kfnKvmdXgf1jI4tRMuBPThFxekOoNFxkp9QFvB1dMLVC267c1/W02qbW0dKu9IZb35n/mVDr8is+ku3TOC6UKU9SoKFj+45qYmaczZsn3dafj2w0HHEkw6/SXzIWqLlTMcZ/KzmSJ0mJRDvf2EWeDxBOtSrC2OqvlUCSw7LSWsmugeVwiZWI8MS02yVV+vEmYBQtsKmDqjheYxTm2jDRHjyNrKzw/+5tX5G6GSSDh7foMwcy/PWmWLNFt1gedjkcUaew76pDkYcDuUDgL1zAc63beqH6FYmwJtQaunsGrlR+E33v1nztsz40g38LVZXxMYP+IqLDr46GTn4b235a7o2dH0XeeeDJikZvk/OK0q9GjSxahlG+rutQ5aaFgyRbfSH5t7WCgYcbb+6k77xC/LQ83l0K1n1OMzRzv2xoMJEqvq7vcJY5Y0Ny6C+h+igNFY41Xgt6EB1h51leedWYiMxBeVPR2hIPRuVOTWUT2Q+esUNd0ttLZ7Dj/rCt/shDvr18uNVkGAyLXqASenJgDVahuCJ0xl6XPnXWJaEyq6tm1aa3YvWeqEulfEf+6rQwAxOQ4HG3siImRTPQPeQiSaM35uzFkNMp1qIwMN4XEZ4a7nnKJTCBlPHemLj48Grf0B2CNkU5r77O/HN1U5GDkOQ4TGu2ByVP8M9I3orqNg5hFGnK2Z/QeuxPGnWz3nLHETAOaSXrTRisxfrVlLoCyiuiPmlaTrdm0oMuYrx0LRhrhPJTG9nrNK72HfG1IbL6YzQQg2Tfu3RYJryjVb98DpZ1Go0YLsQkp8rtOIby2qFrakvB7q2GeAdJ1nTq+7I5z8DgIBVymj0la+ayIcy2GTI/rCBQSLRfWiic/XDu0SN7mQcvID9coHILbYPS6y978RaSDvzjShhXhnqjyzp/zYwlWrfuXM/PTKs2hxf4IQ2LK+/ueXHWkjvQZ6rxY26ZOHRyXc6r4mM28RUnr8TL28VJhbd+hmw6N6CyDP0XDYqncinZfBkEq15TnpchOzgGs78QjZmD/giRwtpxgYyVaF6f29YZh+A46a71W4gY3a0WWqPt+/qm0DBAlO88IKjPV0yKBa4U2cZuSfc6fd3U+31iUnw7z78uzV3Ok/gu96v7UQ4B49383ATmhYzzle/TLHtEi+9OQvY1rcxnZefN4Rzjbmz4Om4mYTHrpMKe8JfowtgdM6tJgZXLKcneuhN/9Iec02oALby/lu0EKWpH3y1F7TRppNu/9r7QOOYgff6QD63sH99rJOXdnYEeZBwlIlu2YRctEjl36DlysCLoslEl6uaOUGd47PggMyKvxqyYHN4zk9caErw6d9G+CBmDQzpmGiUiHqYSr/mrYvXJzypzh0jUVFp5unXJWqGrNFSYMsoFRJIZfY0tAbbdzkGmy/GfW5/wb3oPv03kOK2ecO9Zv60B30NpLm7GR7VLrrtgnHwaD/oRxkcHh3nqGdvGCmkbMHu6IIG5rJTWG1zJLChG0GyIC3QbyYE3GqUFwgLufWpdfsyZbuqGqktG9sKUmQ74S8MVBPme2mwhKbAGQYOlGCgyRuoCEN82Q3RwODCWkE7fDgxv7LtiYvNkVcBzUGOGymI+2RiAoLLCl2Mkd+3tku/va+4nPXObrC/DfT4Q6TW/JuEqRZV6rJcsF0CyTncNtuaxNfprGcbEpFQ5eox0HZnUsBXRXuo1X2tgPyy/hPKCvm89/LC8Beo5khhGNoC0JfH8qZaVB09cL0PzXdA6eDdKPCXMaaSh+HppeR2xIWnxZnf+U2mstiFKZWyMhuxjpvsTiU5vR6rysT5wH3FUbg0DvjL6lj0SrpLi9UIta7VfVrqy1zaMrZrdOZ3ovPLrTMvlerrGWdOviiTXn5YFz8S/peRSVXmsVao140B4ZPKC91QPFwi2P+anaGFbY3hKt6zRS6pcGZxoVfCU56oK2VuncIcmGE6SbJpqjU9yNGmG71pqPt4bNPlo9jtsAxR4/pHV/f2s/S9dfu3RwSVzwKpbWGVTuUvcS/bexFvlC4YS4HNjBxM/SS6AwQzOJN424C2EfSe59xTaOdkaTCiKgLcntYKLddMjkE62X/kkjtsFb66rsNnfLb9xgcFcSiHzify93EW6araBnNvRqdc1B2SHL+/REgxjh6e2xFBjm1CzMJ68RucWn8ln5k2/BUzHTyRnTU8gcxz6IhlmlAxXtfs1/uCOXDiErQ2pV4Ertv3+s7UrpzM7UmYPKKdcdXUQ0c3i6P8xq+0HXYSu4FNFDF0e2sk2H792LPq/SxkQIBgFXAJpC55NBsAc5W4HXuBKqJzWNS+eRxawbSsOTz/cpL7+oLt1oxZiIalvD94uxtuxeokL1L1dtM4NQ0PvucZ2fmoEkPEmkdbvOGL/T5XQ/w2R3MG/A4Hl9gz4DgAA</data>
+        <length>4744</length>
+        <position>1</position>
+        <sys_attachment display_value="picture" sys_id="335c30bb937cca105d94371efaba1026">335c30bb937cca105d94371efaba1026</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:15:45</sys_created_on>
+        <sys_id>f35c30bb937cca105d94371efaba1026</sys_id>
+    </sys_attachment_doc>
+</record_update>
