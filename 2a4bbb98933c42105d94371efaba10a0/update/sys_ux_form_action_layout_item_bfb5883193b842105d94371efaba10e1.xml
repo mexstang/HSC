@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action display_value="HSC DeclarativeActionApprovalField">b7b5883193b842105d94371efaba10de</action>
+        <active>true</active>
+        <color>secondary</color>
+        <description/>
+        <icon/>
+        <item_type>action</item_type>
+        <label>HSC DeclarativeActionApprovalField</label>
+        <layout_group/>
+        <name>HSC DeclarativeActionApprovalField</name>
+        <order>0</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-07 22:09:15</sys_created_on>
+        <sys_id>bfb5883193b842105d94371efaba10e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC DeclarativeActionApprovalField</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_bfb5883193b842105d94371efaba10e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-07 22:09:15</sys_updated_on>
+        <table>global</table>
+    </sys_ux_form_action_layout_item>
+</record_update>
