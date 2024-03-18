@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="hsc_home">0abbb7d80d3c42108acd953f6c9fa7c6</macroponent>
+        <name>My task page redirection</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const {
+        state,
+        emit,
+        data
+    } = api;
+    let sysId = "";
+    let table = "";
+    try {
+        sysId = data.look_up_record_3.result.sysapproval.value;
+        let tableDisplayValue = data.look_up_record_3.result.sysapproval.displayValue;
+        let tableStartsWith = tableDisplayValue.substring(0, 3);
+
+        if (tableStartsWith == "INC") {
+            table = "incident";
+        }else if (tableStartsWith == "RIT") {
+            table = "sc_req_item";
+        } else {
+            table = "task";
+        }
+
+        if (state.taskcard && sysId) {
+            api.setState("taskcard", "");
+            emit('NAV_ITEM_SELECTED', {
+                route: "rec_task",
+                fields: {
+                    table,
+                    sysId,
+                    approvalId: api.state.taskcard
+                }
+            });
+        }
+    } catch (e) {}
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-03-04 00:13:04</sys_created_on>
+        <sys_id>c6bbb7d8ae3c42106b350971fa81b3b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My task page redirection</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ux_client_script_c6bbb7d8ae3c42106b350971fa81b3b8</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-03-04 00:13:04</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>
