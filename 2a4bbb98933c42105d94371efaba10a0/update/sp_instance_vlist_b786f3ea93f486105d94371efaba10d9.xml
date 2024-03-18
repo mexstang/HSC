@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <display_field>description</display_field>
+        <field_list/>
+        <filter table="x_1093559_hsc_em_0_hsc_bulletin">display_location=Other News^EQ<item display_value="Other News" endquery="false" field="display_location" goto="false" newquery="false" operator="=" or="false" value="Other News"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <glyph>comment-o</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">fd24ffe693f486105d94371efaba1089</sp_column>
+        <sp_page/>
+        <sp_widget display_value="News Ticker">a9a0b0dec3623100c8b837659bba8f80</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-10 23:36:49</sys_created_on>
+        <sys_id>b786f3ea93f486105d94371efaba10d9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>OTHER NEWS</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_instance_vlist_b786f3ea93f486105d94371efaba10d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-11 00:24:05</sys_updated_on>
+        <table>x_1093559_hsc_em_0_hsc_bulletin</table>
+        <title>OTHER NEWS</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=b786f3ea93f486105d94371efaba10d9"/>
+</record_update>
