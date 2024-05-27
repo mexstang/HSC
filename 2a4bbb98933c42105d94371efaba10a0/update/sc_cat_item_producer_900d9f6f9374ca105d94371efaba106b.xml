@@ -46,7 +46,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Mr Lo">6816f79cc0a8016401c5a33be04be441</owner>
+        <owner display_value="MR LO">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
         <post_insert_script><![CDATA[/**
 * This script is executed after the record is generated. 
@@ -69,7 +69,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs/>
+        <sc_catalogs>3b5b8d7d93bc42105d94371efaba103b,e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -88,14 +88,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-14 00:21:54</sys_created_on>
         <sys_id>900d9f6f9374ca105d94371efaba106b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>HSC Request Time Off</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sc_cat_item_producer_900d9f6f9374ca105d94371efaba106b</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-03-14 00:31:08</sys_updated_on>
+        <sys_updated_on>2024-05-27 00:14:20</sys_updated_on>
         <table_name>x_1093559_hsc_em_0_hsc_request_time_off</table_name>
         <taxonomy_topic/>
         <template/>
@@ -103,7 +103,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>7</version>
+        <version>30</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
