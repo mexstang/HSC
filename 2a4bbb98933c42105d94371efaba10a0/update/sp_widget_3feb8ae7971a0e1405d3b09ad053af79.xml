@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $http) {
+	/* widget controller */
+	var c = this;
+
+	// Define the months
+	c.months = [
+		{ name: 'January', value: 1 },
+		{ name: 'February', value: 2 },
+		{ name: 'March', value: 3 },
+		{ name: 'April', value: 4 },
+		{ name: 'May', value: 5 },
+		{ name: 'June', value: 6 },
+		{ name: 'July', value: 7 },
+		{ name: 'August', value: 8 },
+		{ name: 'September', value: 9 },
+		{ name: 'October', value: 10 },
+		{ name: 'November', value: 11 },
+		{ name: 'December', value: 12 }
+	];
+
+	// Default to the current month
+	c.selectedMonth = c.months[new Date().getMonth()].value; 
+	c.selectedMonthName = c.months[new Date().getMonth()].name;
+	c.records = [];
+
+	// Function to fetch records based on the selected month
+	c.fetchRecords = function(selectedMonth) {
+		$http({
+			method: 'GET',
+			url: '/api/now/table/x_1093559_hsc_em_0_hsc_time_off_calendar?',
+			params: {
+				sysparm_query: 'month=' + selectedMonth,
+				sysparm_fields: 'month,day,year,slots_available',
+				sysparm_limit: 31,
+				sysparm_orderby: 'day' ,
+			}
+		}).then(function(response) {
+			c.records = response.data.result;
+
+			// Sort the array by 'day' property using the compare function
+			c.records.sort(compareByDay);				
+
+		});
+	};
+
+	// Function to handle month change
+
+	c.onMonthChange = function() { 
+		var selectedMonthObject = c.months.find(function(month) {
+			return month.value === parseInt(c.selectedMonth);
+		});
+		c.selectedMonthName = selectedMonthObject.name;
+		c.fetchRecords(c.selectedMonthName);
+	};
+
+
+
+	// Initial load of records
+	c.fetchRecords(c.selectedMonthName);
+
+	//When a checkbox is clicked, pass captures the record info
+	c.selections = [];
+	c.selected = false;
+
+	c.daySelected = function(month, day, year,checkbox) { 
+		if(checkbox){
+			var obj ={month: month, day: day, year: year};
+			c.selections.push(obj);	
+		}else if(!checkbox){
+			for(var i =0; i < c.selections.length; i++){
+				var index = c.selections.findIndex(function(obj) {
+					return obj.day === day;
+				});
+				if (index !== -1) {
+					c.selections.splice(index, 1);
+
+				}
+			}
+		}
+		c.selections.sort(compareByDay);	
+	};
+
+//Sorts the objects in the Array
+	function compareByDay(a, b) {
+		return a.day - b.day;
+	}
+	
+	c.submitButton = function() { 
+		alert("rrrr");
+	};
+
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#mainDiv{
+  display:flex;
+  color:black;
+}
+
+h3, h4{
+text-align:center;
+}
+
+#wrapperAvailable
+{
+margin:5px;
+}
+
+#wrapperSelected
+{
+margin:5px;
+}
+
+.labels{
+text-align:center;
+}
+table{  
+  box-shadow: 1px 2px 4px gray;
+  border-radius:15px;
+
+}
+th{
+  padding:10px;
+  width:30px; 
+  text-align:center;
+}
+
+td{
+  
+  padding:10px;
+  width:30px; 
+  text-align:center;
+}
+
+.selectionColor{
+color:blue;
+}
+
+.submitButton{
+  border:none;
+border-radius:5px;
+  box-shadow: 1px 2px 5px gray;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_my_requests</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HSC My Requests</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 07:59:04</sys_created_on>
+        <sys_id>3feb8ae7971a0e1405d3b09ad053af79</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>HSC My Requests</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_3feb8ae7971a0e1405d3b09ad053af79</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 08:03:19</sys_updated_on>
+        <template><![CDATA[
+<div id="mainDiv" >
+
+  <div id="wrapperAvailable" >
+   
+    <div>
+      <h3>Scheduled Time Off</h3>
+
+      <table>
+        <thead>          
+          <tr>
+            <th>  </th>
+            <th>Month </th>
+            <th>Day </th>
+            <th>Year </th>
+            <th>Slots Available </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="record in c.records">
+            <td><input  ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.selected )" /> </td>
+            <td>{{record.month}}</td>
+            <td>{{record.day}}</td>
+            <td>{{record.year}}</td>
+            <td>{{record.slots_available}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Selected Div -->
+  <div id="wrapperSelected" >
+   
+    <div>
+      <h3>Cancel Time Off</h3>
+
+      <table>
+        <thead>
+          <tr>           
+            <th>Month </th>
+            <th>Day </th>
+            <th>Year </th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="selectionColor" ng-repeat="record in c.selections">
+            <td>{{record.month}}</td>
+            <td>{{record.day}}</td>
+            <td>{{record.year}}</td>
+            
+          </tr>
+          <tr><td></td><td></td><td></td>
+            <td  ><button class="submitButton" ng-click="c.submitButton()"  >
+            Submit
+            </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+]]></template>
+    </sp_widget>
+</record_update>
