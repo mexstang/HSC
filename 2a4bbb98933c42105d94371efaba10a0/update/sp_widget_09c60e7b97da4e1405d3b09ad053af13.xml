@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope) {
+    var c = this;
+
+    c.updateAnimalRecord = function() {
+        $scope.data.animalType = [1,2,3];
+        console.log('Animal type set:', $scope.data.animalType); // Check if animalType is set
+        $scope.server.update().then(function(response) {
+            console.log('Server response:', response);
+        }).catch(function(error) {
+            console.error('Server update failed:', error);
+        });
+    };
+
+    $scope.c.updateRecord = function() {
+        c.updateAnimalRecord();
+    };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>testonly</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>testonly</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	var animalType = input; // Use 'input' instead of 'data'
+	gs.addErrorMessage(animalType);
+	if (animalType == undefined) {
+		gs.addErrorMessage('Error: Animal type not received');
+	} else {
+
+
+		gs.addInfoMessage('Animal type received: ' + animalType.animalType);
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 02:14:58</sys_created_on>
+        <sys_id>09c60e7b97da4e1405d3b09ad053af13</sys_id>
+        <sys_mod_count>167</sys_mod_count>
+        <sys_name>testonly</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_09c60e7b97da4e1405d3b09ad053af13</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:15:20</sys_updated_on>
+        <template><![CDATA[<div>
+    <button ng-click="c.updateRecord()">Update Animal Record</button>
+   
+</div>]]></template>
+    </sp_widget>
+</record_update>
