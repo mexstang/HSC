@@ -20,7 +20,7 @@
 		{ name: 'November', value: 11 },
 		{ name: 'December', value: 12 }
 	];
-
+	
 	// Default to the current month
 	c.selectedMonth = c.months[new Date().getMonth()].value; 
 	c.selectedMonthName = c.months[new Date().getMonth()].name;
@@ -39,7 +39,7 @@
 			}
 		}).then(function(response) {
 			c.records = response.data.result;
-
+			
 			// Sort the array by 'day' property using the compare function
 			c.records.sort(compareByDay);				
 
@@ -57,7 +57,7 @@
 	};
 
 	// Initial load of records
-	c.fetchRecords(c.selectedMonthName);
+	//c.fetchRecords(c.selectedMonthName);
 
 	//When a checkbox is clicked, pass captures the record info
 	c.selections = [];
@@ -70,7 +70,7 @@
 			var obj ={month: month, day: day, year: year, typeName: typeName};			
 			c.selections.push(obj);				
 		}else if(!checkbox){ 			
-			for(var i =0; i < c.selections.length; i++){
+			for(var i = 0; i < c.selections.length; i++){
 				var index = c.selections.findIndex(function(obj) {
 					return obj.day === day;
 				});
@@ -86,83 +86,125 @@
 	function compareByDay(a, b) {
 		return a.day - b.day;
 	}
-	//--------------------------
+	//-------------SUBMIT FUNCTION-------------
 	c.typeSelect = '';
 	c.selectedName ='';
-	var RequestObject = {};
-	c.submitButton = function() { 
+	c.submitButton = function() { 		
+		var RequestObject = {};
+		var selectedName = c.selectedName;
+		var requestType = c.typeSelect;
 
-		var confirmation =	confirm("You have requested the following days off. \n Click OK to continue. \n\r" +c.selections[0].month + " " + c.selections[0].day + ", " + c.selections[0].year);
-		if(confirmation){ 	
+		//VALIDATE FIELDS
+		if(selectedName == ""){ 
+			document.getElementById('nameSelect').style.background = 'pink';
+			return;
+		}else{
+			document.getElementById('nameSelect').style.background = 'white';
+		}	
 
-			for(var i=0;i< c.selections.length;i++){
-				var typeName = c.selections[i].typeName;
-				var type = document.getElementById(typeName).value;
-				document.getElementById(typeName).style.background = 'white';
-				if(type ==  "-- None --"  ){
-					document.getElementById(typeName).style.background = 'pink';
-					return;
-				}else{
-					c.selections[i].type = type;
-				}
+		for(var i=0;i< c.selections.length;i++){
+			var typeName = c.selections[i].typeName;
+			var type = document.getElementById(typeName).value;
 
-			} 
-
-			var selectedName = c.selectedName;
-			var requestType = c.typeSelect;
-			if(selectedName == ""){ 
-				document.getElementById('nameSelect').style.background = 'pink';
+			if(type ==  "-- None --"  ){
+				document.getElementById(typeName).style.background = 'pink';
 				return;
 			}else{
+				document.getElementById(typeName).style.background = 'white';
+				c.selections[i].type = type;
+			}
+		}
+
+
+		var message = '';
+		for(var x = 0;x < c.selections.length; x++){
+			message += " \u2022 " + c.selections[x].month + " " + c.selections[x].day + ", " + c.selections[x].year + " " + c.selections[x].type + " \n ";
+
+
+		}		
+
+		c.showModal();
+
+		c.submitModal = function() {
 			RequestObject.employeeName = selectedName;
 			RequestObject.requestedDays = c.selections;
 
 			$scope.data.yourSelections = RequestObject;
 			$scope.server.update();
-			}
-		}
+
+			c.isModalVisible = false;
+			//c.onMonthChange();
+			c.records = [];
+			c.selections = [];
+			c.selectedName =''; 
+			c.selectedMonth = '';
+		};
+
+	} //-------------------END SUBMIT------------------------------
+
+	// ------------ MODAL ---------------
+	c.isModalVisible = false;
+
+	c.showModal = function(message) { 
+		c.isModalVisible = true;		
+	};
+
+	c.closeModal = function() {
+		c.isModalVisible = false;
 	};
 
 
+	// Optional: Close the modal when clicking outside of it
+	window.onclick = function(event) {
+		var modal = document.getElementById('myModal');
+		if (event.target == modal) {
+			c.$apply(function() {
+				c.isModalVisible = false;
+			});
+		}
+	};
+	// ------------- END MODAL -----------------------
 
-
-
-
-
-
-};]]></client_script>
+};
+]]></client_script>
         <controller_as>c</controller_as>
         <css>#mainDiv{
+  width:100%;
   display:flex;
-  color:black;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:black;  
 }
 
 h3, h4{
-text-align:center;
+  text-align:center;
 }
 
 select{
-border-radius:5px;
-max-width:170px;
+  border:none;
+  border-radius:3px;
+  max-width:170px;
+  box-shadow: 1px 1px 3px gray;
 }
 
 #wrapperAvailable
 {
-margin:5px;
+  margin-right:15px;
 }
 
 #wrapperSelected
 {
-margin:5px;
+  margin-left:15px;
 }
 
 .labels{
-text-align:center;
+  text-align:center;
 }
 table{  
   box-shadow: 1px 2px 4px gray;
-  border-radius:15px;
-
+  border-radius:3px;
+  min-height:100px;
+ 
 }
 th{
   padding:10px;
@@ -171,21 +213,76 @@ th{
 }
 
 td{
-  
+
   padding:10px;
   width:30px; 
   text-align:center;
 }
 
 .selectionColor{
-color:blue;
+  color:blue;
 }
 
-.submitButton{
+
+.submitButton {
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
   border:none;
-border-radius:5px;
-  box-shadow: 1px 2px 5px gray;
-}</css>
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* ====== MODAL ======== */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: none; -*/
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.spanBtns {
+  color: #aaa;
+  float: right;    
+}
+
+.btns {
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  border:none;
+}
+
+.btns:hover,
+.btns:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -206,7 +303,7 @@ border-radius:5px;
 	var requestObject = input;
 
 	if(requestObject){
-		
+
 		// Initialize a GlideRecord object for the target table
 
 		var employeeName = requestObject.yourSelections.employeeName;
@@ -215,7 +312,7 @@ border-radius:5px;
 		var requestedDays = requestObject.yourSelections.requestedDays;
 
 		// Create new records --------------------
-
+		var numArray = [];
 		for(var i = 0;i< requestedDays.length;i++){
 
 			var requestedMonth = requestedDays[i].month; 
@@ -227,6 +324,8 @@ border-radius:5px;
 
 			gr.initialize();
 
+			if(i == 0){gr.parent_record = true;}else{gr.parent_record = false;}
+
 			// Set field values
 			gr.employee_name = employeeName;
 			gr.month = requestedMonth;
@@ -236,7 +335,32 @@ border-radius:5px;
 
 			// Insert the record into the table
 			var newSysId = gr.insert();
+			numArray.push(gr.number);
 		}
+		var num = numArray.join(',');
+		gs.addInfoMessage('SUCCESS. YOUR REQUEST HAS BEEN SUBMITTED. Ticket/s: ' + num)
+
+		// --------------------------------------
+		// Define the Flow Sys ID
+		//var flowSysId = '80142ea3979a0e1405d3b09ad053af88'; // Replace with the actual Sys ID of your flow
+
+		// Define the inputs to pass to the flow, if any
+		//var inputs = {
+		// 'input_name': 'input_value' // Replace with actual inputs if needed
+		//};
+
+		// Start the Flow
+		//var flowAPI = new sn_fd.FlowAPI();
+		//var result = flowAPI.startFlow(flowSysId, null, inputs); // Use `null` if you don't have a current record Sys ID to pass
+
+		// Check the result
+		//if (result) {
+		//	data.result = 'Flow triggered successfully!';
+		//} else {
+		//	data.result = 'Failed to trigger flow.';
+		//}
+
+
 	}
 
 
@@ -294,26 +418,26 @@ border-radius:5px;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 00:46:56</sys_created_on>
         <sys_id>f509ac6397120e1405d3b09ad053af23</sys_id>
-        <sys_mod_count>714</sys_mod_count>
+        <sys_mod_count>936</sys_mod_count>
         <sys_name>HSC Request Time Off</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_f509ac6397120e1405d3b09ad053af23</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-29 10:39:53</sys_updated_on>
+        <sys_updated_on>2024-05-31 03:28:10</sys_updated_on>
         <template><![CDATA[
 <div id="mainDiv" >
 
   <div id="wrapperAvailable" >
     <div class="labels" >
-      <label for="monthSelect">Month</label>
+      <label for="monthSelect">*Month</label>
       <select id="monthSelect"  ng-model="c.selectedMonth" ng-change="c.onMonthChange()">
         <option ng-repeat="month in c.months" value="{{month.value}}">{{month.name}}</option>
       </select>
     </div>
     <div>
-      <h3>Available days for {{c.selectedMonthName}}</h3>
+      <h3>Available days</h3>
 
       <table>
         <thead>          
@@ -341,8 +465,8 @@ border-radius:5px;
   <!-- Selected Div -->
   <div id="wrapperSelected" >
     <div class="labels" >
-      <label for="nameSelect">Name</label>
-      <select id="nameSelect"  ng-model="c.selectedName" ng-change="c.onNameChage()">
+      <label for="nameSelect">*Name</label>
+      <select id="nameSelect"  ng-model="c.selectedName" >
         <option ng-repeat="name in data.empNames" value="{{name}}">{{name}}</option>
       </select>
       
@@ -370,7 +494,7 @@ border-radius:5px;
           </tr>
           <tr><td></td><td></td><td></td>
             <td  ><button class="submitButton" ng-click="c.submitButton()"  >
-              Submit
+              Done
               </button></td>
           </tr>
         </tbody>
@@ -378,8 +502,34 @@ border-radius:5px;
     </div>
 
   </div>
+ <!-- MODAL -->
+   <div id="myModal" class="modal" ng-show="c.isModalVisible">
+     
+    <div class="modal-content">
+       <p><strong>YOUR REQUEST</strong></p>
+        <ul id="" ng-repeat="record in c.selections" >
+          <li>{{record.month}} {{record.day}}, {{record.year}} <b>{{record.type}}</b></li>
+      </ul>
+       <span class="spanBtns" >
+         <button class="btns" ng-click="c.closeModal()">CANCEL</button>
+      <button class="btns" ng-click="c.submitModal()">SUBMIT</button>
+    </span>
+     </div>
+</div>
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 ]]></template>
     </sp_widget>
 </record_update>
