@@ -64,16 +64,16 @@
             <label>Requested</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
-            <sequence/>
+            <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2024-05-31 04:53:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>35a78230972e825405d3b09ad053af70</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-31 04:53:28</sys_updated_on>
+            <sys_updated_on>2024-06-03 05:04:08</sys_updated_on>
             <value>requested</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -84,16 +84,16 @@
             <label>Approved</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
-            <sequence>1</sequence>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2024-05-29 03:59:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>0e58230497e6ce1405d3b09ad053af31</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-31 04:52:57</sys_updated_on>
+            <sys_updated_on>2024-06-03 05:04:12</sys_updated_on>
             <value>approved</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -104,16 +104,16 @@
             <label>Rejected</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
-            <sequence>2</sequence>
+            <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2024-05-29 04:00:03</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>0c68eb4497e6ce1405d3b09ad053af2c</sys_id>
-            <sys_mod_count>6</sys_mod_count>
+            <sys_mod_count>7</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-31 04:53:02</sys_updated_on>
+            <sys_updated_on>2024-06-03 05:04:15</sys_updated_on>
             <value>rejected</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -124,17 +124,57 @@
             <label>Pending</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
-            <sequence>3</sequence>
+            <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2024-05-29 03:59:46</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>af48230497e6ce1405d3b09ad053af30</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-31 04:53:21</sys_updated_on>
+            <sys_updated_on>2024-06-03 05:04:25</sys_updated_on>
             <value>pending</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Employee Canceled</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-03 05:03:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6ab6a53d9766821005d3b09ad053af8d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-03 05:04:32</sys_updated_on>
+            <value>employee_canceled</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Employer Canceled</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-03 05:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>74d6293d9766821005d3b09ad053af51</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-03 05:04:34</sys_updated_on>
+            <value>employer canceled</value>
         </sys_choice>
     </sys_choice>
 </record_update>
