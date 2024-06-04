@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>JPEG</format>
+        <height>50</height>
+        <image>630448de9766061005d3b09ad053af52</image>
+        <name>hsc_checkmark.jpg</name>
+        <size_bytes>1197</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 11:06:06</sys_created_on>
+        <sys_id>3443885297a6061005d3b09ad053afdb</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>hsc_checkmark.jpg</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>db_image_3443885297a6061005d3b09ad053afdb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 11:08:42</sys_updated_on>
+        <thumbnail/>
+        <width>50</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#cecece</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>image</file_name>
+        <hash>b9e30638e6d9507d966b2568d3f3f2b403e93b64ebb90e328c4d0d1a0cd03d3b</hash>
+        <image_height>50</image_height>
+        <image_width>50</image_width>
+        <size_bytes>1197</size_bytes>
+        <size_compressed>1047</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 11:08:42</sys_created_on>
+        <sys_id>630448de9766061005d3b09ad053af52</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 11:08:42</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>3443885297a6061005d3b09ad053afdb</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="630448de9766061005d3b09ad053af52">630448de9766061005d3b09ad053af52</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 11:08:42</sys_created_on>
+        <sys_id>a30448de9766061005d3b09ad053af52</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>+3/j/wMGAS83TzcGRkZGhgogZPh/m8GZQYCbh4+HS4CPl09IUEBYQkNKQkxMwlBZVVbDytjWxtLYwtzBI8bPwSXc1dwiIDcwPD4pPSPdzrewsiClIiY1PRlkCKOgkJCEqIS+lJR+spOFUzLJ4P8BBkEOBiMGI2ZGJQYmQUZmQcb/RxjkGRgYWRnBgAEKGJmYWVjZ2Dk4ubiBCrYKMDAxMjMzsTCzsrKwAGVrgfIMLIKsQoqGjmzCgYnsSoUiRo0TF3IoO208KBp08YOKcVJREyeXmLiEpJSqmrqGppaJqZm5haWVs4urm7uHp1dwSGhYeERkVHJKalp6RmZWcUlpWXlFZVVzS2tbe0dn16TJU6ZOmz5j5qxFi5csXbZ8xcpVmzZv2bpt+46duw4dPnL02PETJ09dunzl6rXrN27eevjo8ZOnz56/ePnq46fPX75++/7j5y+QvxgZmBlhAKu/BIH+YmJhYWZhB/mLkakcpECQhVXRkE3IMZA9sVBYyaiRQ8Rp4sKNBzmVjYM+iCYVXeQSUzF5qPoR5DWwz4jzWBNZPoN7DOGvWww8zIzAyGMWZLBn+MJ1bnLcpUUTJ37lLjhV4PbxqJzCxEcX8ueZaR0SOyjrLjp/wYuqmFmyUyZFOCrv0XpzrrFTJeVTBtP3PypW9n9Zcv8zvN9l/1Dx4n+GF8r5/xlqL+/fUNL/i+3Wf4b7C92/8U38z+BwO/73Fw3G/R8mvPjP8EVw+3+Gfa8+xTgrLXY3ydnEszCMvfzytR3vRWJeSmX+Fu2bman7+eMRhY7Pl/ue31rzQ+uUwvVw4WfRN+afSs+b+PHU+svLPz1ewR7tKhLAlt5p/yRu/3+GdbqhW/76Xfb+cG227ptlFrdYGLcZ8zyoYg6r8fzPoPT1P8PfwixfIYnnH672BCvtyc9pnNrmKCHCmHc8YMuVpM8574RSZcvmuV8pFZ37qLewJNZmxoe8pT+T4v3D7A7ttM332/1h2ZLpt4on5jznqnr8t+2r/POtrknb7fQ/is8sMjuwwLjxokBJ4Nd/Sy6wrW/aYjb13OY67hNPZjh/8nz3/Fdd3dSlD/m/7jr+t97+87pOwWRXF8ZQNwZZhnXlh+Rfl/b/+lf/3EFWVSTQQXKeyn+GiVX/Gf7t2Gp9+M6Pev//DOtL/oVWRVzKmKcZYmQ1NdWWw9a1ePEhTrGw26FXFLotIy7FiTWYm0prbJWWXKsu6Sku+cW2/0G2/aFf5t/MZj49ueWOx+2lib/4T/+66v/DVf5f86z5f/+a1B/SAEaDzBVgxL1cwDdp5372z2ob3P2328p/6Nz54HXVRPmv17aZ7DW67blZ7NoqJ+Ydm2Wm2S1r0At0FWFAw4z/bwIAMNBhrK0EAAA=</data>
+        <length>1384</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="630448de9766061005d3b09ad053af52">630448de9766061005d3b09ad053af52</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 11:08:42</sys_created_on>
+        <sys_id>270448de9766061005d3b09ad053af52</sys_id>
+    </sys_attachment_doc>
+</record_update>
