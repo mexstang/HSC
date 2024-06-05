@@ -4,146 +4,337 @@
         <client_script><![CDATA[api.controller=function($scope, $http) {
 	/* widget controller */
 	var c = this;
-
-	// Define the months
-	c.months = [
-		{ name: 'January', value: 1 },
-		{ name: 'February', value: 2 },
-		{ name: 'March', value: 3 },
-		{ name: 'April', value: 4 },
-		{ name: 'May', value: 5 },
-		{ name: 'June', value: 6 },
-		{ name: 'July', value: 7 },
-		{ name: 'August', value: 8 },
-		{ name: 'September', value: 9 },
-		{ name: 'October', value: 10 },
-		{ name: 'November', value: 11 },
-		{ name: 'December', value: 12 }
-	];
-
-	// Default to the current month
-	c.selectedMonth = c.months[new Date().getMonth()].value; 
-	c.selectedMonthName = c.months[new Date().getMonth()].name;
+	//====================================
 	c.records = [];
+	// Calculate the date 6 months ago
+	var currentDate = new Date();	
+	var sixMonthsAgo = new Date(currentDate.setMonth(currentDate.getMonth() - 6));
+	// Format the date to YYYY-MM-DD HH:MM:SS
+	var formattedDate = sixMonthsAgo.toISOString().slice(0, 19).replace('T', ' ');
 
-	// Function to fetch records based on the selected month
-	c.fetchRecords = function(selectedMonth) {
+	// REST: Function to fetch records based on the selected month
+	c.fetchRecords = function(employeeName) {
+		document.getElementById('nameSelect').style.background = 'white';
 		$http({
 			method: 'GET',
-			url: '/api/now/table/x_1093559_hsc_em_0_hsc_time_off_calendar?',
+			url: '/api/now/table/x_1093559_hsc_em_0_hsc_requested_time_off?',
 			params: {
-				sysparm_query: 'month=' + selectedMonth,
-				sysparm_fields: 'month,day,year,slots_available',
+				sysparm_query: 'employee_name=' + employeeName + '^sys_created_on>=' + formattedDate,
+				sysparm_fields: 'number,month,day,year,type,approval,sys_created_on,closed_date',
 				sysparm_limit: 31,
 				sysparm_orderby: 'day' ,
 			}
 		}).then(function(response) {
 			c.records = response.data.result;
+			
+			/* ==REST is returning wrong timezone. So we splice the TIME out. ========= */			
+			for(var i=0;i<c.records.length;i++){
+				var createdDate = c.records[i].sys_created_on;
+				var closedDate = c.records[i].closed_date;
+				var createDate = convertDate(createdDate);
+				var closeDate = convertDate(closedDate);
+
+				c.records[i].sys_created_on = createDate;
+				c.records[i].closed_date = closeDate;
+			}
+
+			function convertDate(createdDate) {		
+				var cdArray = createdDate.split('');
+				var spliceArray = cdArray.splice(0,10);
+				var joinArray = spliceArray.join('');
+				return joinArray;
+			}
+			/* ========== END SPLICE OF DATE/TIME ===================== */		
+
 
 			// Sort the array by 'day' property using the compare function
-			c.records.sort(compareByDay);				
+			c.records.sort(compareByDay);		
 
+			c.requested = [];
+			c.prevRequested = [];				
+
+			for(var r = 0; r < c.records.length;r++){
+				if(c.records[r].approval == "requested"){					
+					c.requested.push(c.records[r]);
+				}else{
+					c.prevRequested.push(c.records[r]);						
+				}				
+			}			
 		});
-	};
-
-	// Function to handle month change
-
-	c.onMonthChange = function() { 
-		var selectedMonthObject = c.months.find(function(month) {
-			return month.value === parseInt(c.selectedMonth);
-		});
-		c.selectedMonthName = selectedMonthObject.name;
-		c.fetchRecords(c.selectedMonthName);
-	};
-
-
-
-	// Initial load of records
-	c.fetchRecords(c.selectedMonthName);
-
+	};//END FETCH 
+	//=======================================================================
 	//When a checkbox is clicked, pass captures the record info
 	c.selections = [];
 	c.selected = false;
 
-	c.daySelected = function(month, day, year,checkbox) { 
-		if(checkbox){
-			var obj ={month: month, day: day, year: year};
-			c.selections.push(obj);	
-		}else if(!checkbox){
-			for(var i =0; i < c.selections.length; i++){
+	c.daySelected = function(month, day, year, type, checkbox) { 	
+		var typeName = month+day+year;
+
+		if(checkbox){ 			
+			var obj ={month: month, day: day, year: year, type: type, typeName: typeName};			
+			c.selections.push(obj);				
+		}else if(!checkbox){ 			
+			for(var i = 0; i < c.selections.length; i++){
 				var index = c.selections.findIndex(function(obj) {
 					return obj.day === day;
 				});
-				if (index !== -1) {
-					c.selections.splice(index, 1);
-
+				if (index !== -1) { 
+					c.selections.splice(index, 1);					
 				}
 			}
 		}
 		c.selections.sort(compareByDay);	
 	};
 
-//Sorts the objects in the Array
+	//Sorts the objects in the Array
 	function compareByDay(a, b) {
 		return a.day - b.day;
 	}
-	
-	c.submitButton = function() { 
-		alert("rrrr");
+	//-------------CANCEL REQUEST BUTTON FUNCTION-------------
+	c.selectedName = '';
+	var RequestObject = {};
+	c.submitButton = function(){
+
+		//var selectedName = c.selectedName;
+
+		// =============== VALIDATE FIELDS ================= `
+		if(c.selectedName == ""){ 
+			document.getElementById('nameSelect').style.background = 'pink';
+			alert('Please select your name.');
+			return;
+		}	
+			
+		if(c.requested.length == 0){
+			alert('You do not have any Requests in progress.'); 
+			return;
+		}		
+
+		if(c.selections.length == 0){
+			alert('Please make a selection.'); 
+			return;
+		}
+
+		c.showModal();
+
+	} //-------------------END CANCEL REQUEST FUNCTION------------------------------
+
+	c.submitModal = function() {
+		RequestObject.employeeName = c.selectedName;
+		RequestObject.requestedDays = c.selections;
+
+		$scope.data.yourSelections = RequestObject;
+		$scope.server.update();
+
+		c.isModalVisible = false;
+		//c.onMonthChange();
+		c.records = [];
+		c.selections = [];
+		c.requested = [];
+		c.prevRequested = [];		
+		c.selectedName =''; 
+
 	};
 
+	// ====================== MODAL ===========================
+	c.isModalVisible = false;
 
-};]]></client_script>
+	c.showModal = function() { 
+		c.isModalVisible = true;		
+	};
+
+	c.closeModal = function() {
+		c.isModalVisible = false;
+	};
+
+	//======================== END MODAL========================
+
+};
+]]></client_script>
         <controller_as>c</controller_as>
         <css>#mainDiv{
-  display:flex;
-  color:black;
-}
-
-h3, h4{
-text-align:center;
-}
-
-#wrapperAvailable
-{
-margin:5px;
-}
-
-#wrapperSelected
-{
-margin:5px;
-}
-
-.labels{
-text-align:center;
-}
-table{  
-  box-shadow: 1px 2px 4px gray;
-  border-radius:15px;
-
-}
-th{
-  padding:10px;
-  width:30px; 
-  text-align:center;
-}
-
-td{
+  width:100%;
+  color:black;  
+  margin:0;
+  padding:0;
   
-  padding:10px;
-  width:30px; 
+  border-radius:3px;
+  box-shadow: 1px 2px 4px gray;
+}
+/* ========== HEADER ============== */
+.headerDiv{
+width:100%;
   text-align:center;
 }
+h3, h4{
+  text-align:center;
+  font-weight:bold;
+}
+
+select{
+  border:none;
+  border-radius:3px;
+  max-width:170px;
+  box-shadow: 1px 1px 3px gray;
+}
+/* ============ END HEADER ============ */
+/* ====== MY REQUESTS ======== */
+.myRequestsDiv
+{
+  width:100%;   
+  max-height:50vh;
+  overflow:auto;  
+  text-align:center;  
+}
+
+#myRequestsHeader {
+  width:100%; 
+  text-align:center;
+}
+#myRequestsHeader th{
+  width:100px;    
+  padding:3px;
+  border-bottom:solid;
+  border-width:thin;
+  text-align:center;
+}
+
+
+#myRequestsHeader td{
+  width:100px;   
+  padding:3px;
+  text-align:center;
+}
+
+#myRequestsHeader input{
+  border-radius:2px;
+  box-shadow: 1px 1px 2px;
+}
+
+
+#myRequestsHeader img{
+  width:20px;
+  height:20px;
+  box-shadow: 1px 2px 6px gray;
+}
+
+
+/* ====== END MY REQUESTS ======== */
+/* ====== CLOSED REQUESTS ======== */
+.closedRequestDiv
+{
+  width:100%;   
+  max-height:50vh;
+  overflow:auto;  
+  text-align:center;
+}
+
+#closedRequestHeader {
+  width:100%; 
+}
+
+#closedRequestHeader th{
+  width:100px;    
+  padding:3px;
+  border-bottom:solid;
+  border-width:thin;
+  text-align:center;
+}
+
+#closedRequestRecords {
+  width:100%;  
+}
+
+#closedRequestRecords td{
+  width:100px;   
+  padding:3px;
+  text-align:center;
+}
+
+/* ====== END CLOSED REQUESTS ======== */
 
 .selectionColor{
-color:blue;
+  color:blue;
+  font-weight:bold;
 }
 
-.submitButton{
+.submitButtonDiv
+{
+  width:97%;
+  text-align:center;
+
+}
+.submitButton {
+  text-shadow: 1px 1px 2px gray;
+  text-align:center;
+  color: #000000;
+   
+  font-weight: bold;
   border:none;
-border-radius:5px;
-  box-shadow: 1px 2px 5px gray;
-}</css>
+  border-radius:3px;
+  margin:5px;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+   
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px gray;
+}
+
+
+
+/* ====== MODAL ======== */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: none; -*/
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.spanBtns {
+  color: #aaa;
+  float: right;    
+}
+
+.btns {
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  border:none;
+}
+
+.btns:hover,
+.btns:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ============ MODAL ============= */
+.modal-content{
+  color:black;
+  
+  
+}
+
+/* ================================ */</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -157,82 +348,163 @@ border-radius:5px;
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {
+	//==============Load Employee Names =================
+	var empArray=[];
+	data.empNames = empArray;
+
+	var employeesGr = new GlideRecord('sys_user');
+	employeesGr.addActiveQuery();
+	employeesGr.query();
+
+	while(employeesGr.next()){	
+		var empSysId = employeesGr.getValue('sys_id');
+		var empName = employeesGr.getValue('name');
+		var empObj = {name: empName, sysId: empSysId};		
+
+		empArray.push(empObj);
+	}
+
+	// Sort the users array by the name property
+	empArray.sort(function(a, b) {
+		if (a.name < b.name) {
+			return -1;
+		}
+		if (a.name > b.name) {
+			return 1;
+		}
+		return 0;
+	});
+	//================== END LOADING EMPLOYEE ARRAY ==========================
+	// Bind the Client OBJECT with the Server INPUT OBJECT to get the Request Object data
+	var requestObject = input;
+
+	if(requestObject){
+		// Initialize a GlideRecord object for the target table
+		var employeeName = requestObject.yourSelections.employeeName;
+		var requestedDays = requestObject.yourSelections.requestedDays;
+
+		//Update Records-Set approval to Employee Canceled---------------
+		var numArray = [];
+		for(var i = 0;i< requestedDays.length;i++){
+			var month = requestedDays[i].month;
+			var day = requestedDays[i].day;
+			var year = requestedDays[i].year;			
+			
+			var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_requested_time_off');
+			gr.addQuery('month',month);
+			gr.addQuery('day',day);
+			gr.addQuery('year',year);
+			gr.query();
+		
+			if(gr.next()){	
+				if(i == 0){gr.parent_record = true;}else{gr.parent_record = false;}
+				// Set field values
+				gr.approval = "employee_canceled";
+				gr.closed_date = new GlideDateTime();
+				gr.update();
+			}
+
+			numArray.push(gr.number);
+		}//END FOR LOOP
+		var num = numArray.join(',');
+		gs.addInfoMessage('SUCCESS. THE FOLLOWING REQUESTS HAVE BEEN CANCELED. Ticket/s: ' + num)
+	}
+	//------------------------------------
+
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 07:59:04</sys_created_on>
         <sys_id>3feb8ae7971a0e1405d3b09ad053af79</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>477</sys_mod_count>
         <sys_name>HSC My Requests</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_3feb8ae7971a0e1405d3b09ad053af79</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-27 08:03:19</sys_updated_on>
-        <template><![CDATA[
-<div id="mainDiv" >
-
-  <div id="wrapperAvailable" >
-   
-    <div>
-      <h3>Scheduled Time Off</h3>
-
-      <table>
-        <thead>          
-          <tr>
-            <th>  </th>
-            <th>Month </th>
-            <th>Day </th>
-            <th>Year </th>
-            <th>Slots Available </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="record in c.records">
-            <td><input  ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.selected )" /> </td>
-            <td>{{record.month}}</td>
-            <td>{{record.day}}</td>
-            <td>{{record.year}}</td>
-            <td>{{record.slots_available}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Selected Div -->
-  <div id="wrapperSelected" >
-   
-    <div>
-      <h3>Cancel Time Off</h3>
-
-      <table>
+        <sys_updated_on>2024-06-05 06:32:26</sys_updated_on>
+        <template><![CDATA[<div id="mainDiv" >  
+  <div class="headerDiv" >
+  <h3>MY REQUESTS</h3>
+  <br/>    
+      <label for="nameSelect">*Name</label>      
+      <select id="nameSelect"  ng-model="c.selectedName" ng-change="c.fetchRecords(c.selectedName)" >
+        <option ng-repeat="employee in data.empNames" value="{{employee.sysId}}">{{employee.name}}</option>
+      </select>     
+      <button class="submitButton" ng-click="c.submitButton()">CANCEL REQUEST</button>
+    </div>    
+    <div class="myRequestsDiv" >       
+      <table id="myRequestsHeader" >                 
         <thead>
-          <tr>           
+          <tr>    
+            <th> <img src="hsc_checkmark.jpg" /></th>
             <th>Month </th>
             <th>Day </th>
-            <th>Year </th>            
+            <th>Year </th> 
+            <th>Type </th>
+            <th>Status</th>
+            <th>Created </th>             
           </tr>
-        </thead>
+        </thead>      
+     
         <tbody>
-          <tr class="selectionColor" ng-repeat="record in c.selections">
+          <tr ng-repeat="record in c.requested">
+            <td><input ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.type,record.sys_created_on,record.closed_date,record.selected )" /> </td>
             <td>{{record.month}}</td>
             <td>{{record.day}}</td>
             <td>{{record.year}}</td>
-            
-          </tr>
-          <tr><td></td><td></td><td></td>
-            <td  ><button class="submitButton" ng-click="c.submitButton()"  >
-            Submit
-            </button></td>
+            <td>{{record.type}}</td>
+            <td>{{record.approval}}</td>
+            <td>{{record.sys_created_on}}</td>            
           </tr>
         </tbody>
       </table>
     </div>
+    <h4>Closed Requests</h4>
+     <div class="closedRequestDiv" >       
+      <table id="closedRequestHeader" >                 
+        <thead>
+          <tr>    
+            <th>Month </th>
+            <th>Day </th>
+            <th>Year </th> 
+            <th>Type </th>
+            <th>Status</th>
+            <th>Created </th>
+            <th>Closed</th>
+          </tr>
+        </thead>          
+        <tbody>
+          <tr ng-repeat="record in c.prevRequested">
+            <td>{{record.month}}</td>
+            <td>{{record.day}}</td>
+            <td>{{record.year}}</td>
+            <td>{{record.type}}</td>
+            <td>{{record.approval}}</td>
+            <td>{{record.sys_created_on}}</td>
+            <td>{{record.closed_date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
 
-  </div>
-]]></template>
+
+    <!-- MODAL -->
+    <div id="myModal" class="modal" ng-show="c.isModalVisible">
+      <div class="modal-content">
+        <p><strong>YOUR REQUESTED CANCELLATIONS</strong></p>
+        <ul id="" ng-repeat="record in c.selections" >
+          <li>{{record.month}} {{record.day}}, {{record.year}} <b>{{record.type}}</b></li>
+        </ul>
+        <span class="spanBtns" >
+          <button class="btns" ng-click="c.closeModal()">CANCEL</button>
+          <button class="btns" ng-click="c.submitModal()">SUBMIT</button>
+        </span>
+      </div>
+    </div>]]></template>
     </sp_widget>
 </record_update>
