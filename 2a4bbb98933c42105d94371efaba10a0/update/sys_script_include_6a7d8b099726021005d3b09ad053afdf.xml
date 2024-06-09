@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1093559_hsc_em_0.CreateCalendarDaysUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CreateCalendarDaysUtils</name>
+        <script><![CDATA[var CreateCalendarDaysUtils = Class.create();
+CreateCalendarDaysUtils.prototype = {
+    initialize: function() {},
+    //====================== MONTH CONVERSION ARRAY ================	
+    months: [{
+            name: 'January',
+            value: 1
+        },
+        {
+            name: 'February',
+            value: 2
+        },
+        {
+            name: 'March',
+            value: 3
+        },
+        {
+            name: 'April',
+            value: 4
+        },
+        {
+            name: 'May',
+            value: 5
+        },
+        {
+            name: 'June',
+            value: 6
+        },
+        {
+            name: 'July',
+            value: 7
+        },
+        {
+            name: 'August',
+            value: 8
+        },
+        {
+            name: 'September',
+            value: 9
+        },
+        {
+            name: 'October',
+            value: 10
+        },
+        {
+            name: 'November',
+            value: 11
+        },
+        {
+            name: 'December',
+            value: 12
+        }
+    ],
+    //================ END MONTH CONVERSION ARRAY ===========================
+    createCalendarDays: function() {
+
+        //Create Calendar days (Feb 1st to Jan 31st)
+        var gd = new GlideDate();
+        var year = gd.getYearLocalTime();
+        var startYear = year;
+        var endYear = year + 2;
+
+        var startCycle = new GlideDateTime(startYear + "-02-01");
+        var endCycle = new GlideDateTime(endYear + "-01-31");
+
+        //========================================================================
+
+        var table = 'x_1093559_hsc_em_0_hsc_time_off_calendar';
+        var startDate = new GlideDateTime(startCycle);
+        var endDate = new GlideDateTime(endCycle);
+
+        while (startDate.getDisplayValue() <= endDate.getDisplayValue()) {
+            var monthUTC = this.months[startDate.getMonthUTC() - 1].name;
+			var monthValueUTC = this.months[startDate.getMonthUTC() - 1].value;
+            var dayUTC = startDate.getDayOfMonthUTC();
+			var yearUTC = startDate.getYearUTC();
+
+            var recordExists = this.recordCheck(monthUTC, dayUTC, yearUTC);
+
+            if (!recordExists) {
+
+                var dayGr = new GlideRecord(table);
+                dayGr.initialize();
+                dayGr.month = monthUTC;
+				dayGr.month_value = monthValueUTC;
+                dayGr.day = dayUTC;
+                dayGr.year = yearUTC;
+                dayGr.slots_assigned = 5;
+                dayGr.slots_available = 5;
+                dayGr.available = false;
+                dayGr.status = 'available';
+
+                dayGr.insert();
+            }
+            startDate.addDaysUTC(1);
+        } //End While loop
+
+    },
+    recordCheck: function(month, day, year) {
+        var table = 'x_1093559_hsc_em_0_hsc_time_off_calendar';
+        var recGr = new GlideRecord(table);
+        recGr.addQuery('month', month);
+        recGr.addQuery('day', day);
+        recGr.addQuery('year', year);
+        recGr.setLimit(1);
+        recGr.query();
+
+        if (recGr.next()) {
+            return true;
+        }
+
+    },
+
+    type: 'CreateCalendarDaysUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-01 04:36:55</sys_created_on>
+        <sys_id>6a7d8b099726021005d3b09ad053afdf</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>CreateCalendarDaysUtils</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_script_include_6a7d8b099726021005d3b09ad053afdf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-09 05:48:22</sys_updated_on>
+    </sys_script_include>
+</record_update>
