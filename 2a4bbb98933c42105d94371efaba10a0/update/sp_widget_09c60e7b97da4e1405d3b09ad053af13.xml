@@ -2,46 +2,36 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[api.controller = function($scope) {
-    var c = this;
+	var c = this;
+ 
 
-    // Get the result from the server script
-    c.resultMessage = $scope.data.result;
+  c.isActive = true;
+
+  c.toggle = function() {
+	 
+    c.isActive = !c.isActive;
+		 
+  };
+ 
+
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.modal {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-   
+        <css>.transition-container {
+  text-align: center;
+  margin-top: 50px;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 0 auto;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.box.active {
+  width: 200px;
+  background-color: red;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -57,22 +47,7 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	
-	try {
-		var inputs = {};
-		inputs.table_name = 'x_1093559_hsc_em_0.hsc_request_time_off';
-		//inputs.request_item = '' ; // GlideRecord of table: sc_req_item 
-
-		// Start Asynchronously: Uncomment to run in background.
-		//sn_fd.FlowAPI.getRunner().flow('x_1093559_hsc_em_0.hsc_request_time_off').inBackground().withInputs(inputs).run();
-				
-		// Execute Synchronously: Run in foreground.
-		sn_fd.FlowAPI.getRunner().flow('x_1093559_hsc_em_0.hsc_request_time_off').inForeground().withInputs(inputs).run();
-		 
-	} catch (ex) {
-		var message = ex.getMessage();
-		gs.error(message);
-	}
+ 
 	
 })();]]></script>
         <servicenow>false</servicenow>
@@ -80,16 +55,17 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-28 02:14:58</sys_created_on>
         <sys_id>09c60e7b97da4e1405d3b09ad053af13</sys_id>
-        <sys_mod_count>228</sys_mod_count>
+        <sys_mod_count>249</sys_mod_count>
         <sys_name>testonly</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_09c60e7b97da4e1405d3b09ad053af13</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-30 09:55:20</sys_updated_on>
-        <template><![CDATA[<div>
-    <p>{{c.resultMessage}}</p>
+        <sys_updated_on>2024-06-10 10:38:51</sys_updated_on>
+        <template><![CDATA[<div class="transition-container">
+  <button ng-click="c.toggle()">Toggle</button>
+  <div class="box" ng-class="{ 'active': c.isActive }"></div>
 </div>]]></template>
     </sp_widget>
 </record_update>
