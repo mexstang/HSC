@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1093559_hsc_em_0.PublicAPIIntegration</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PublicAPIIntegration</name>
+        <script><![CDATA[var PublicAPIIntegration = Class.create();
+PublicAPIIntegration.prototype = {
+    initialize: function() {},
+    
+    getPosts: function() {
+        var restMessage = new sn_ws.RESTMessageV2('Public API Integration', 'GET Posts');
+        var response = restMessage.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+         
+        if (httpStatus == 200) {  
+            var posts = JSON.parse(responseBody);
+			 
+            this.storePosts(posts);
+			 
+        } else {  
+            gs.error('Error fetching data: ' + httpStatus);
+        }
+    },
+    
+    storePosts: function(posts) { 
+        posts.forEach(function(post) {
+            var gr = new GlideRecord('x_1093559_hsc_em_0_u_public_api_data');
+            gr.initialize();
+            gr.u_id = post.id;
+            gr.u_title = post.title;
+            gr.u_body = post.body;
+            gr.insert();
+			
+        });
+    },
+    
+    type: 'PublicAPIIntegration'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-11 15:53:09</sys_created_on>
+        <sys_id>6ff4492c977ece1005d3b09ad053af8d</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>PublicAPIIntegration</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_script_include_6ff4492c977ece1005d3b09ad053af8d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-11 17:29:08</sys_updated_on>
+    </sys_script_include>
+</record_update>
