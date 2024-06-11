@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $http) {
+	/* widget controller */
+	var c = this;
+	//============= Array of objects: Months names/values =================
+	c.months = [
+		{name:"January",value:"1"},
+		{name:"February",value:"2"},
+		{name:"March",value:"3"},
+		{name:"April",value:"4"},
+		{name:"May",value:"5"},
+		{name:"June",value:"6"},
+		{name:"July",value:"7"},
+		{name:"August",value:"8"},
+		{name:"September",value:"9"},
+		{name:"October",value:"10"},
+		{name:"November",value:"11"},
+		{name:"December",value:"12"},
+	]
+
+	c.monthNameToNumber ={
+		"January":"1",
+		"February":"2",
+		"March":"3",
+		"April":"4",
+		"May":"5",
+		"June":"6",
+		"July":"7",
+		"August":"8",
+		"September":"9",
+		"October":"10",
+		"November":"11",
+		"December":"12"
+	}	
+	//===================================================
+	//SELECT MONTH DROPDOWN - Get curr month, year, add Jan of next year
+	//
+	c.month =[];
+
+	var currentDate = new Date();
+	var currentMonth = currentDate.getMonth();
+	var nextYear = currentDate.getFullYear() + 1;
+	var nextYearJan = "January-" + nextYear;
+
+	for(var i = 0; i < c.months.length; i++){
+		if(c.months[i].value > currentMonth){
+			c.month.push(c.months[i].name);
+		}
+	}
+	c.month.push(nextYearJan);
+
+	//EMPLOYEES SELECT BOX ===================
+	c.selectEmployee = function(){
+		document.getElementById('employeesList').style.background = "white";
+	}
+
+	//=============== FETCH RECORDS VIA REST ===========================
+	c.myArray = [];
+	// REST: Function to fetch records based on the selected month
+	c.fetchRecords = function(selectedMonth,selectedYear,calendarStartDay) {
+
+		$http({
+			method: 'GET',
+			url: '/api/now/table/x_1093559_hsc_em_0_hsc_time_off_calendar?',
+			params: {
+				sysparm_query: 'month=' + selectedMonth + '^year=' + selectedYear,
+				sysparm_fields: 'month,day,year,slots_available',
+				sysparm_limit: 31,
+				sysparm_orderby: 'day' ,
+			}
+		}).then(function(response) {
+			c.records = response.data.result;
+			// Sort the records ASC
+			c.records.sort(compareByDay);	
+
+			for(var r = 0;r < c.records.length;r++){
+				if(c.records[r].slots_available > 0){
+					c.myArray.push({number:r + 1, slots:'Slots(' + c.records[r].slots_available + ')' , class:"availableDay",year:c.records[r].year,month:c.records[r].month});
+
+				}else{
+					c.myArray.push({number:r  + 1, slots:'Slots(' + 0 + ')', class:"NotAvailableDay"});
+
+				}				
+			}
+
+			//=================ON LOAD - CALENDAR ==================================
+			c.calendarDays = [];
+
+			var e = 0;
+			for(var d=0;d < c.myArray.length + calendarStartDay;d++){
+				if(d >= calendarStartDay){			
+					c.calendarDays.push(c.myArray[e]);
+					e++;
+				}else{
+					c.calendarDays.push({number:"",slots:"",class:"emptyBtns"});
+				}		
+			}			
+		});//END .then ================================
+	};//============== END FETCH RECORDS ===============================
+
+	startOfMonth();//Gets the day in which to start the calendar.
+
+	//================== ON MONTH CHANGE ============================
+	c.changeMonth = function(mon){
+		c.calendarDays=[];
+		c.records=[];
+		c.myArray=[];
+
+		document.getElementById('selectedMonthBox').style.background = "white";		
+
+
+		startOfMonth(mon);//Gets the day in which to start the calendar.
+	}		   
+	//=============== WHEN A DAY IS CLICKED, ADD A RECORD ================================================
+
+	c.mySelections = [];
+
+	c.dayClicked = function(year,month,day){ 
+		var objectName = "obj" +year+month+day;
+
+		var convertedNumber = c.monthNameToNumber[month];
+
+		for(var i =0; i < c.mySelections.length; i++){	
+			if(c.mySelections[i].year == year && c.mySelections[i].month == convertedNumber && c.mySelections[i].day == day){
+				alert("duplicate"); 
+				return;
+			}
+		}//End loop
+
+		var mySelectionsObj = {year:year, month:convertedNumber, day:day, type:"", objectName:objectName, monthName:month};
+		c.mySelections.push(mySelectionsObj);	
+
+		c.mySelections.sort(compareSelections);
+
+	}//End function	
+
+	//--------------- REMOVE A SELECTION ----------------
+	c.removeDay = function(year,month,day){ 
+
+		for(var i =0; i < c.mySelections.length; i++){	
+			if(c.mySelections[i].year == year && c.mySelections[i].month == month && c.mySelections[i].day == day){
+				c.mySelections.splice(i,1);
+			}
+		}//End loop		
+	}//End function
+
+	//=========== MY SELECTIONS ============== /SUBMIT BUTTON - Pass c.mySelections array to
+	//the $scope.data object in a property(selectedDays)
+	c.submitMySelections = function(){
+		var requestObj = {
+			employee: c.selectedEmployee ,
+			info: c.mySelections
+		}
+
+		$scope.data.TimeOff = requestObj;
+		var su = $scope.server.update();
+		if(su){
+			resetWidget();
+
+		}
+	}
+	//========= MODAL SECTION ==================
+	c.isVisible = false;
+
+	c.showModal = function(){
+		c.isVisible = true;
+	}
+
+	c.hideModal=function(x){
+		c.isVisible = false;		
+	}	
+	//------------ ALERT MODAL ----------
+	c.isActive = false;
+
+	c.showAlertModal = function(x){
+		c.alert=x;
+		c.isActive = true;
+	}
+
+	c.hideAlertModal=function(x){
+		c.isActive = false;		
+	}	
+
+	//==============================================
+	//++++++++++++++++++ FUNCTIONS SECTION +++++++++++++++++++++++++
+
+	function startOfMonth(x){ 
+
+		var newDate = new Date();			
+		var monthName = c.months[newDate.getMonth()].name;
+		var fullYear = newDate.getFullYear();
+
+		var monValue = c.monthNameToNumber[monthName];
+		var specDate = new Date(fullYear, monValue - 1, 1); 
+		var	startDay = specDate.getDay();		
+		if(!x){	
+			c.selectedMonth=monthName; 
+		}else if(x){	
+			if(x == 'January-2025'){
+				x = "January";
+				monthName = "January";
+				fullYear = fullYear + 1;				
+			}else{			
+				monthName=x;				
+			}
+			var monthValue = c.monthNameToNumber[x];
+			var specificDate = new Date(fullYear, monthValue - 1, 1); // month - 1 because months are zero-indexed
+			startDay = specificDate.getDay();
+		}
+
+		c.fetchRecords(monthName,fullYear,startDay);
+
+	}	// ============= End startOfMontH ============================
+
+	//SORT FUNCTION -----
+
+	//Sorts the objects in the Array
+	function compareByDay(a, b) {
+		return a.day - b.day;
+	}
+
+	//SORT MY SELECTIONS RECORDS
+	function compareSelections(a, b) {
+		// Assuming you want to sort by year, month, and then day
+		if (a.year != b.year) {
+			return a.year - b.year;
+		}
+		if (a.month != b.month) {
+			return a.month - b.month;
+		}
+		return a.day - b.day;
+	}
+
+	//DONE BUTTON - VALIDATE FIELDS ---------------------
+
+	c.validateFields = function(){		
+
+		if(c.selectedMonth == ""){
+			c.showAlertModal("Please select a month.");
+			document.getElementById('selectedMonthBox').style.background = "pink";		
+			return;
+		}	 
+
+		if(c.selectedEmployee == undefined || c.selectedEmployee == ""){
+			c.showAlertModal("Please select your name.");
+			document.getElementById('employeesList').style.background = "pink";		
+			return;
+		}	
+
+		if(c.mySelections == ''){
+			c.showAlertModal("Please make a selection.");
+			return;
+		}	
+
+		//Loop My Selections Type boxes
+		for(var i = 0; i < c.mySelections.length; i++){
+			if(c.mySelections[i].type == ""){				
+				c.showAlertModal("Please select what TYPE of day off you are taking.");
+				document.getElementById(c.mySelections[i].objectName).style.background = "pink";
+        if(i == c.mySelections.length - 1){return;}
+			}	
+		}
+		c.showModal();
+
+	}
+	//-----------------------------------------------
+
+	//============== MY SELECTIONS ==================== On Change Type
+
+	c.requestType = function(m,d,y,t){
+		for(var i = 0; i < c.mySelections.length; i++){
+			if(c.mySelections[i].month == m && c.mySelections[i].day == d && c.mySelections[i].year == y){
+				c.mySelections[i].type = t;	
+				document.getElementById(c.mySelections[i].objectName).style.background = "white";
+			}			
+		}//End Loop				
+	}//End Function
+
+	//RESET FUNCTION
+	function resetWidget(){
+		c.hideModal();		
+		c.mySelections = [];
+		c.calendarDays = [];	
+		c.selectedMonth ="";	
+		c.selectedEmployee="";
+	}
+
+	// +++++++++++++++++++++++ END FUNCTIONS +++++++++++++++++++++++++++++
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.emptyBtns{
+  border:none;
+}
+.availableDay{
+  border:none;
+  width:100%;
+  border-radius:3px;
+}
+.availableDay:hover{
+  background:lightblue;
+
+}
+
+.NotAvailableDay{
+  border:none;
+  background-color: #ccc;
+  color: #666; 
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6; 
+}
+
+.selectedMonthDiv{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  text-align:center;
+  font-weight:bold;
+  color:black;
+}
+
+.selectedMonthBox{
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 2px 4px gray;
+  margin:5px;
+}
+
+.monthLabel{
+  font-weight:bold;
+  font-size:16px;
+}
+
+.yearLabel{
+  font-weight:bold;
+  font-size:18px;
+}
+
+
+.employeesListContainer{
+  margin:5px;
+  float:right;
+}
+
+
+.employeesList{
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 2px 4px gray;  
+
+}
+
+
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day-name {
+  color:black;
+  font-weight: bold;
+  padding: 2px;
+  background-color: #ddd;
+  border-radius:3px;
+}
+
+.day{
+
+  color:black;
+  padding: 2px;
+  background-color: #f9f9f9;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+}
+/* ==== MY SELECTIONS === */
+.mySelections{
+  color:black;
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 1px 3px gray;
+  width:100%;
+  text-align:center;
+}
+
+h4{
+  color:black;
+  font-weight:bold;
+}
+
+.mySelectionsDay{
+  width:140px;
+  color:black;
+  text-align:left;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.removeBtn{
+  color:maroon;
+  font-weight:bold;
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 2px 3px gray;
+}
+
+
+.removeBtn:hover{
+  background:pink;
+  box-shadow: 2px 3px 6px gray;
+}
+
+.requestType{
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 1px 2px gray; 
+
+}
+
+/* -------- MY SELECTIONS MODAL ------- */
+.mySelectionsModalContainer{
+  display: block; 
+  position: fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color: rgba(0, 0, 0, 0.4);  
+}
+
+
+.mySelectionsModal {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  border: 1px solid #888;
+  border-radius:3px;
+  box-shadow: 2px 2px 5px black;
+  text-align: center; 
+  max-width: 300px;
+}
+
+.modalInfo{
+  color:black;
+}
+
+
+.doneBtn{
+  font-family:georgia;
+  margin:5px;
+  color:green;
+  border-radius:3px;
+  font-size:2rem;
+  font-weight:bold;
+  border:none;
+  box-shadow: 1px 1px 3px gray;
+}
+
+.doneBtn:hover{  
+  box-shadow: 1px 1px 13px gray;
+}
+
+.cancelModal{
+  margin:5px;
+  color:maroon;
+  font-weight:bold;
+  border:none;
+  border-radius:3px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+.cancelModal:hover{  
+  box-shadow: 1px 1px 13px gray;
+}
+
+.submitModal{
+  margin:5px;
+  color:green;
+  border-radius:3px;
+  font-weight:bold;
+  border:none;
+  box-shadow: 1px 1px 3px gray;
+}
+
+
+.submitModal:hover{  
+  box-shadow: 1px 1px 13px gray;
+}
+
+
+.modalInfo{
+  text-align:left;
+}
+
+/* =========== ALERT MODAL ========== */
+.alertModalContainer{
+  position: absolute;
+  top: -500px;
+  left: center;
+  z-index: 1;
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  transition: top 0.9s ease;
+}
+
+.alertModalContainer.active {
+  top: 0;
+}
+
+.alertModal{
+  color:black;
+  text-align:center;
+  margin:10px auto;
+  width:400px;
+  height:150px;
+  background:white;
+  border-radius:3px;
+  box-shadow: 1px 2px 3px black;  
+}
+
+.alert{
+  color:black;
+  font-weight:bold;
+  margin:5px;
+}
+
+.alertBtn{
+  margin:5px;
+  color:green;
+  border-radius:3px;
+  font-weight:bold;
+  border:none;
+  box-shadow: 1px 1px 3px gray;
+}
+
+
+.alertBtn:hover{  
+  box-shadow: 1px 1px 13px gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_calendar</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HSC_Calendar</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	//EMPLOYEE NAME SELECT BOX - LOAD IT 
+	var empObj={};
+
+	var empGr = new GlideRecord('sys_user');
+	empGr.addActiveQuery();
+	empGr.orderBy('name');
+	empGr.query();
+
+	while(empGr.next()){
+		var sysId = empGr.getValue('sys_id');
+		var name = empGr.getValue('name');
+		empObj[name] = sysId;
+	}	
+
+	//Convert empObj into an array or arrays-[["name","value"],["name","value"]]
+	data.employeeArray = Object.entries(empObj);
+
+	//========= INSERT RECORDS INTO TABLE FROM INPUT OBJECT ====
+	var dataObj = input;
+
+	if(input){
+		var table = "x_1093559_hsc_em_0_hsc_requested_time_off";
+		var empName = 	empObj[dataObj.TimeOff.employee];
+		var empArray = dataObj.TimeOff.info;	
+		var recNumber = [];
+		//Check for duplicates	
+		for(var i = 0; i < empArray.length; i++){		
+			var recMonth = empArray[i].month;
+			var recMonthName = empArray[i].monthName;
+			var recDay = empArray[i].day;
+			var recYear = empArray[i].year;
+			var rectype = empArray[i].type;
+
+			var recExists = recordExists(recMonth, recDay, recYear);	
+
+			if(!recExists){
+				var msGr = new GlideRecord(table);
+				msGr.initialize();
+
+				if (i == 0) {
+					msGr.parent_record = true;
+				} else {
+					msGr.parent_record = false;
+				}				
+
+				msGr.employee_name = empName;
+				msGr.month = recMonthName;
+				msGr.month_value = recMonth;
+				msGr.day = recDay;
+				msGr.year = recYear;
+				msGr.type = rectype;
+				msGr.insert();	
+
+				recNumber.push(msGr.number); 
+			}
+		}//End Loop
+
+		if(recNumber.length > 0){ 
+			var recNumberSplit = recNumber.join(",");
+			gs.addInfoMessage("SUCCESS. The following requests were submitted. " + recNumberSplit);
+		}else{
+			gs.addErrorMessage("This request has already been submitted.");
+		}
+
+	}//End If
+
+	function recordExists(m,d,y){
+		var recGr = new GlideRecord(table);
+		recGr.addActiveQuery();
+		recGr.addQuery('month',m);
+		recGr.addQuery('day',d);
+		recGr.addQuery('year',y);
+		recGr.query();
+
+		while(recGr.next()){
+			return true;
+		}	
+		return false;
+	}
+
+	//============= END CONTAINER FUNCTION ================	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-05 13:29:11</sys_created_on>
+        <sys_id>0fcd65e697a2861005d3b09ad053afb5</sys_id>
+        <sys_mod_count>1220</sys_mod_count>
+        <sys_name>HSC_Calendar</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_0fcd65e697a2861005d3b09ad053afb5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-11 05:08:42</sys_updated_on>
+        <template><![CDATA[<div class="selectedMonthDiv" >
+  <select id="selectedMonthBox" class="selectedMonthBox" ng-model="c.selectedMonth" ng-change="c.changeMonth(c.selectedMonth)" >
+    <option ng-repeat="month in c.month" value="{{month}}" >{{month}}</option>
+  </select> 
+  <span  class="employeesListContainer" > Employee Name
+    <select id="employeesList" class="employeesList" ng-model="c.selectedEmployee" ng-change="c.selectEmployee()" >
+      <option class="employeeOption"  ng-repeat="rec in data.employeeArray"  value="{{rec[0]}}" >{{rec[0]}}  </option>    
+    </select></span>
+</div>
+<!-- ====================== CALENDAR =============== -->
+<div class="calendar">
+  <div class="day-name">Sun</div>
+  <div class="day-name">Mon</div>
+  <div class="day-name">Tue</div>
+  <div class="day-name">Wed</div>
+  <div class="day-name">Thu</div>
+  <div class="day-name">Fri</div>
+  <div class="day-name">Sat</div>
+
+  <div class="day" ng-repeat="rec in c.calendarDays" >
+    <button class="{{rec.class}}" ng-click="c.dayClicked(rec.year,rec.month,rec.number)"  >
+      <b>{{rec.number}}</b>
+      <br/>
+      {{rec.slots}}
+    </button>
+  </div>
+</div>
+<!-- ============= MY SELECTIONS ============== -->
+<div id="mySelections" class="mySelections" >
+  <h4>My Selections</h4>
+  <div class="mySelectionsOptions" ng-repeat="rec in c.mySelections" >
+    <label class="mySelectionsDay" >{{rec.monthName}}-{{rec.day}}-{{rec.year}}</label>
+    &nbsp;
+    <select id="{{rec.objectName}}" class="requestType" ng-model="rec.type" ng-change="c.requestType(rec.month,rec.day,rec.year,rec.type)" >
+      <option ></option>
+      <option >Sick Day</option>
+      <option >Vacation Day</option>
+    </select>
+    <button class="removeBtn" ng-click="c.removeDay(rec.year,rec.month,rec.day) " >
+      X
+    </button>
+  </div> 
+  <button class="doneBtn" ng-click="c.validateFields()" >
+    Done
+  </button>
+</div>
+<!-- ============= MODAL============== -->
+<div class="mySelectionsModalContainer" ng-show="c.isVisible" >
+  <div class="mySelectionsModal" >
+    <h4>
+      CONFIRM SELECTIONS
+    </h4>
+    <ul class="modalInfo" ng-repeat="rec in c.mySelections" >
+      <li>{{rec.monthName}}-{{rec.day}}-{{rec.year}} <b>{{rec.type}}</b></li>
+    </ul>    
+    <button class="cancelModal" ng-click="c.hideModal()" >
+      Cancel
+    </button>
+    <button class="submitModal" ng-click="c.submitMySelections()" >
+      Submit
+    </button>
+  </div>
+</div>
+
+<!-- ===================== ALERT MODAL ========================= -->
+<div id="alertModalContainer" class="alertModalContainer" ng-class="{ 'active': c.isActive }">
+<div id="alertModal" class="alertModal" >
+  <label class="alert" ng-model="c.alert" >{{c.alert}}</label>
+  <br/>
+  <button class="alertBtn" ng-click="c.hideAlertModal()" >
+      OK
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>
