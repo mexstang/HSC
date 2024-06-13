@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Ribbon Config ID</description>
+        <name>ribbonConfigId</name>
+        <page display_value="HSC Workspace">48eef501d57e82501336eb84182cfcca</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-13 09:08:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>40eef5019d7e82508d6c0dd1b4af35ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ribbonConfigId</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ux_page_property_40eef5019d7e82508d6c0dd1b4af35ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-13 09:08:38</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1093559_hsc_em_0.48eef501d57e82501336eb84182cfcca.root.ribbonConfigId</unique_name>
+        <value>88eef501a77e8250800e9711898c38ba</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=40eef5019d7e82508d6c0dd1b4af35ba"/>
+</record_update>
