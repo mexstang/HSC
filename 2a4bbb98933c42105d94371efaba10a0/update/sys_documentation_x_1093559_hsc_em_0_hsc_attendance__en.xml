@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="HSC ATTENDANCE" language="en" table="x_1093559_hsc_em_0_hsc_attendance">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>HSC ATTENDANCE</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_attendance</name>
+            <plural>HSC ATTENDANCEs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-11 01:00:03</sys_created_on>
+            <sys_id>4f994836937886105d94371efaba100a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>HSC ATTENDANCE</sys_name>
+            <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+            <sys_update_name>sys_documentation_x_1093559_hsc_em_0_hsc_attendance__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-11 01:00:03</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
