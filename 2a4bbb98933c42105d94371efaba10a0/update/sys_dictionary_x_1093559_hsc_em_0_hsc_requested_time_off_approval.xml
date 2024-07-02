@@ -10,13 +10,13 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice>1</choice>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Approval</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>not requested</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -32,7 +32,7 @@
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Choice">choice</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
@@ -59,7 +59,7 @@
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sys_dictionary_x_1093559_hsc_em_0_hsc_requested_time_off_approval</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-29 03:59:17</sys_updated_on>
+        <sys_updated_on>2024-05-31 05:09:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
