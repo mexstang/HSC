@@ -7,36 +7,36 @@
         <display_2/>
         <display_date/>
         <filter/>
-        <glyph>child</glyph>
+        <glyph/>
         <hint/>
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <label>HELP</label>
-        <order>12</order>
+        <label>Request Time Off</label>
+        <order>3</order>
         <record_script/>
         <sc_cat_item/>
         <sc_category/>
         <short_description/>
-        <sp_page display_value="test_widgets">39fadab7975e4e1405d3b09ad053af7e</sp_page>
-        <sp_rectangle_menu display_value="HSC Menu">eb9aa068933082105d94371efaba1074</sp_rectangle_menu>
-        <sp_rectangle_menu_item/>
+        <sp_page display_value="hsc_request_time_off">5b0e606c933082105d94371efaba1020</sp_page>
+        <sp_rectangle_menu/>
+        <sp_rectangle_menu_item display_value="TIME OFF">43fd682c933082105d94371efaba1083</sp_rectangle_menu_item>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-04 04:00:17</sys_created_on>
-        <sys_id>426f20ac933082105d94371efaba10c1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>HELP</sys_name>
+        <sys_created_on>2024-05-27 07:50:45</sys_created_on>
+        <sys_id>54c9c267971a0e1405d3b09ad053afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Time Off</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name>sp_rectangle_menu_item_426f20ac933082105d94371efaba10c1</sys_update_name>
+        <sys_update_name>sp_rectangle_menu_item_54c9c267971a0e1405d3b09ad053afc2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-28 03:47:23</sys_updated_on>
+        <sys_updated_on>2024-05-27 07:50:45</sys_updated_on>
         <table/>
         <type>page</type>
         <url/>
         <url_target/>
     </sp_rectangle_menu_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=426f20ac933082105d94371efaba10c1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=54c9c267971a0e1405d3b09ad053afc2"/>
 </record_update>

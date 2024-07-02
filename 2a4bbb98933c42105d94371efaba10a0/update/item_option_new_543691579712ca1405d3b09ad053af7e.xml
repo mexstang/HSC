@@ -29,7 +29,7 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table/>
+        <list_table>x_1093559_hsc_em_0_hsc_time_off_calendar</list_table>
         <lookup_label/>
         <lookup_price/>
         <lookup_table/>
@@ -37,17 +37,17 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>employee_name</name>
-        <order>5</order>
+        <name>select_the_days_you_need_off</name>
+        <order>2</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>EMPLOYEE NAME</question_text>
+        <question_text>SELECT THE DAYS YOU NEED OFF</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -55,7 +55,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_1093559_hsc_em_0_hsc_request_time_off</record_producer_table>
-        <reference>sys_user</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -75,23 +75,23 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-14 00:24:23</sys_created_on>
-        <sys_id>e3dd17ef9374ca105d94371efaba105e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>EMPLOYEE NAME</sys_name>
+        <sys_created_on>2024-05-26 09:26:40</sys_created_on>
+        <sys_id>543691579712ca1405d3b09ad053af7e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>SELECT THE DAYS YOU NEED OFF</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name>item_option_new_e3dd17ef9374ca105d94371efaba105e</sys_update_name>
+        <sys_update_name>item_option_new_543691579712ca1405d3b09ad053af7e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-27 00:12:37</sys_updated_on>
+        <sys_updated_on>2024-05-27 00:07:21</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>21</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>
@@ -103,22 +103,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=e3dd17ef9374ca105d94371efaba105e"/>
-    <fx_price action="delete_multiple" query="id=e3dd17ef9374ca105d94371efaba105e"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=543691579712ca1405d3b09ad053af7e"/>
+    <fx_price action="delete_multiple" query="id=543691579712ca1405d3b09ad053af7e"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>e3dd17ef9374ca105d94371efaba105e</id>
+        <id>543691579712ca1405d3b09ad053af7e</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-14 00:24:23</sys_created_on>
-        <sys_id>793e97ef9374ca105d94371efaba1020</sys_id>
+        <sys_created_on>2024-05-26 09:26:40</sys_created_on>
+        <sys_id>d16651979712ca1405d3b09ad053af4c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-14 00:24:23</sys_updated_on>
+        <sys_updated_on>2024-05-26 09:26:40</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -126,16 +126,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>e3dd17ef9374ca105d94371efaba105e</id>
+        <id>543691579712ca1405d3b09ad053af7e</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-14 00:24:23</sys_created_on>
-        <sys_id>313e97ef9374ca105d94371efaba1020</sys_id>
+        <sys_created_on>2024-05-26 09:26:40</sys_created_on>
+        <sys_id>1d6659579712ca1405d3b09ad053af6c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-14 00:24:23</sys_updated_on>
+        <sys_updated_on>2024-05-26 09:26:40</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
