@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="HSC Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
+        <group/>
+        <owner>false</owner>
+        <role display_value="x_1093559_hsc_em_0.hsc_requested_time_off_user" name="x_1093559_hsc_em_0.hsc_requested_time_off_user">c309ba0097e2ce1405d3b09ad053afcf</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-13 09:08:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cdee7901977e825005d3b09ad053af07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>88eef5015f7e8250f2ce9e4e235bd5c3</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>par_dashboard_permission_cdee7901977e825005d3b09ad053af07</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-13 09:08:40</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+</record_update>

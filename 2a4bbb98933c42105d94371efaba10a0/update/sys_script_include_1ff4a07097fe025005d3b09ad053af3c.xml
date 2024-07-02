@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1093559_hsc_em_0.MyRestScriptInclude</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>MyRestScriptInclude</name>
+        <script><![CDATA[var MyRestScriptInclude = Class.create();
+MyRestScriptInclude.prototype = {
+    initialize: function() {},
+
+    getPosts: function() {
+        var restMessage = new sn_ws.RESTMessageV2('myRestMessage', 'myHttpGetPosts');
+        var response = restMessage.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+
+        if (httpStatus == 200) {
+            var posts = JSON.parse(responseBody);
+            this.storePosts(posts);
+        } else {
+            gs.info('Error with MyRestScriptInclude.');
+        }
+    },
+
+    storePosts: function(posts) {
+        posts.forEach(function(post) {
+            var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_rest_test');
+            gr.initialize();
+            gr.u_id = post.id;
+            gr.u_title = post.title;
+            gr.u_body = post.body;
+            gr.insert();
+        });
+    },
+
+
+    type: 'MyRestScriptInclude'
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 08:15:20</sys_created_on>
+        <sys_id>1ff4a07097fe025005d3b09ad053af3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MyRestScriptInclude</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_script_include_1ff4a07097fe025005d3b09ad053af3c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-12 08:15:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

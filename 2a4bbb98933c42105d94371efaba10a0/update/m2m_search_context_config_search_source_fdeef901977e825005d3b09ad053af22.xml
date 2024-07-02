@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_search_context_config_search_source">
+    <m2m_search_context_config_search_source action="INSERT_OR_UPDATE">
+        <order>300</order>
+        <search_context_config display_value="HSC Workspace - Workspace Search">84eef5016d7e82504f0a2ecef17759c1</search_context_config>
+        <source display_value="HSC Workspace - x_1093559_hsc_em_0_hsc_requested_t">f5eef901977e825005d3b09ad053af1b</source>
+        <sys_class_name>m2m_search_context_config_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-13 09:08:43</sys_created_on>
+        <sys_id>fdeef901977e825005d3b09ad053af22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>m2m_search_context_config_search_source_fdeef901977e825005d3b09ad053af22</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-13 09:08:43</sys_updated_on>
+    </m2m_search_context_config_search_source>
+</record_update>

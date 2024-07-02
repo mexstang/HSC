@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="337636c997a2021005d3b09ad053af73" sys_domain="global" table="x_1093559_hsc_em_0_hsc_time_off_calendar" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-01 02:55:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>808636c997a2021005d3b09ad053af77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_time_off_calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="Default view">337636c997a2021005d3b09ad053af73</sys_ui_form>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="Default view">777636c997a2021005d3b09ad053af72</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-01 02:55:56</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1093559_hsc_em_0_hsc_time_off_calendar</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-01 02:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>337636c997a2021005d3b09ad053af73</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1093559_hsc_em_0_hsc_time_off_calendar</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_337636c997a2021005d3b09ad053af73</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-01 02:55:55</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
