@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>time_out</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-26 02:59:02</sys_created_on>
+        <sys_id>09ad3703975a8a1405d3b09ad053af83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>time_out</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ui_policy_action_09ad3703975a8a1405d3b09ad053af83</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-26 02:59:02</sys_updated_on>
+        <table>x_1093559_hsc_em_0_hsc_attendance</table>
+        <ui_policy display_value="Hide TimeOut field if it is empty">e48d3fcf971a8a1405d3b09ad053af1f</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=09ad3703975a8a1405d3b09ad053af83"/>
+</record_update>

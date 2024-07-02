@@ -4,83 +4,125 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>5d1bbb62933886105d94371efaba10ad</sys_id>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a91fb5119756421405d3b09ad053af15</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>551bbb62933886105d94371efaba10ae</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>display_location</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>5d1bbb62933886105d94371efaba10ae</sys_id>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a11fb5119756421405d3b09ad053af16</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a91fb5119756421405d3b09ad053af16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>employee_of_the_month</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a11fb5119756421405d3b09ad053af17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a91fb5119756421405d3b09ad053af17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>551bbb62933886105d94371efaba10af</sys_id>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a11fb5119756421405d3b09ad053af18</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_created_on</element>
-            <position>4</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>5d1bbb62933886105d94371efaba10af</sys_id>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a91fb5119756421405d3b09ad053af18</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
-            <position>5</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-03-10 23:56:35</sys_created_on>
-            <sys_id>551bbb62933886105d94371efaba10b0</sys_id>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a11fb5119756421405d3b09ad053af19</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-03-10 23:56:35</sys_updated_on>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-20 07:16:36</sys_created_on>
+            <sys_id>a91fb5119756421405d3b09ad053af19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="Default view">14e237a693f486105d94371efaba10c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-20 07:16:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

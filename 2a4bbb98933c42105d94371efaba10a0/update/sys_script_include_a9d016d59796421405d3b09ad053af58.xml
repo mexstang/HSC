@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1093559_hsc_em_0.UserProfileImage</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>UserProfileImage</name>
+        <script><![CDATA[var UserProfileImage = Class.create();
+UserProfileImage.prototype = {
+    initialize: function() {
+    },
+
+    getUserImageUrl: function(userId) {
+        var attachmentGr = new GlideRecord('sys_attachment');
+        attachmentGr.addQuery('table_name', 'sys_user');
+        attachmentGr.addQuery('table_sys_id', userId);
+        attachmentGr.addQuery('content_type', 'image/jpeg'); // Adjust based on the image type
+        attachmentGr.query();
+        if (attachmentGr.next()) {
+            return '/sys_attachment.do?sys_id=' + attachmentGr.sys_id;
+        }
+        return null;
+    },
+
+    type: 'UserProfileImage'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-20 08:34:40</sys_created_on>
+        <sys_id>a9d016d59796421405d3b09ad053af58</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>UserProfileImage</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_script_include_a9d016d59796421405d3b09ad053af58</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-20 09:06:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

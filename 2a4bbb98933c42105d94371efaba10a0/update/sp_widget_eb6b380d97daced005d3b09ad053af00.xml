@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+
+	//ng-click
+	$scope.hello = function(){
+		alert("hello ese vato!");
+	}
+
+	//ng-if must = true to show
+	$scope.show = true;
+
+	//ng-if coins
+	$scope.coins = 10;
+
+	//ng-model date
+	var date = new Date();
+	var month = date.getMonth();
+	var day = date.getDate();
+	var year = date.getFullYear();	
+	var monthNameArray = 
+			['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+	var daySuffix ='';
+	switch(day){
+		case 1:
+		case 21:
+		case 31:
+			daySuffix = 'st';
+			break;
+
+		case 2:
+		case 22:
+			daySuffix = 'nd';
+			break;
+
+		case 3:
+		case 23:
+			daySuffix = 'rd';
+			break;
+
+		default:
+			daySuffix = 'th';
+
+	}
+
+	var hour =	date.getHours();
+	var minutes = date.getMinutes();
+	var amPm = 'am';
+	
+	if(hour >= 12){
+		hour = hour - 11;
+		amPm = 'pm'
+	}
+	
+	if(minutes < 10){
+		minutes = '0' + minutes;
+	}
+
+
+
+	$scope.date1 = monthNameArray[month] + ' ' + day + daySuffix + ', ' + year;
+
+
+	//ng-if
+	var car = 'mustang';
+	if(car == 'mustang'){
+		$scope.wtf = true;
+	}
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.parentDiv{
+  height:auto;
+  width: 100%;
+  background:#F5F5F5;
+  margin:10px;
+  padding:5px;
+  border-radius:5px;
+  box-shadow: 1px 2px 15px gray;
+  color:black; 
+  font-size:16px;
+  font-family:book antiqua;
+  text-transform: uppercase;
+}
+
+.header{
+  width:100%;
+  text-align:center;
+  padding:2px;
+  font-weight:bold;
+  margin-bottom:5px;
+  
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>HSC APP - Custom Widget for the home page. Shows news updates and events as simple list. When you click a record, the widget next to it will show that record.</description>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_home_page</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>HSC Home Page</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	
+	var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_bulletin');
+	gr.addQuery('display_location','Must Read News')
+	gr.orderBy('order'); 
+	gr.query();
+	
+	data.grArray = [];
+	
+	while(gr.next()){
+	data.grArray.push(gr.getValue('description'));
+	}
+	
+		
+	
+	
+	//ng-repeat
+	data.myArray = [];
+	data.myArray.push('Chico');
+	data.myArray.push('Cheech');
+	data.myArray.push('Chavo');
+
+
+
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-19 07:46:18</sys_created_on>
+        <sys_id>eb6b380d97daced005d3b09ad053af00</sys_id>
+        <sys_mod_count>165</sys_mod_count>
+        <sys_name>HSC Home Page</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_eb6b380d97daced005d3b09ad053af00</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-20 16:26:56</sys_updated_on>
+        <template><![CDATA[<div id='parentDiv' class='parentDiv' >
+  <label class='header' ng-model='' >IMPORTANT NEWS - {{date1}} </label>
+  <ul ng-repeat='data in data.grArray' >
+    <li>{{data}}</li>
+   
+  </ul>
+
+
+
+ <!-- 
+  <span ng-repeat='coin in data.myArray' >
+  {{coin}}<br/>
+  </span>
+ 
+
+  <span ng-if='wtf' >WTFrank!</span>
+
+
+  <button ng-click='hello()' >
+    ALERT
+  </button>
+  <br/>
+
+
+  <span ng-if='show'>Smelly</span>
+  <br/>
+
+  <span ng-if='coins == 0 || coins == undefined'>No coins</span>
+  <span ng-if='coins > 0' >{{coins}} coins</span> 
+  -->
+
+</div>]]></template>
+    </sp_widget>
+</record_update>
