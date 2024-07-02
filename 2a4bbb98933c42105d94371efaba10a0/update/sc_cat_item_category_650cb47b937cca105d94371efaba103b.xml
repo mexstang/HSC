@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="HARD HAT">96fb74f7937cca105d94371efaba10a6</sc_cat_item>
+        <sc_category display_value="HSC UNIFORMS, BOOTS, ACCESSORIES">ba2540339378ca105d94371efaba101f</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-14 07:14:14</sys_created_on>
+        <sys_id>650cb47b937cca105d94371efaba103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC UNIFORMS, BOOTS, ACCESSORIES.HARD HAT</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sc_cat_item_category_650cb47b937cca105d94371efaba103b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-14 07:14:14</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

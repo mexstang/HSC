@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="HSC CreateTickets">d81a3478937002105d94371efaba1020</cat_item>
+        <cat_item display_value="Boots">830bd83f93b8ca105d94371efaba1080</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -21,12 +21,12 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>assignment_group</field>
+        <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
         <hidden>false</hidden>
-        <include_none>true</include_none>
+        <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
         <list_table/>
@@ -37,29 +37,27 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
-        <map_to_field>true</map_to_field>
+        <mandatory>false</mandatory>
+        <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>assignment_group</name>
-        <order>410</order>
+        <name>what_size_do_you_wear</name>
+        <order/>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>ASSIGNMENT GROUP</question_text>
+        <question_text>What size do you wear?</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>incident</record_producer_table>
-        <reference>sys_user_group</reference>
-        <reference_qual>nameSTARTSWITHHSC^EQ</reference_qual>
-        <reference_qual_condition table="sys_user_group">nameSTARTSWITHHSC^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="STARTSWITH" or="false" value="HSC"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </reference_qual_condition>
+        <record_producer_table/>
+        <reference/>
+        <reference_qual/>
+        <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -77,19 +75,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-11 23:50:54</sys_created_on>
-        <sys_id>3a70854393700a105d94371efaba10c5</sys_id>
-        <sys_mod_count>15</sys_mod_count>
-        <sys_name>ASSIGNMENT GROUP</sys_name>
+        <sys_created_on>2024-03-14 04:52:04</sys_created_on>
+        <sys_id>5c6b5c3f93b8ca105d94371efaba1047</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>What size do you wear?</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name>item_option_new_3a70854393700a105d94371efaba10c5</sys_update_name>
+        <sys_update_name>item_option_new_5c6b5c3f93b8ca105d94371efaba1047</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-14 22:54:22</sys_updated_on>
+        <sys_updated_on>2024-03-14 04:52:04</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>5</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -105,22 +103,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=3a70854393700a105d94371efaba10c5"/>
-    <fx_price action="delete_multiple" query="id=3a70854393700a105d94371efaba10c5"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c6b5c3f93b8ca105d94371efaba1047"/>
+    <fx_price action="delete_multiple" query="id=5c6b5c3f93b8ca105d94371efaba1047"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>3a70854393700a105d94371efaba10c5</id>
+        <id>5c6b5c3f93b8ca105d94371efaba1047</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-11 23:50:54</sys_created_on>
-        <sys_id>b753cd4793700a105d94371efaba107e</sys_id>
+        <sys_created_on>2024-03-14 04:52:04</sys_created_on>
+        <sys_id>4f7b947f93b8ca105d94371efaba10c0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-11 23:50:54</sys_updated_on>
+        <sys_updated_on>2024-03-14 04:52:04</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -128,16 +126,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>3a70854393700a105d94371efaba10c5</id>
+        <id>5c6b5c3f93b8ca105d94371efaba1047</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-11 23:50:54</sys_created_on>
-        <sys_id>7353cd4793700a105d94371efaba107d</sys_id>
+        <sys_created_on>2024-03-14 04:52:04</sys_created_on>
+        <sys_id>077b947f93b8ca105d94371efaba10c0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-11 23:50:54</sys_updated_on>
+        <sys_updated_on>2024-03-14 04:52:04</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
