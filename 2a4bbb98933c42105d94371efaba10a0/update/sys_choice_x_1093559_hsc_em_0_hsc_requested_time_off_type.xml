@@ -21,7 +21,7 @@
             <element>type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Sick</label>
+            <label>Sick Day</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
             <sequence>1</sequence>
@@ -31,17 +31,17 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a39a7ec897e2ce1405d3b09ad053af89</sys_id>
-            <sys_mod_count>3</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-29 01:34:37</sys_updated_on>
-            <value>Sick</value>
+            <sys_updated_on>2024-05-30 03:04:01</sys_updated_on>
+            <value>Sick Day</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Vacation</label>
+            <label>Vacation Day</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_requested_time_off</name>
             <sequence>2</sequence>
@@ -51,10 +51,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>ecd68f889726ce1405d3b09ad053afba</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-05-29 01:34:12</sys_updated_on>
-            <value>Vacation</value>
+            <sys_updated_on>2024-05-30 03:04:12</sys_updated_on>
+            <value>Vacation Day</value>
         </sys_choice>
     </sys_choice>
 </record_update>
