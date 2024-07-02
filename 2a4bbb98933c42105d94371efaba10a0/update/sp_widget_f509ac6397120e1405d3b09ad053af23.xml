@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope, $http) {	
+        <client_script><![CDATA[api.controller=function($scope, $http) {
 	/* widget controller */
 	var c = this;
 
@@ -20,16 +20,11 @@
 		{ name: 'November', value: 11 },
 		{ name: 'December', value: 12 }
 	];
-	//====================================
-	c.activeMonths = [];
-	var currentMonth = new Date();
-	currentMonth = currentMonth.getMonth() ;
 
-	for(var i = currentMonth;i <= c.months.length;i++){
-		c.activeMonths.push(c.months[i]);	
-	}
-	//====================================
-	c.records = []; 
+	// Default to the current month
+	c.selectedMonth = c.months[new Date().getMonth()].value; 
+	c.selectedMonthName = c.months[new Date().getMonth()].name;
+	c.records = [];
 
 	// REST: Function to fetch records based on the selected month
 	c.fetchRecords = function(selectedMonth) {
@@ -37,23 +32,24 @@
 			method: 'GET',
 			url: '/api/now/table/x_1093559_hsc_em_0_hsc_time_off_calendar?',
 			params: {
-				sysparm_query: 'month=' + selectedMonth + '^slots_available>0',
+				sysparm_query: 'month=' + selectedMonth,
 				sysparm_fields: 'month,day,year,slots_available',
 				sysparm_limit: 31,
 				sysparm_orderby: 'day' ,
 			}
 		}).then(function(response) {
 			c.records = response.data.result;
+
 			// Sort the array by 'day' property using the compare function
-			c.records.sort(compareByDay);	
+			c.records.sort(compareByDay);				
+
 		});
 	};
 
 	// Function to handle month change
 
 	c.onMonthChange = function() { 
-		document.getElementById('monthSelect').style.background = 'white';
-		var selectedMonthObject = c.activeMonths.find(function(month) {
+		var selectedMonthObject = c.months.find(function(month) {
 			return month.value === parseInt(c.selectedMonth);
 		});
 		c.selectedMonthName = selectedMonthObject.name;
@@ -61,7 +57,7 @@
 	};
 
 	// Initial load of records
-	//c.fetchRecords(c.selectedMonthName);
+	c.fetchRecords(c.selectedMonthName);
 
 	//When a checkbox is clicked, pass captures the record info
 	c.selections = [];
@@ -74,7 +70,7 @@
 			var obj ={month: month, day: day, year: year, typeName: typeName};			
 			c.selections.push(obj);				
 		}else if(!checkbox){ 			
-			for(var i = 0; i < c.selections.length; i++){
+			for(var i =0; i < c.selections.length; i++){
 				var index = c.selections.findIndex(function(obj) {
 					return obj.day === day;
 				});
@@ -90,254 +86,106 @@
 	function compareByDay(a, b) {
 		return a.day - b.day;
 	}
-	//-------------DONE BUTTON FUNCTION-------------
+	//--------------------------
 	c.typeSelect = '';
 	c.selectedName ='';
-	c.submitButton = function() { 	
+	var RequestObject = {};
+	c.submitButton = function() { 
 
-		var monthBox = document.getElementById('monthSelect').value;
+		var confirmation =	confirm("You have requested the following days off. \n Click OK to continue. \n\r" +c.selections[0].month + " " + c.selections[0].day + ", " + c.selections[0].year);
+		if(confirmation){ 	
 
-		if(monthBox == 0){
-			alert('Please select a month.'); 
-			document.getElementById('monthSelect').style.background = 'pink';
-			return;
-		}
+			for(var i=0;i< c.selections.length;i++){
+				var typeName = c.selections[i].typeName;
+				var type = document.getElementById(typeName).value;
+				document.getElementById(typeName).style.background = 'white';
+				if(type ==  "-- None --"  ){
+					document.getElementById(typeName).style.background = 'pink';
+					return;
+				}else{
+					c.selections[i].type = type;
+				}
 
-		if(c.selections.length == 0){
-			alert('Please make a selection.'); 
-			return;
-		}		
+			} 
 
-		if(c.selections.length == 0){
-			alert('Please make a selection.'); 
-			document.getElementById('monthSelect').style.background = 'pink';
-			return;}
-
-		var RequestObject = {};
-		var selectedName = c.selectedName;
-		var requestType = c.typeSelect;
-
-		//VALIDATE FIELDS
-		if(selectedName == ""){  
-			document.getElementById('nameSelected').style.background = 'pink';
-			alert('Please choose your name.');
-			return;
-		}
-
-		for(var i=0;i< c.selections.length;i++){
-			var typeName = c.selections[i].typeName;
-			var type = document.getElementById(typeName).value;
-
-			if(type ==  "-- None --"  ){
-				alert('Please make sure to choose a TYPE for every one of your selections.');
-				document.getElementById(typeName).style.background = 'pink';
+			var selectedName = c.selectedName;
+			var requestType = c.typeSelect;
+			if(selectedName == ""){ 
+				document.getElementById('nameSelect').style.background = 'pink';
 				return;
 			}else{
-				document.getElementById(typeName).style.background = 'white';
-				c.selections[i].type = type;
-			}
-		}
-
-		var message = '';
-		for(var x = 0;x < c.selections.length; x++){
-			message += " \u2022 " + c.selections[x].month + " " + c.selections[x].day + ", " + c.selections[x].year + " " + c.selections[x].type + " \n ";
-		}		
-		//=========================================================
-		c.showModal();
-
-		c.submitModal = function() {
 			RequestObject.employeeName = selectedName;
 			RequestObject.requestedDays = c.selections;
 
 			$scope.data.yourSelections = RequestObject;
 			$scope.server.update();
-
-			c.isModalVisible = false;
-			//c.onMonthChange();
-			c.records = [];
-			c.selections = [];
-			c.selectedName =''; 
-			c.selectedMonth = '';
-		};
-
-	}  
-	//=============================END SUBMIT============================
-
-	c.onNameChange=function(){
-		document.getElementById('nameSelected').style.background = 'white';
-	}	
-	// ------------ MODAL ---------------
-	c.isModalVisible = false;
-
-	c.showModal = function(message) { 
-		c.isModalVisible = true;		
-	};
-
-	c.closeModal = function() {
-		c.isModalVisible = false;
-	};
-
-	// Optional: Close the modal when clicking outside of it
-	window.onclick = function(event) {
-		var modal = document.getElementById('myModal');
-		if (event.target == modal) {
-			c.$apply(function() {
-				c.isModalVisible = false;
-			});
+			}
 		}
 	};
-	// ------------- END MODAL -----------------------
 
-};
-]]></client_script>
+
+
+
+
+
+
+
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>#mainDiv{
-  width:100%;
   display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color:black;   
+  color:black;
 }
 
 h3, h4{
-  text-align:center;
+text-align:center;
 }
 
 select{
-  border:none;
-  border-radius:3px;
-  max-width:170px;
-  box-shadow: 1px 1px 3px gray;
-  text-align:center;
+border-radius:5px;
+max-width:170px;
 }
 
 #wrapperAvailable
 {
-  padding:5px;
-  margin-right:15px;
-  box-shadow: 1px 2px 4px gray;
-  border-radius:3px;
-  min-height:100px;
-}
-
-.tableDiv
-{
-  max-height:50vh;
-  overflow:auto;  
-}
-
-.availableTable{ 
-  box-shadow: 1px 2px 4px gray;
-  border-radius:3px;
-  min-height:100px;
-
+margin:5px;
 }
 
 #wrapperSelected
 {
-  padding:5px;
-  margin-right:15px;
-  box-shadow: 1px 2px 4px gray;
-  border-radius:3px;
-  min-height:100px;
-}
-
-.selectedTable{   
-  min-height:100px; 
+margin:5px;
 }
 
 .labels{
-  text-align:center;
+text-align:center;
 }
-.selectionTable{  
-  min-height:100px;
-  max-height: 400px;
-}
+table{  
+  box-shadow: 1px 2px 4px gray;
+  border-radius:15px;
 
-table{
-width:100%;
 }
-
 th{
   padding:10px;
-  width:110px; 
+  width:30px; 
   text-align:center;
 }
 
 td{
+  
   padding:10px;
-  width:110px; 
+  width:30px; 
   text-align:center;
 }
 
 .selectionColor{
-  color:blue;
-  font-weight:bold;
+color:blue;
 }
 
-.btnTd{
-  text-align:right; 
-}
-
-.submitButton {
-  color: #aaa;
-  font-size: 20px;
-  font-weight: bold;
+.submitButton{
   border:none;
-}
-
-.submitButton:hover,
-.submitButton:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-
-/* ====== MODAL ======== */
-.modal {
-  display: block;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* display: none; -*/
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  padding-bottom: 40px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-
-.spanBtns {
-  color: #aaa;
-  float: right;    
-}
-
-.btns {
-  color: #aaa;
-  font-size: 20px;
-  font-weight: bold;
-  border:none;
-}
-
-.btns:hover,
-.btns:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-</css>
+border-radius:5px;
+  box-shadow: 1px 2px 5px gray;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -351,88 +199,72 @@ td{
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {	
-	//Create an Object & load it with Employee SysId & Name
-	var empObj = {};
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	var requestObject = input;
+
+	if(requestObject){
+		
+		// Initialize a GlideRecord object for the target table
+
+		var employeeName = requestObject.yourSelections.employeeName;
+		//var requestType = requestObject.yourSelections.requestType;
+
+		var requestedDays = requestObject.yourSelections.requestedDays;
+
+		// Create new records --------------------
+
+		for(var i = 0;i< requestedDays.length;i++){
+
+			var requestedMonth = requestedDays[i].month; 
+			var requestedDay = requestedDays[i].day; 
+			var requestedYear = requestedDays[i].year; 
+			var requestedType = requestedDays[i].type;
+
+			var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_requested_time_off');
+
+			gr.initialize();
+
+			// Set field values
+			gr.employee_name = employeeName;
+			gr.month = requestedMonth;
+			gr.day = requestedDay;
+			gr.year = requestedYear;
+			gr.type = requestedType;
+
+			// Insert the record into the table
+			var newSysId = gr.insert();
+		}
+	}
+
+
+	//------------------------------------
+
+	//Load Employee Names -----------
+	var empArray=[];
+	data.empNames = empArray;
 
 	var employeesGr = new GlideRecord('sys_user');
 	employeesGr.addActiveQuery();
-	employeesGr.orderBy('name'); // Order by the 'name' field
-
 	employeesGr.query();
 
-	while (employeesGr.next()) {
-		var sysId = employeesGr.getValue('sys_id');
-		var name = employeesGr.getValue('name');
-		empObj[name] = sysId;
+	while(employeesGr.next()){			
+		empArray.push(employeesGr.getValue('name'));
 	}
 
-	// Convert object to array of key-value pairs
-	var empArray = Object.entries(empObj);
-	data.empNames = empArray;
-	//===========================================================	
-
-	/* Populate the INPUT obect with the Client Side object */
-	var requestObject = input;
-	//If requestObject has data, do the following.
-	if (requestObject) {
-		//Create 2 vars-Add the Employee Name & the Array of objects
-		var employeeName = requestObject.yourSelections.employeeName;
-		var requestedDays = requestObject.yourSelections.requestedDays;
-
-		//Create a num Array to hold the record's number
-		//Loop through requestedDays array
-		//Check to see if record exists
-		//if !exists, INSERT a new record
-		//Then push it's number into num Array to display on a gs.addInfoMessage() to user.
-		var numArray = [];
-		for (var i = 0; i < requestedDays.length; i++) {
-			var requestedMonth = requestedDays[i].month;
-			var requestedDay = requestedDays[i].day;
-			var requestedYear = requestedDays[i].year;
-			var requestedType = requestedDays[i].type;
-
-			//Check to see if record already exists
-			var empCheckGr = new GlideRecord('x_1093559_hsc_em_0_hsc_requested_time_off');
-			empCheckGr.addQuery('employee_name', empObj[employeeName]);
-			empCheckGr.addQuery('month', requestedMonth);
-			empCheckGr.addQuery('day', requestedDay);
-			empCheckGr.addQuery('year', requestedYear);
-			empCheckGr.addQuery('approval', 'requested');
-
-			empCheckGr.query();
-
-			if (!empCheckGr.hasNext()) {
-				var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_requested_time_off');
-
-				gr.initialize();
-
-				if (i == 0) {
-					gr.parent_record = true;
-				} else {
-					gr.parent_record = false;
-				}
-
-				// Set field values
-				gr.employee_name = employeeName;
-				gr.month = requestedMonth;
-				gr.day = requestedDay;
-				gr.year = requestedYear;
-				gr.type = requestedType;
-
-				// Insert the record into the table
-				gr.insert();
-				numArray.push(gr.number);
-			}
+	// Sort the users array by the name property
+	empArray.sort(function(a, b) {
+		if (a < b) {
+			return -1;
 		}
-		var num = numArray.join(',');
-		if(num){
-			gs.addInfoMessage('SUCCESS. YOUR REQUEST HAS BEEN SUBMITTED. Ticket/s: ' + num);
-		}else{
-			gs.addErrorMessage('YOU HAVE ALREADY SUBMITTED THIS REQUEST.');			
+		if (a > b) {
+			return 1;
 		}
-	}
-	//===================================================
+		return 0;
+	});
+
 
 	//Load Request Type ------------------------
 	var options = [];
@@ -444,49 +276,55 @@ td{
 	var column = 'type';
 	var choices = new GlideChoiceList();
 	var choiceList = choices.getChoiceList(table, column);
-	for (var a = 0; a < choiceList.getSize(); a++) {
-		options.push(choiceList.getChoice(a).getLabel());
+	for (var i = 0; i < choiceList.getSize(); i++) {
+		options.push(choiceList.getChoice(i).getLabel());
 
 	}
 
 	//-------------------------------------
+
+
+
+
+
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 00:46:56</sys_created_on>
         <sys_id>f509ac6397120e1405d3b09ad053af23</sys_id>
-        <sys_mod_count>1312</sys_mod_count>
+        <sys_mod_count>714</sys_mod_count>
         <sys_name>HSC Request Time Off</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_f509ac6397120e1405d3b09ad053af23</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 14:49:02</sys_updated_on>
-        <template><![CDATA[<div id="mainDiv" >
+        <sys_updated_on>2024-05-29 10:39:53</sys_updated_on>
+        <template><![CDATA[
+<div id="mainDiv" >
+
   <div id="wrapperAvailable" >
     <div class="labels" >
-      <label for="monthSelect">*Month</label>
+      <label for="monthSelect">Month</label>
       <select id="monthSelect"  ng-model="c.selectedMonth" ng-change="c.onMonthChange()">
-        <option ng-repeat="month in c.activeMonths" value="{{month.value}}">{{month.name}}</option>
+        <option ng-repeat="month in c.months" value="{{month.value}}">{{month.name}}</option>
       </select>
     </div>
-    <div  > 
-      <h3>Available days</h3>
-      <table >                 
-        <thead>
-          <tr>   <th>  </th>        
+    <div>
+      <h3>Available days for {{c.selectedMonthName}}</h3>
+
+      <table>
+        <thead>          
+          <tr>
+            <th>  </th>
             <th>Month </th>
             <th>Day </th>
-            <th>Year </th> 
+            <th>Year </th>
             <th>Slots Available </th>
           </tr>
-        </thead>      
-      </table>
-    </div>
-    <div class="tableDiv" >       
-      <table class="availableTable" >
+        </thead>
         <tbody>
           <tr ng-repeat="record in c.records">
             <td><input  ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.selected )" /> </td>
@@ -503,14 +341,15 @@ td{
   <!-- Selected Div -->
   <div id="wrapperSelected" >
     <div class="labels" >
-      <label for="nameSelected">*Name</label>
-      <select id="nameSelected"  ng-model="c.selectedName"  ng-change="c.onNameChange()">
-        <option ng-repeat="rec in data.empNames" value="{{rec[0]}}">{{rec[0]}}</option>
-      </select>      
+      <label for="nameSelect">Name</label>
+      <select id="nameSelect"  ng-model="c.selectedName" ng-change="c.onNameChage()">
+        <option ng-repeat="name in data.empNames" value="{{name}}">{{name}}</option>
+      </select>
+      
     </div>
     <div>
       <h3>Your selections</h3>
-      <table  >
+      <table>
         <thead>
           <tr>           
             <th>Month </th>
@@ -519,58 +358,26 @@ td{
             <th>Type </th>
           </tr>
         </thead>
-      </table>
-    </div>
-    <div class="tableDiv" >   
-      <table  class="selectedTable"  >
         <tbody>
           <tr class="selectionColor" ng-repeat="record in c.selections">
             <td>{{record.month}}</td>
             <td>{{record.day}}</td>
             <td>{{record.year}}</td>
-            <td><select id="{{record.typeName}}"   >
-              <option  class="selectionColor" ng-repeat="type in data.choices" value="{{type}}" >{{type}}</option>
+            <td><select id="{{record.typeName}}" >
+              <option ng-repeat="type in data.choices" value="{{type}}" >{{type}}</option>
               </select>
             </td>
           </tr>
           <tr><td></td><td></td><td></td>
-            <td>
-              <button id="doneBtn" class="submitButton" ng-click="c.submitButton()"  >
-                Done
-              </button>
-            </td>
+            <td  ><button class="submitButton" ng-click="c.submitButton()"  >
+              Submit
+              </button></td>
           </tr>
         </tbody>
       </table>
     </div>
 
   </div>
-  <!-- MODAL -->
-  <div id="myModal" class="modal" ng-show="c.isModalVisible">
-
-    <div class="modal-content">
-      <p><strong>YOUR REQUEST</strong></p>
-      <ul id="" ng-repeat="record in c.selections" >
-        <li>{{record.month}} {{record.day}}, {{record.year}} <b>{{record.type}}</b></li>
-      </ul>
-      <span class="spanBtns" >
-        <button class="btns" ng-click="c.closeModal()">CANCEL</button>
-        <button class="btns" ng-click="c.submitModal()">SUBMIT</button>
-      </span>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ]]></template>
