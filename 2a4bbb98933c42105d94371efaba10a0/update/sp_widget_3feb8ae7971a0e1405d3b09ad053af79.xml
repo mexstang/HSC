@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope, $http) {
+        <client_script><![CDATA[api.controller=function($scope, $http, $location) {
 	/* widget controller */
 	var c = this;
+
 	//====================================
 	c.records = [];
 	// Calculate the date 6 months ago
@@ -26,7 +27,7 @@
 			}
 		}).then(function(response) {
 			c.records = response.data.result;
-			
+
 			/* ==REST is returning wrong timezone. So we splice the TIME out. ========= */			
 			for(var i=0;i<c.records.length;i++){
 				var createdDate = c.records[i].sys_created_on;
@@ -36,20 +37,19 @@
 
 				c.records[i].sys_created_on = createDate;
 				c.records[i].closed_date = closeDate;
-			}
+			}//End Loop
 
 			function convertDate(createdDate) {		
 				var cdArray = createdDate.split('');
 				var spliceArray = cdArray.splice(0,10);
 				var joinArray = spliceArray.join('');
 				return joinArray;
-			}
-			/* ========== END SPLICE OF DATE/TIME ===================== */		
-
-
+			}//End function
+			/* ========== END SPLICE OF DATE/TIME ===================== */	
 			// Sort the array by 'day' property using the compare function
-			c.records.sort(compareByDay);		
+			c.records.sort(compareByDay);	
 
+			//Initialize 2 arrays
 			c.requested = [];
 			c.prevRequested = [];				
 
@@ -63,7 +63,7 @@
 		});
 	};//END FETCH 
 	//=======================================================================
-	//When a checkbox is clicked, pass captures the record info
+	//When a checkbox is clicked, pass captures the record info 
 	c.selections = [];
 	c.selected = false;
 
@@ -81,49 +81,58 @@
 				if (index !== -1) { 
 					c.selections.splice(index, 1);					
 				}
-			}
-		}
+			}//End Loop
+		}//End If
+		//Sort array
 		c.selections.sort(compareByDay);	
-	};
+	};//End c.daySelected Function
 
 	//Sorts the objects in the Array
 	function compareByDay(a, b) {
 		return a.day - b.day;
 	}
-	//-------------CANCEL REQUEST BUTTON FUNCTION-------------
+	//================== CANCEL REQUEST BUTTON ================
 	c.selectedName = '';
 	var RequestObject = {};
 	c.submitButton = function(){
-
-		//var selectedName = c.selectedName;
-
 		// =============== VALIDATE FIELDS ================= `
 		if(c.selectedName == ""){ 
 			document.getElementById('nameSelect').style.background = 'pink';
-			alert('Please select your name.');
+			c.validateModal('Please select your name.');
 			return;
 		}	
-			
+
 		if(c.requested.length == 0){
-			alert('You do not have any Requests in progress.'); 
+			c.validateModal('You do not have any Requests in progress.'); 
 			return;
 		}		
 
 		if(c.selections.length == 0){
-			alert('Please make a selection.'); 
+			c.validateModal('Please make a selection.'); 
 			return;
 		}
 
 		c.showModal();
 
 	} //-------------------END CANCEL REQUEST FUNCTION------------------------------
-
+	// ====================== MODAL ===========================
 	c.submitModal = function() {
+		c.cancelInProgress = true;
+
 		RequestObject.employeeName = c.selectedName;
 		RequestObject.requestedDays = c.selections;
 
 		$scope.data.yourSelections = RequestObject;
-		$scope.server.update();
+		var serverUpdated = $scope.server.update();
+
+		serverUpdated.then(function(){
+
+			c.cancelInProgress = false;
+			c.isCancelModalDiv=true;
+			c.cancelModalLabel= c.data.cancelMsg;
+			c.cancelledTickets = c.data.cancelledTickets;
+			c.getParameters();
+		});
 
 		c.isModalVisible = false;
 		//c.onMonthChange();
@@ -133,9 +142,8 @@
 		c.prevRequested = [];		
 		c.selectedName =''; 
 
-	};
+	};//End Function
 
-	// ====================== MODAL ===========================
 	c.isModalVisible = false;
 
 	c.showModal = function() { 
@@ -146,17 +154,44 @@
 		c.isModalVisible = false;
 	};
 
+	//c.isCancelModalDiv
+	c.isCancelModalDiv = false;
+	c.validateModal = function(msg){
+		c.isCancelModalDiv = true;
+		c.cancelModalLabel=msg;
+	}
+
+	c.closeValidateModal = function(){
+		c.isCancelModalDiv = false;
+	}
+
+	//c.cancelInProgress
+	c.cancelInProgress = false;	
+
 	//======================== END MODAL========================
 
+	//====================================
+	//Get URL parameters using the AngularJS service - $location
+	c.getParameters=function(){
+		c.locationObj = $location.search();
+		var empSysId = c.locationObj.empSysId;
+		//var redirectUser = c.locationObj.redirectUser;
+		if(empSysId){	
+			c.fetchRecords(empSysId);
+			c.selectedName = empSysId;
+		} 
+	}//End Function
+	c.getParameters();
 };
 ]]></client_script>
         <controller_as>c</controller_as>
         <css>#mainDiv{
+  position:absolute;
+  top:-10px;
   width:100%;
   color:black;  
   margin:0;
-  padding:0;
-  
+  padding:0;  
   border-radius:3px;
   box-shadow: 1px 2px 4px gray;
 }
@@ -226,10 +261,13 @@ select{
   max-height:50vh;
   overflow:auto;  
   text-align:center;
+  background:#fae8f0;  
 }
 
 #closedRequestHeader {
   width:100%; 
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 #closedRequestHeader th{
@@ -266,8 +304,7 @@ select{
 .submitButton {
   text-shadow: 1px 1px 2px gray;
   text-align:center;
-  color: #000000;
-   
+  color: green;   
   font-weight: bold;
   border:none;
   border-radius:3px;
@@ -276,11 +313,10 @@ select{
 }
 
 .submitButton:hover,
-.submitButton:focus {
-   
+.submitButton:focus {   
   text-decoration: none;
   cursor: pointer;
-  text-shadow: 2px 2px 2px gray;
+  box-shadow: 2px 2px 5px gray;
 }
 
 
@@ -300,6 +336,7 @@ select{
 }
 
 .modal-content {
+  color: black;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -327,14 +364,119 @@ select{
   text-decoration: none;
   cursor: pointer;
 }
-/* ============ MODAL ============= */
-.modal-content{
-  color:black;
-  
-  
+.submitBtn {
+  text-shadow: 1px 1px 2px gray;
+  text-align:center;
+  color: green;   
+  font-weight: bold;
+  border:none;
+  border-radius:3px;
+  margin:5px;
+  box-shadow: 1px 1px 2px gray;
 }
 
-/* ================================ */</css>
+.submitBtn:hover{   
+  box-shadow: 2px 2px 5px gray;
+}
+
+.cancelBtn {
+  text-align:center;
+  color: blue;   
+  font-weight: bold;
+  border:none;
+  border-radius:3px;
+  margin:5px;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.cancelBtn:hover{   
+ box-shadow: 2px 2px 5px gray;
+}
+
+/* ============ MODAL ============= */
+
+.cancelModalDiv{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: none; -*/
+}
+
+.cancelModal-content {
+  background:white;
+  margin: 15% auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  border: 1px solid #888;
+  border-radius:5px;
+  box-shadow: 1px 2px 5px black;
+  width: 80%;
+  max-width: 600px;
+  text-align:center;
+}
+
+.cancelModalLabel {
+  color:black;
+  font-weight: bold;
+  font-size:18px;
+  text-align:center;
+}
+
+.validateBtn {
+  font-size:20px;
+  text-align:center;
+  color: green;   
+  font-weight: bold;
+  border:none;
+  border-radius:3px;
+  margin:5px;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.validateBtn:hover{   
+  box-shadow: 2px 2px 5px gray;
+}
+
+
+
+.cancelInProgress{
+  display:block;
+  z-index:1;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+
+}
+
+/* ================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -408,7 +550,8 @@ select{
 			numArray.push(gr.number);
 		}//END FOR LOOP
 		var num = numArray.join(',');
-		gs.addInfoMessage('SUCCESS. THE FOLLOWING REQUESTS HAVE BEEN CANCELED. Ticket/s: ' + num)
+		data.cancelMsg ='SUCCESS. THE FOLLOWING REQUESTS HAVE BEEN CANCELED.'
+		data.cancelledTickets = num;
 	}
 	//------------------------------------
 
@@ -418,17 +561,17 @@ select{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 07:59:04</sys_created_on>
         <sys_id>3feb8ae7971a0e1405d3b09ad053af79</sys_id>
-        <sys_mod_count>477</sys_mod_count>
+        <sys_mod_count>562</sys_mod_count>
         <sys_name>HSC My Requests</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_3feb8ae7971a0e1405d3b09ad053af79</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-05 06:32:26</sys_updated_on>
-        <template><![CDATA[<div id="mainDiv" >  
-  <div class="headerDiv" >
-  <h3>MY REQUESTS</h3>
+        <sys_updated_on>2024-06-17 20:20:11</sys_updated_on>
+        <template><![CDATA[<div id="mainDiv" > 
+  <h3>MY REQUESTS</h3> 
+  <div class="headerDiv" >  
   <br/>    
       <label for="nameSelect">*Name</label>      
       <select id="nameSelect"  ng-model="c.selectedName" ng-change="c.fetchRecords(c.selectedName)" >
@@ -452,7 +595,7 @@ select{
      
         <tbody>
           <tr ng-repeat="record in c.requested">
-            <td><input ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.type,record.sys_created_on,record.closed_date,record.selected )" /> </td>
+            <td><input ng-model="record.selected"  type="checkbox" ng-click="c.daySelected(record.month,record.day,record.year,record.type,record.selected )" /> </td>
             <td>{{record.month}}</td>
             <td>{{record.day}}</td>
             <td>{{record.year}}</td>
@@ -463,8 +606,9 @@ select{
         </tbody>
       </table>
     </div>
-    <h4>Closed Requests</h4>
-     <div class="closedRequestDiv" >       
+    
+     <div class="closedRequestDiv" >
+       <h4>Closed Requests</h4>       
       <table id="closedRequestHeader" >                 
         <thead>
           <tr>    
@@ -493,7 +637,7 @@ select{
 </div>
 
 
-    <!-- MODAL -->
+    <!-- =========================MODALS========================= -->
     <div id="myModal" class="modal" ng-show="c.isModalVisible">
       <div class="modal-content">
         <p><strong>YOUR REQUESTED CANCELLATIONS</strong></p>
@@ -501,10 +645,45 @@ select{
           <li>{{record.month}} {{record.day}}, {{record.year}} <b>{{record.type}}</b></li>
         </ul>
         <span class="spanBtns" >
-          <button class="btns" ng-click="c.closeModal()">CANCEL</button>
-          <button class="btns" ng-click="c.submitModal()">SUBMIT</button>
+          <button class="cancelBtn" ng-click="c.closeModal()">DO NOT SUBMIT</button>
+          <button class="submitBtn" ng-click="c.submitModal()">SUBMIT</button>
         </span>
       </div>
-    </div>]]></template>
+    </div>
+
+ <!-- MODAL -->
+    <div id="cancelModalDiv" class="cancelModalDiv" ng-show="c.isCancelModalDiv">
+      <div class="cancelModal-content">
+        <label id="cancelModalLabel" class="cancelModalLabel" ng-model="c.cancelModalLabel" >{{c.cancelModalLabel}}</label> 
+   <br/>
+        <label id="cancelModalLabel2" class="cancelModalLabel" ng-model="c.cancelledTickets" >{{c.cancelledTickets}}</label> 
+   <br/>
+        <button class="validateBtn" ng-click="c.closeValidateModal()">OK</button>
+        
+      </div>
+    </div>
+
+<!-- Modal to prevent user actions while cancellation request is updating -->
+<div id="cancelInProgress" class="cancelInProgress" ng-show="c.cancelInProgress" >
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></template>
     </sp_widget>
 </record_update>
