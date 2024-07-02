@@ -1,2 +1,2 @@
 # HSC
-SN Project - Hugo Saniation Company
+SN Project - Hugo Sanitation Company
