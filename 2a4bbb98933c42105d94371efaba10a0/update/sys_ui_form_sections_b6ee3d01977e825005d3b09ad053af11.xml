@@ -28,6 +28,20 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f6ee3d01977e825005d3b09ad053afd7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_incident" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">b6ee3d01977e825005d3b09ad053af11</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">76ee3d01977e825005d3b09ad053afd6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_1093559_hsc_em_0_hsc_incident</name>
             <roles/>

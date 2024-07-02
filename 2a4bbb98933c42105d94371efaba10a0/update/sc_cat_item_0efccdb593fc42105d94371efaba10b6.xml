@@ -44,7 +44,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Mr Lo">6816f79cc0a8016401c5a33be04be441</owner>
+        <owner display_value="MR LO">6816f79cc0a8016401c5a33be04be441</owner>
         <picture>735ecdb993fc42105d94371efaba1096</picture>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=0efccdb593fc42105d94371efaba10b6&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
@@ -66,7 +66,7 @@
         <sys_id>0efccdb593fc42105d94371efaba10b6</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Boots</sys_name>
-        <sys_package/>
+        <sys_package display_value="Global" source="global">global</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sc_cat_item_0efccdb593fc42105d94371efaba10b6</sys_update_name>

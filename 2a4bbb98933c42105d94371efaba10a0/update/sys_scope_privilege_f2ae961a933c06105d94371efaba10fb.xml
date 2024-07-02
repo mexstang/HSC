@@ -16,7 +16,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-09 22:34:20</sys_updated_on>
         <target_name>x_1093559_csa_quiz_csa_quiz</target_name>
-        <target_scope display_value="CSA Quiz">20f2fa3493f802105d94371efaba104a</target_scope>
+        <target_scope display_value="">20f2fa3493f802105d94371efaba104a</target_scope>
         <target_type>sys_db_object</target_type>
     </sys_scope_privilege>
 </record_update>

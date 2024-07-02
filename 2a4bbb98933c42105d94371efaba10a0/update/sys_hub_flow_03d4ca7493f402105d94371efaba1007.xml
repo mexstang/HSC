@@ -11,6 +11,7 @@
         <copied_from/>
         <copied_from_name/>
         <description>Worker submits ticket, Notification to Managers group, Manager Approves or Rejects, Approves = Task is made for the Assignment Group, Notifications sent, Reject = Ticket closes &amp; Notification sent to worker.</description>
+        <display_name_after_preview/>
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>hsc_submit_ticket</internal_name>
@@ -27,6 +28,7 @@
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
         <status>published</status>
+        <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-05 04:50:41</sys_created_on>
@@ -73,16 +75,16 @@
         <table>incident</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>03d4ca7493f402105d94371efaba1007</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-13 22:35:26</sys_created_on>
         <sys_id>0e450faf93f0ca105d94371efaba10dc</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-13 22:35:26</sys_updated_on>
+        <sys_updated_on>2024-05-31 04:40:41</sys_updated_on>
         <trigger display_value="">61c9765b93bc4a105d94371efaba107b</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=03d4ca7493f402105d94371efaba1007^sys_idNOT IN0e450faf93f0ca105d94371efaba10dc"/>

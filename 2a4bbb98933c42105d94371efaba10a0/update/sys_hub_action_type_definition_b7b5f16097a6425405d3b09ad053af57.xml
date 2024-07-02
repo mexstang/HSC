@@ -498,7 +498,22 @@
         <url_target/>
     </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_b7b5f16097a6425405d3b09ad053af57"/>
-    <sys_hub_action_plan action="delete_multiple" query="action_id=b7b5f16097a6425405d3b09ad053af57"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=b7b5f16097a6425405d3b09ad053af57^sys_idNOT IN5f9631e497a6425405d3b09ad053afb8"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="HSC Request Time Off">b7b5f16097a6425405d3b09ad053af57</action_id>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"5f9631e497a6425405d3b09ad053afb8","name":"plan","plan_signature":null}}</plan>
+        <snapshot>979631e497a6425405d3b09ad053af8f</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 08:59:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5f9631e497a6425405d3b09ad053afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 08:59:50</sys_updated_on>
+    </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Incident" source="com.snc.incident">c5fdb4989080021087de3cfccdb0d637</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 00:27:08</sys_created_on>
+        <sys_id>5f831c4d9745c21005d3b09ad053af70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 00:27:08</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

@@ -28,7 +28,7 @@
         <sys_updated_on>2024-03-05 00:47:11</sys_updated_on>
         <table>incident</table>
         <template>active=true^sys_created_on=2024-03-04 00:00:00^state=1^u_vehicle_number=^EQ</template>
-        <user display_value="Mr Lo">6816f79cc0a8016401c5a33be04be441</user>
+        <user display_value="MR LO">6816f79cc0a8016401c5a33be04be441</user>
         <view/>
     </sys_template>
 </record_update>

@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=260251000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Called from the Request Time Off widget. It is used to get manager approval for all time off requests.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>hsc_request_time_off</internal_name>
+        <label_cache>[{"name":"c093ee33-f6f1-404e-8c54-d67b1bbca3ba.approval_state","label":"2 - Ask For Approval➛Approval State","reference":"","reference_display":"Approval State","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"73262181-5d49-4cdf-b36c-5a062a83d0dc":["condition"]},"attributes":null},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"9992e575-614a-4ad7-8c24-b31303da9641":["record"],"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["record"],"c093ee33-f6f1-404e-8c54-d67b1bbca3ba":["record"],"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["record"]},"attributes":null},{"name":"{{static.e2c451a897e2425405d3b09ad053aff7}}","label":"HSC Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["approval_conditions"]},"attributes":null},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"Created or Updated_1.current.employee_name.manager.email","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"Created or Updated_1.current.employee_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null","ah_subject"]},"attributes":null},{"name":"Created or Updated_1.table_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Table","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null"]},"attributes":null},{"name":"Created or Updated_1.current.employee_name.name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null","ah_subject"]},"attributes":null},{"name":"Created or Updated_1.current.month","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Month","reference":"","reference_display":"Month","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.day","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Day","reference":"","reference_display":"Day","type":"integer","base_type":"integer","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.year","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Year","reference":"","reference_display":"Year","type":"integer","base_type":"integer","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.type","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"flow_variable.table_name","label":"Flow Variables➛table_name","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"7de116e5-c7b1-4bee-9008-533b70d8f8d9":["table_name"]},"attributes":null}]</label_cache>
+        <master_snapshot>b165ee2b979a0e1405d3b09ad053af79</master_snapshot>
+        <name>HSC Request Time Off</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>c80af9e897a6425405d3b09ad053afd3</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:44:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>80142ea3979a0e1405d3b09ad053af88</sys_id>
+        <sys_mod_count>83</sys_mod_count>
+        <sys_name>HSC Request Time Off</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_hub_flow_80142ea3979a0e1405d3b09ad053af88</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:35:39</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_variable_value action="DELETE" query="document_key=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_flow_catalog_trigger action="DELETE">
+        <active>false</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c80af9e897a6425405d3b09ad053afd3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:35:22</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN49e9a9289726425405d3b09ad053af19"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 08:04:15</sys_created_on>
+        <sys_id>49e9a9289726425405d3b09ad053af19</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:35:29</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=49e9a9289726425405d3b09ad053af19"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN1b1459e497e2425405d3b09ad053af0b"/>
+    <sys_hub_flow_stage action="DELETE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</flow>
+        <label>Stage 1 APPROVAL</label>
+        <order>0</order>
+        <stage_id>e496f488-7d24-4085-8bd4-ef95e54587f6</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:29:06</sys_created_on>
+        <sys_id>1b1459e497e2425405d3b09ad053af0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:29:06</sys_updated_on>
+        <type>standard</type>
+        <value>new_stage_0</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="DELETE" query="id=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN80142ea3979a0e1405d3b09ad053af8a"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>80142ea3979a0e1405d3b09ad053af88</id>
+        <name>HSC Request Time Off</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:44:30</sys_created_on>
+        <sys_id>80142ea3979a0e1405d3b09ad053af8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 09:44:30</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=80142ea3979a0e1405d3b09ad053af8a"/>
+    <sys_hub_flow_input action="DELETE" query="model=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN8ff97d2897a6425405d3b09ad053afe0,a965ee2b979a0e1405d3b09ad053af3f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</model>
+        <model_id>80142ea3979a0e1405d3b09ad053af88</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:34</sys_created_on>
+        <sys_id>8ff97d2897a6425405d3b09ad053afe0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:03:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=8ff97d2897a6425405d3b09ad053afe0"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</model>
+        <model_id>80142ea3979a0e1405d3b09ad053af88</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:20</sys_created_on>
+        <sys_id>a965ee2b979a0e1405d3b09ad053af3f</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:03:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=a965ee2b979a0e1405d3b09ad053af3f"/>
+    <sys_hub_flow_output action="DELETE" query="model=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_action_instance action="DELETE" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT INe066d12c97e2425405d3b09ad053afcb"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:39:01</sys_created_on>
+        <sys_id>e066d12c97e2425405d3b09ad053afcb</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:03:57</sys_updated_on>
+        <ui_id>636b39ce-e4f4-4317-b8f4-1e172a8c0083</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=e066d12c97e2425405d3b09ad053afcb"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e066d12c97e2425405d3b09ad053afcb</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>3ea7dd6c97e2425405d3b09ad053af02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <value>&lt;p&gt;Hello, &lt;/p&gt;
+&lt;p&gt;A Request for time off has been submitted. Please check your Approvals and either approve or decline it.&lt;/p&gt;
+&lt;p&gt;Thank you, The Machine&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e066d12c97e2425405d3b09ad053afcb</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:15:19</sys_created_on>
+        <sys_id>ca2afde897a6425405d3b09ad053afe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:15:19</sys_updated_on>
+        <value>hotchick@hsc.com</value>
+        <variable display_value="To">59806bf4a70323008299b39f087901da</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=e066d12c97e2425405d3b09ad053afcb"/>
+    <sys_element_mapping action="DELETE">
+        <field>ah_body</field>
+        <id>e066d12c97e2425405d3b09ad053afcb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>f6a7dd6c97e2425405d3b09ad053af02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ah_subject</field>
+        <id>e066d12c97e2425405d3b09ad053afcb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>baa7dd6c97e2425405d3b09ad053af02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>ALERT: TIME OFF REQUEST SUBMITTED - {{Created or Updated_1.current.employee_name}}{{Created or Updated_1.current.employee_name.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ah_to</field>
+        <id>e066d12c97e2425405d3b09ad053afcb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>36a7dd6c97e2425405d3b09ad053af02</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:15:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=e066d12c97e2425405d3b09ad053afcb"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e066d12c97e2425405d3b09ad053afcb"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN32a7dd6c97e2425405d3b09ad053af07,3aa7dd6c97e2425405d3b09ad053af06,f2a7dd6c97e2425405d3b09ad053af07"/>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>80142ea3979a0e1405d3b09ad053af88</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.table_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>32a7dd6c97e2425405d3b09ad053af07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7954c38e-70d4-4503-9022-59db99b86a6c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>80142ea3979a0e1405d3b09ad053af88</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.employee_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>3aa7dd6c97e2425405d3b09ad053af06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2f97ca93-f29c-46b2-af5d-daf62685cd23</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>80142ea3979a0e1405d3b09ad053af88</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.employee_name.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:44:38</sys_created_on>
+        <sys_id>f2a7dd6c97e2425405d3b09ad053af07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:44:38</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ccc93dee-772f-4445-bd2e-f0c3eed8013a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="DELETE" query="model=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88^sys_idNOT INcff97d2897a6425405d3b09ad053afe3,e965ee2b979a0e1405d3b09ad053af41"/>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:35</sys_created_on>
+        <sys_id>cff97d2897a6425405d3b09ad053afe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:14:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:20</sys_created_on>
+        <sys_id>e965ee2b979a0e1405d3b09ad053af41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 09:50:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Called from the Request Time Off widget. It is used to get manager approval for all time off requests.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>hsc_request_time_off</internal_name>
+        <label_cache>[{"name":"c093ee33-f6f1-404e-8c54-d67b1bbca3ba.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"73262181-5d49-4cdf-b36c-5a062a83d0dc":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"reference","base_type":"reference","usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["record"],"c093ee33-f6f1-404e-8c54-d67b1bbca3ba":["record"],"9992e575-614a-4ad7-8c24-b31303da9641":["record"],"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["record"]},"attributes":{}},{"name":"{{static.e2c451a897e2425405d3b09ad053aff7}}","label":"HSC Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["approval_conditions"]}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"sys_created_by","usedInstances":{}},{"name":"Created or Updated_1.current.employee_name.manager.email","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"Created or Updated_1.current.employee_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"employee_name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["ah_subject",null]}},{"name":"Created or Updated_1.table_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Table","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"table_name","base_type":"table_name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":[null]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.employee_name.name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["ah_subject",null]}},{"name":"Created or Updated_1.current.month","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Month","reference":"","reference_display":"Month","type":"string","base_type":"string","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"month","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.day","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Day","reference":"","reference_display":"Day","type":"integer","base_type":"integer","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"day","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.year","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Year","reference":"","reference_display":"Year","type":"integer","base_type":"integer","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"year","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.type","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"type","choices":[{"label":"-- None --","used":false,"missing":false,"rawLabel":"-- None --","selected":false,"image":"","reference":false,"value":""},{"label":"Sick Day","used":false,"missing":false,"rawLabel":"Sick Day","selected":false,"image":"","reference":false,"value":"Sick Day","parameters":{"name":"x_1093559_hsc_em_0_hsc_requested_time_off"}},{"label":"Vacation Day","used":false,"missing":false,"rawLabel":"Vacation Day","selected":false,"image":"","reference":false,"value":"Vacation Day","parameters":{"name":"x_1093559_hsc_em_0_hsc_requested_time_off"}}],"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"default_search_field":"number"}}]</label_cache>
+        <master>true</master>
+        <name>HSC Request Time Off</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="HSC Request Time Off">80142ea3979a0e1405d3b09ad053af88</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b165ee2b979a0e1405d3b09ad053af79</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:02</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_variable_value action="DELETE" query="document_key=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INbff9f9e897a6425405d3b09ad053af66"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HSC Request Time Off">b165ee2b979a0e1405d3b09ad053af79</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:37</sys_created_on>
+        <sys_id>bff9f9e897a6425405d3b09ad053af66</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:03</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=bff9f9e897a6425405d3b09ad053af66"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INd6e899ec97e2425405d3b09ad053afdd"/>
+    <sys_hub_flow_stage action="DELETE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="HSC Request Time Off">b165ee2b979a0e1405d3b09ad053af79</flow>
+        <label>Stage 1 APPROVAL</label>
+        <order>0</order>
+        <stage_id>e496f488-7d24-4085-8bd4-ef95e54587f6</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>d6e899ec97e2425405d3b09ad053afdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:04</sys_updated_on>
+        <type>standard</type>
+        <value>new_stage_0</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="DELETE" query="id=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INb165ee2b979a0e1405d3b09ad053af7a"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>b165ee2b979a0e1405d3b09ad053af79</id>
+        <name>HSC Request Time Off</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:20</sys_created_on>
+        <sys_id>b165ee2b979a0e1405d3b09ad053af7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 09:50:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=b165ee2b979a0e1405d3b09ad053af7a"/>
+    <sys_hub_flow_input action="DELETE" query="model=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN2ff9f9e897a6425405d3b09ad053af30,7965ee2b979a0e1405d3b09ad053af99"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="HSC Request Time Off">b165ee2b979a0e1405d3b09ad053af79</model>
+        <model_id>b165ee2b979a0e1405d3b09ad053af79</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:36</sys_created_on>
+        <sys_id>2ff9f9e897a6425405d3b09ad053af30</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=2ff9f9e897a6425405d3b09ad053af30"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="HSC Request Time Off">b165ee2b979a0e1405d3b09ad053af79</model>
+        <model_id>b165ee2b979a0e1405d3b09ad053af79</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:21</sys_created_on>
+        <sys_id>7965ee2b979a0e1405d3b09ad053af99</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=7965ee2b979a0e1405d3b09ad053af99"/>
+    <sys_hub_flow_output action="DELETE" query="model=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_action_instance action="DELETE" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN16e899ec97e2425405d3b09ad053afb3"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="HSC Request Time Off">b165ee2b979a0e1405d3b09ad053af79</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>16e899ec97e2425405d3b09ad053afb3</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:02</sys_updated_on>
+        <ui_id>636b39ce-e4f4-4317-b8f4-1e172a8c0083</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=16e899ec97e2425405d3b09ad053afb3"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16e899ec97e2425405d3b09ad053afb3</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:15:32</sys_created_on>
+        <sys_id>8d3ab12c97a6425405d3b09ad053af29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:15:32</sys_updated_on>
+        <value>hotchick@hsc.com</value>
+        <variable display_value="To">59806bf4a70323008299b39f087901da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16e899ec97e2425405d3b09ad053afb3</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>d6e899ec97e2425405d3b09ad053afb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:04</sys_updated_on>
+        <value>&lt;p&gt;Hello, &lt;/p&gt;
+&lt;p&gt;A Request for time off has been submitted. Please check your Approvals and either approve or decline it.&lt;/p&gt;
+&lt;p&gt;Thank you, The Machine&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=16e899ec97e2425405d3b09ad053afb3"/>
+    <sys_element_mapping action="DELETE">
+        <field>ah_body</field>
+        <id>16e899ec97e2425405d3b09ad053afb3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>92e899ec97e2425405d3b09ad053afb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ah_subject</field>
+        <id>16e899ec97e2425405d3b09ad053afb3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>56e899ec97e2425405d3b09ad053afb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>ALERT: TIME OFF REQUEST SUBMITTED - {{Created or Updated_1.current.employee_name}}{{Created or Updated_1.current.employee_name.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ah_to</field>
+        <id>16e899ec97e2425405d3b09ad053afb3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:04</sys_created_on>
+        <sys_id>dee899ec97e2425405d3b09ad053afb4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:15:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=16e899ec97e2425405d3b09ad053afb3"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=16e899ec97e2425405d3b09ad053afb3"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN22e899ec97e2425405d3b09ad053affe,6ee899ec97e2425405d3b09ad053affd,aae899ec97e2425405d3b09ad053affd"/>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>b165ee2b979a0e1405d3b09ad053af79</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.employee_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:05</sys_created_on>
+        <sys_id>22e899ec97e2425405d3b09ad053affe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2f97ca93-f29c-46b2-af5d-daf62685cd23</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>b165ee2b979a0e1405d3b09ad053af79</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.employee_name.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:05</sys_created_on>
+        <sys_id>6ee899ec97e2425405d3b09ad053affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ccc93dee-772f-4445-bd2e-f0c3eed8013a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>b165ee2b979a0e1405d3b09ad053af79</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.table_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 06:50:05</sys_created_on>
+        <sys_id>aae899ec97e2425405d3b09ad053affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 06:50:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7954c38e-70d4-4503-9022-59db99b86a6c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="DELETE" query="model=b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN7d65ee2b979a0e1405d3b09ad053af9d,eff9f9e897a6425405d3b09ad053af34"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:21</sys_created_on>
+        <sys_id>7d65ee2b979a0e1405d3b09ad053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 09:50:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 09:14:36</sys_created_on>
+        <sys_id>eff9f9e897a6425405d3b09ad053af34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:14:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_b165ee2b979a0e1405d3b09ad053af79"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>80142ea3979a0e1405d3b09ad053af88</sys_id>
+        <latest_snapshot>b165ee2b979a0e1405d3b09ad053af79</latest_snapshot>
+        <compiler_build>glide-washingtondc-12-20-2023__patch1-02-28-2024_03-09-2024_0815.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=80142ea3979a0e1405d3b09ad053af88^sys_idNOT INc265ee2b979a0e1405d3b09ad053afca"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c265ee2b979a0e1405d3b09ad053afca","name":"plan","plan_signature":null}}</plan>
+        <plan_id>80142ea3979a0e1405d3b09ad053af88</plan_id>
+        <snapshot>b165ee2b979a0e1405d3b09ad053af79</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 09:50:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c265ee2b979a0e1405d3b09ad053afca</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:02:03</sys_updated_on>
+        <trigger display_value="">c80af9e897a6425405d3b09ad053afd3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=80142ea3979a0e1405d3b09ad053af88"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>96e70bbbdb4701d08aea21c40596199c</instance_id>
+        <instance_name>dev127500</instance_name>
+        <name>sys_hub_flow_80142ea3979a0e1405d3b09ad053af88</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=260251000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;25000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Called from the Request Time Off widget. It is used to get manager approval for all time off requests.&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;hsc_request_time_off&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"c093ee33-f6f1-404e-8c54-d67b1bbca3ba.approval_state","label":"2 - Ask For Approval➛Approval State","reference":"","reference_display":"Approval State","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"73262181-5d49-4cdf-b36c-5a062a83d0dc":["condition"]},"attributes":null},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"9992e575-614a-4ad7-8c24-b31303da9641":["record"],"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["record"],"c093ee33-f6f1-404e-8c54-d67b1bbca3ba":["record"],"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["record"]},"attributes":null},{"name":"{{static.e2c451a897e2425405d3b09ad053aff7}}","label":"HSC Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["approval_conditions"]},"attributes":null},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"Created or Updated_1.current.employee_name.manager.email","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"Created or Updated_1.current.employee_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null","ah_subject"]},"attributes":null},{"name":"Created or Updated_1.table_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Table","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null"]},"attributes":null},{"name":"Created or Updated_1.current.employee_name.name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["null","ah_subject"]},"attributes":null},{"name":"Created or Updated_1.current.month","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Month","reference":"","reference_display":"Month","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.day","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Day","reference":"","reference_display":"Day","type":"integer","base_type":"integer","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.year","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Year","reference":"","reference_display":"Year","type":"integer","base_type":"integer","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Created or Updated_1.current.type","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]},"attributes":null},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"flow_variable.table_name","label":"Flow Variables➛table_name","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"7de116e5-c7b1-4bee-9008-533b70d8f8d9":["table_name"]},"attributes":null}]&lt;/label_cache&gt;&lt;master_snapshot&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/master_snapshot&gt;&lt;name&gt;HSC Request Time Off&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;c80af9e897a6425405d3b09ad053afd3&lt;/remote_trigger_id&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:44:30&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/sys_id&gt;&lt;sys_mod_count&gt;83&lt;/sys_mod_count&gt;&lt;sys_name&gt;HSC Request Time Off&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_80142ea3979a0e1405d3b09ad053af88&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:35:39&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_flow_catalog_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;catalog_item/&gt;&lt;name/&gt;&lt;run_flow_in/&gt;&lt;sys_class_name&gt;sys_flow_catalog_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c80af9e897a6425405d3b09ad053afd3&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:35:22&lt;/sys_updated_on&gt;&lt;/sys_flow_catalog_trigger&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN49e9a9289726425405d3b09ad053af19"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 08:04:15&lt;/sys_created_on&gt;&lt;sys_id&gt;49e9a9289726425405d3b09ad053af19&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:35:29&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=49e9a9289726425405d3b09ad053af19"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN1b1459e497e2425405d3b09ad053af0b"/&gt;&lt;sys_hub_flow_stage action="INSERT_OR_UPDATE"&gt;&lt;always_show&gt;true&lt;/always_show&gt;&lt;ancestor_array_position&gt;0&lt;/ancestor_array_position&gt;&lt;ancestor_component_id/&gt;&lt;ancestor_stage_id/&gt;&lt;ancestral_if_else_logic/&gt;&lt;component_indexes/&gt;&lt;duration&gt;1970-01-01 00:00:00&lt;/duration&gt;&lt;flow display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/flow&gt;&lt;label&gt;Stage 1 APPROVAL&lt;/label&gt;&lt;order&gt;0&lt;/order&gt;&lt;stage_id&gt;e496f488-7d24-4085-8bd4-ef95e54587f6&lt;/stage_id&gt;&lt;states&gt;{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}&lt;/states&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:29:06&lt;/sys_created_on&gt;&lt;sys_id&gt;1b1459e497e2425405d3b09ad053af0b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:29:06&lt;/sys_updated_on&gt;&lt;type&gt;standard&lt;/type&gt;&lt;value&gt;new_stage_0&lt;/value&gt;&lt;/sys_hub_flow_stage&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN80142ea3979a0e1405d3b09ad053af8a"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/id&gt;&lt;name&gt;HSC Request Time Off&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:44:30&lt;/sys_created_on&gt;&lt;sys_id&gt;80142ea3979a0e1405d3b09ad053af8a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-27 09:44:30&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=80142ea3979a0e1405d3b09ad053af8a"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN8ff97d2897a6425405d3b09ad053afe0,a965ee2b979a0e1405d3b09ad053af3f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/model&gt;&lt;model_id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:34&lt;/sys_created_on&gt;&lt;sys_id&gt;8ff97d2897a6425405d3b09ad053afe0&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:03:57&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8ff97d2897a6425405d3b09ad053afe0"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/model&gt;&lt;model_id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:20&lt;/sys_created_on&gt;&lt;sys_id&gt;a965ee2b979a0e1405d3b09ad053af3f&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:03:57&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a965ee2b979a0e1405d3b09ad053af3f"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=80142ea3979a0e1405d3b09ad053af88^sys_idNOT INe066d12c97e2425405d3b09ad053afcb"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Send Email"&gt;c1806bf4a70323008299b39f087901cb&lt;/action_type&gt;&lt;action_type_parent display_value="Send Email"&gt;98c181d20b100300d97d8bf637673ab5&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:39:01&lt;/sys_created_on&gt;&lt;sys_id&gt;e066d12c97e2425405d3b09ad053afcb&lt;/sys_id&gt;&lt;sys_mod_count&gt;34&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:03:57&lt;/sys_updated_on&gt;&lt;ui_id&gt;636b39ce-e4f4-4317-b8f4-1e172a8c0083&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e066d12c97e2425405d3b09ad053afcb"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;e066d12c97e2425405d3b09ad053afcb&lt;/document_key&gt;&lt;order&gt;7&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;3ea7dd6c97e2425405d3b09ad053af02&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;value&gt;&amp;lt;p&amp;gt;Hello, &amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;A Request for time off has been submitted. Please check your Approvals and either approve or decline it.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Thank you, The Machine&amp;lt;/p&amp;gt;&lt;/value&gt;&lt;variable display_value="Body"&gt;ad806bf4a70323008299b39f087901f2&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;e066d12c97e2425405d3b09ad053afcb&lt;/document_key&gt;&lt;order&gt;3&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:15:19&lt;/sys_created_on&gt;&lt;sys_id&gt;ca2afde897a6425405d3b09ad053afe6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:15:19&lt;/sys_updated_on&gt;&lt;value&gt;hotchick@hsc.com&lt;/value&gt;&lt;variable display_value="To"&gt;59806bf4a70323008299b39f087901da&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=e066d12c97e2425405d3b09ad053afcb"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_body&lt;/field&gt;&lt;id&gt;e066d12c97e2425405d3b09ad053afcb&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;f6a7dd6c97e2425405d3b09ad053af02&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_subject&lt;/field&gt;&lt;id&gt;e066d12c97e2425405d3b09ad053afcb&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;baa7dd6c97e2425405d3b09ad053af02&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value&gt;ALERT: TIME OFF REQUEST SUBMITTED - {{Created or Updated_1.current.employee_name}}{{Created or Updated_1.current.employee_name.name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_to&lt;/field&gt;&lt;id&gt;e066d12c97e2425405d3b09ad053afcb&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;36a7dd6c97e2425405d3b09ad053af02&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:15:19&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=e066d12c97e2425405d3b09ad053afcb"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e066d12c97e2425405d3b09ad053afcb"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=80142ea3979a0e1405d3b09ad053af88^sys_idNOT IN32a7dd6c97e2425405d3b09ad053af07,3aa7dd6c97e2425405d3b09ad053af06,f2a7dd6c97e2425405d3b09ad053af07"/&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;80142ea3979a0e1405d3b09ad053af88&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.table_name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;32a7dd6c97e2425405d3b09ad053af07&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;7954c38e-70d4-4503-9022-59db99b86a6c&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;80142ea3979a0e1405d3b09ad053af88&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.current.employee_name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;3aa7dd6c97e2425405d3b09ad053af06&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;2f97ca93-f29c-46b2-af5d-daf62685cd23&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;80142ea3979a0e1405d3b09ad053af88&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.current.employee_name.name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:44:38&lt;/sys_created_on&gt;&lt;sys_id&gt;f2a7dd6c97e2425405d3b09ad053af07&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:44:38&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;ccc93dee-772f-4445-bd2e-f0c3eed8013a&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88^sys_idNOT INcff97d2897a6425405d3b09ad053afe3,e965ee2b979a0e1405d3b09ad053af41"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:35&lt;/sys_created_on&gt;&lt;sys_id&gt;cff97d2897a6425405d3b09ad053afe3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:14:35&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:20&lt;/sys_created_on&gt;&lt;sys_id&gt;e965ee2b979a0e1405d3b09ad053af41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-27 09:50:20&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;25000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Called from the Request Time Off widget. It is used to get manager approval for all time off requests.&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;hsc_request_time_off&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"c093ee33-f6f1-404e-8c54-d67b1bbca3ba.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"73262181-5d49-4cdf-b36c-5a062a83d0dc":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"reference","base_type":"reference","usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["record"],"c093ee33-f6f1-404e-8c54-d67b1bbca3ba":["record"],"9992e575-614a-4ad7-8c24-b31303da9641":["record"],"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["record"]},"attributes":{}},{"name":"{{static.e2c451a897e2425405d3b09ad053aff7}}","label":"HSC Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"86cda67a-f5b0-4472-b5d8-824c9af4d4ed":["approval_conditions"]}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"sys_created_by","usedInstances":{}},{"name":"Created or Updated_1.current.employee_name.manager.email","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"Created or Updated_1.current.employee_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"employee_name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["ah_subject",null]}},{"name":"Created or Updated_1.table_name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Table","reference":"x_1093559_hsc_em_0_hsc_requested_time_off","reference_display":"HSC Requested Time Off","type":"table_name","base_type":"table_name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":[null]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.employee_name.name","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Employee Name➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"636b39ce-e4f4-4317-b8f4-1e172a8c0083":["ah_subject",null]}},{"name":"Created or Updated_1.current.month","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Month","reference":"","reference_display":"Month","type":"string","base_type":"string","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"month","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.day","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Day","reference":"","reference_display":"Day","type":"integer","base_type":"integer","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"day","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.year","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Year","reference":"","reference_display":"Year","type":"integer","base_type":"integer","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"year","usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Created or Updated_1.current.type","label":"Trigger - Record Created or Updated➛HSC Requested Time Off Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1093559_hsc_em_0_hsc_requested_time_off","column_name":"type","choices":[{"label":"-- None --","used":false,"missing":false,"rawLabel":"-- None --","selected":false,"image":"","reference":false,"value":""},{"label":"Sick Day","used":false,"missing":false,"rawLabel":"Sick Day","selected":false,"image":"","reference":false,"value":"Sick Day","parameters":{"name":"x_1093559_hsc_em_0_hsc_requested_time_off"}},{"label":"Vacation Day","used":false,"missing":false,"rawLabel":"Vacation Day","selected":false,"image":"","reference":false,"value":"Vacation Day","parameters":{"name":"x_1093559_hsc_em_0_hsc_requested_time_off"}}],"usedInstances":{"5c4cd3f4-42b3-41f4-9a5a-bcc7438d608d":["description"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"default_search_field":"number"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;HSC Request Time Off&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="HSC Request Time Off"&gt;80142ea3979a0e1405d3b09ad053af88&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:02&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INbff9f9e897a6425405d3b09ad053af66"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="HSC Request Time Off"&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:37&lt;/sys_created_on&gt;&lt;sys_id&gt;bff9f9e897a6425405d3b09ad053af66&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:03&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=bff9f9e897a6425405d3b09ad053af66"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INd6e899ec97e2425405d3b09ad053afdd"/&gt;&lt;sys_hub_flow_stage action="INSERT_OR_UPDATE"&gt;&lt;always_show&gt;true&lt;/always_show&gt;&lt;ancestor_array_position&gt;0&lt;/ancestor_array_position&gt;&lt;ancestor_component_id/&gt;&lt;ancestor_stage_id/&gt;&lt;ancestral_if_else_logic/&gt;&lt;component_indexes/&gt;&lt;duration&gt;1970-01-01 00:00:00&lt;/duration&gt;&lt;flow display_value="HSC Request Time Off"&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/flow&gt;&lt;label&gt;Stage 1 APPROVAL&lt;/label&gt;&lt;order&gt;0&lt;/order&gt;&lt;stage_id&gt;e496f488-7d24-4085-8bd4-ef95e54587f6&lt;/stage_id&gt;&lt;states&gt;{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}&lt;/states&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;d6e899ec97e2425405d3b09ad053afdd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:04&lt;/sys_updated_on&gt;&lt;type&gt;standard&lt;/type&gt;&lt;value&gt;new_stage_0&lt;/value&gt;&lt;/sys_hub_flow_stage&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT INb165ee2b979a0e1405d3b09ad053af7a"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/id&gt;&lt;name&gt;HSC Request Time Off&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:20&lt;/sys_created_on&gt;&lt;sys_id&gt;b165ee2b979a0e1405d3b09ad053af7a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-27 09:50:20&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b165ee2b979a0e1405d3b09ad053af7a"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN2ff9f9e897a6425405d3b09ad053af30,7965ee2b979a0e1405d3b09ad053af99"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="HSC Request Time Off"&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/model&gt;&lt;model_id&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:36&lt;/sys_created_on&gt;&lt;sys_id&gt;2ff9f9e897a6425405d3b09ad053af30&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:02&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2ff9f9e897a6425405d3b09ad053af30"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="HSC Request Time Off"&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/model&gt;&lt;model_id&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;true&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:21&lt;/sys_created_on&gt;&lt;sys_id&gt;7965ee2b979a0e1405d3b09ad053af99&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:02&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7965ee2b979a0e1405d3b09ad053af99"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN16e899ec97e2425405d3b09ad053afb3"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Send Email"&gt;c1806bf4a70323008299b39f087901cb&lt;/action_type&gt;&lt;action_type_parent display_value="Send Email"&gt;98c181d20b100300d97d8bf637673ab5&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="HSC Request Time Off"&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;16e899ec97e2425405d3b09ad053afb3&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:02&lt;/sys_updated_on&gt;&lt;ui_id&gt;636b39ce-e4f4-4317-b8f4-1e172a8c0083&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=16e899ec97e2425405d3b09ad053afb3"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;16e899ec97e2425405d3b09ad053afb3&lt;/document_key&gt;&lt;order&gt;3&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:15:32&lt;/sys_created_on&gt;&lt;sys_id&gt;8d3ab12c97a6425405d3b09ad053af29&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:15:32&lt;/sys_updated_on&gt;&lt;value&gt;hotchick@hsc.com&lt;/value&gt;&lt;variable display_value="To"&gt;59806bf4a70323008299b39f087901da&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;16e899ec97e2425405d3b09ad053afb3&lt;/document_key&gt;&lt;order&gt;7&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;d6e899ec97e2425405d3b09ad053afb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:04&lt;/sys_updated_on&gt;&lt;value&gt;&amp;lt;p&amp;gt;Hello, &amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;A Request for time off has been submitted. Please check your Approvals and either approve or decline it.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Thank you, The Machine&amp;lt;/p&amp;gt;&lt;/value&gt;&lt;variable display_value="Body"&gt;ad806bf4a70323008299b39f087901f2&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=16e899ec97e2425405d3b09ad053afb3"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_body&lt;/field&gt;&lt;id&gt;16e899ec97e2425405d3b09ad053afb3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;92e899ec97e2425405d3b09ad053afb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:04&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_subject&lt;/field&gt;&lt;id&gt;16e899ec97e2425405d3b09ad053afb3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;56e899ec97e2425405d3b09ad053afb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:04&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value&gt;ALERT: TIME OFF REQUEST SUBMITTED - {{Created or Updated_1.current.employee_name}}{{Created or Updated_1.current.employee_name.name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_to&lt;/field&gt;&lt;id&gt;16e899ec97e2425405d3b09ad053afb3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:04&lt;/sys_created_on&gt;&lt;sys_id&gt;dee899ec97e2425405d3b09ad053afb4&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:15:32&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=16e899ec97e2425405d3b09ad053afb3"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=16e899ec97e2425405d3b09ad053afb3"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN22e899ec97e2425405d3b09ad053affe,6ee899ec97e2425405d3b09ad053affd,aae899ec97e2425405d3b09ad053affd"/&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.current.employee_name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:05&lt;/sys_created_on&gt;&lt;sys_id&gt;22e899ec97e2425405d3b09ad053affe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:05&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;2f97ca93-f29c-46b2-af5d-daf62685cd23&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.current.employee_name.name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:05&lt;/sys_created_on&gt;&lt;sys_id&gt;6ee899ec97e2425405d3b09ad053affd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:05&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;ccc93dee-772f-4445-bd2e-f0c3eed8013a&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{Created or Updated_1.table_name}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 06:50:05&lt;/sys_created_on&gt;&lt;sys_id&gt;aae899ec97e2425405d3b09ad053affd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 06:50:05&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;7954c38e-70d4-4503-9022-59db99b86a6c&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79^sys_idNOT IN7d65ee2b979a0e1405d3b09ad053af9d,eff9f9e897a6425405d3b09ad053af34"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:21&lt;/sys_created_on&gt;&lt;sys_id&gt;7d65ee2b979a0e1405d3b09ad053af9d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-27 09:50:21&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-30 09:14:36&lt;/sys_created_on&gt;&lt;sys_id&gt;eff9f9e897a6425405d3b09ad053af34&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 09:14:36&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b165ee2b979a0e1405d3b09ad053af79"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/sys_id&gt;&lt;latest_snapshot&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-washingtondc-12-20-2023__patch1-02-28-2024_03-09-2024_0815.zip&lt;/compiler_build&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=80142ea3979a0e1405d3b09ad053af88^sys_idNOT INc265ee2b979a0e1405d3b09ad053afca"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.RunAlways&lt;/binding_strategy&gt;&lt;plan&gt;{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c265ee2b979a0e1405d3b09ad053afca","name":"plan","plan_signature":null}}&lt;/plan&gt;&lt;plan_id&gt;80142ea3979a0e1405d3b09ad053af88&lt;/plan_id&gt;&lt;snapshot&gt;b165ee2b979a0e1405d3b09ad053af79&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-27 09:50:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c265ee2b979a0e1405d3b09ad053afca&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-30 10:02:03&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;c80af9e897a6425405d3b09ad053afd3&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=80142ea3979a0e1405d3b09ad053af88"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1207623898</payload_hash>
+        <record_name>HSC Request Time Off</record_name>
+        <reverted_from/>
+        <source>9dd505d897aece1405d3b09ad053afff</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:35:39</sys_created_on>
+        <sys_id>7e8cc2e0972a425405d3b09ad053af5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fc911d3c80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:35:39</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>b28cc2e09c2a425476367e241cc2f55f</update_guid>
+        <update_guid_history>b28cc2e09c2a425476367e241cc2f55f:1207623898,227c42e0202a4254dd656a34ac8438a6:2090135925,34a5caa8b2e64254ad01717397b1bbdf:333373438,42854aa8e6e64254f161455c18a413dc:768774904,446586a8d7e64254e1db5546bbed8d6d:249068185,ae4506a80ee642542d1b14da559c407c:-488634870,aad4ca6800e64254781f1120b458ce4b:-663309465,0ad48a6851e64254804b360b473ae79e:-1339568834,f0f102a408e642545ac2babd1f41d061:-1768294475,fbd18e6488e6425439b2a1de6e9c80b1:1091527416,9d118e2444e642548df33901036951d5:-1768294475,cb5002240be64254f8eaac457e1a9d74:-1953245820,7f004ae021e64254ac1fde85024f963e:943507306,3e000ae022e642549b5ac339adb364ad:-399962303,213ab12c2ba642544051328aa70b0de7:895318265,7c3a712c6aa64254afdbd7228b374368:1264926532,162a312c66a64254ef5ec2d66abbaf2f:-1995188526,820a7de833a6425447c79f0efb82e31a:2051733318,0c0a3de87aa64254ea58c0bbfa4e7f1e:-1625202993,d3f9b9e8b6a642546188d9b1c9e9b1b2:-1598537328,23e9a1e4436642541735d66fbadf8a10:1271173260,5aa065e8b42642548f5f65d4ec43576b:-825320402,7bcd99e4e2264254e909c09d2f78c0a8:284547262,7fcd99e48a264254076c530734b4079b:-540737417,dbcd59e4b3264254d3a3f5880fbabe3c:1412275076,41cd19e4ee264254576d705ff69af013:1732052348,2abdd5e43d26425490c90cd602995909:2140199517,2ead55e4762642544bed376177a66e66:1279878369,28ad15e4b726425468a47fabaf58d791:-812942372,6f9d15e48a26425430cfa64df3349240:576999017,36e8d9eccae24254aeb35d403bb5aaba:9584806,86e899ecc4e24254d4e0eafb3eee0449:-870759917,43a855ec0ce24254b64e0691f9ce571e:1014577801,847811ecd2e242540278181f5ddb1d52:-2051029845,04585dac6ae24254affc5970f1eb998f:-602186394,f62899ac8fe24254cc828ed31fd2f89f:-1240657105,87e755ac2be242541cbc36a88015b9a7:-1639289756,a6b711ac25e2425454990c20ad06c766:-2031615157,3aa7dd6c53e24254218be1529c403223:-1667785064,b937556cdce2425488561d810af6bff8:609905286,6317d16cece242540fce8dce4a40748d:266246734,4df6dd2c47e24254b5f449a8f7ae3ef6:591376589,7fe6dd2c7be2425431edaaa1d92f4873:585574288,91d65d2c74e242546ef2685228e4ef41:1915164248,5aa6592cfce24254ef69af02b82372cf:-1496845798,bf76952c90e24254fb2a3b47e23d8d4a:377916166,b066d12cc8e242540ce09ac504a989ea:-20246634,6ec5d5e89ce2425446c9df4d244ea0a5:-1709397000,c4c595e894e24254263e1bb9fc22d9e9:400228443,96645968dee24254b099e43183162820:2119886865,2b54d56825e24254274c195ca89ed5fe:-792247118,63449568bbe2425452903ceb79a48011:-1314192198,d3d35d28e5e24254c05acb96d48bbe43:-1629235979,418a7c28c96242543ec69360dcf3c5dc:-1841697521,e88a7c28b16242543b3ff565c3c97d2a:681487558,5a7a3c281b62425419096f0d54c51d3b:-805440743,866ab828b26242542fe3ef94ab5a40da:-1531594610,8e65ee2be09a0e149dcc5b378cd4b6ef:-843230416,f165ee2b119a0e14eb640dd3e06e7c66:1154390921,5435aa2b5d9a0e14f412fab46c0b4ae2:971941226,90256a2b219a0e14f2cc237359909100:214379763,541462e7739a0e143ef475b61570a2ef:2127639676</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:49:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>3b2bf1fcd2e145749476605573798e90</sys_id>
+        <sys_metadata>80142ea3979a0e1405d3b09ad053af88</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC Request Time Off</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_80142ea3979a0e1405d3b09ad053af88</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_80142ea3979a0e1405d3b09ad053af88">7e8cc2e0972a425405d3b09ad053af5f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:49:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

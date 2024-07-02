@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6232376693f486105d94371efaba10a2" extends="incident" label="HSC Bulletin" max_length="40" name="x_1093559_hsc_em_0_hsc_bulletin" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Display Location" mandatory="true" max_length="40" name="display_location" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Expired" sequence="15" value="Expired"/>
+                <element inactive_on_update="false" label="Must Read News" sequence="1" value="Must Read News"/>
+                <element inactive_on_update="false" label="Other News" sequence="10" value="Other News"/>
+                <element inactive_on_update="false" label="Employee Of The Month" sequence="3" value="Employee Of The Month"/>
+            </choice>
+        </element>
+        <element label="Employee Of The Month" max_length="40" name="employee_of_the_month" type="glide_date"/>
+        <element label="Name" max_length="32" name="name" reference="sys_user" type="reference"/>
+    </element>
+</database>

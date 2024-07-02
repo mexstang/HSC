@@ -10,9 +10,9 @@
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>HSC_Rest_Test [ Default GET ]</qualified_name>
+        <qualified_name>HSC_Rest_Message_Test [ Default GET ]</qualified_name>
         <rest_endpoint>https://jsonplaceholder.typicode.com/posts</rest_endpoint>
-        <rest_message display_value="HSC_Rest_Test">ae25983c977e025005d3b09ad053affd</rest_message>
+        <rest_message display_value="HSC_Rest_Message_Test">ae25983c977e025005d3b09ad053affd</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-12 06:49:10</sys_created_on>

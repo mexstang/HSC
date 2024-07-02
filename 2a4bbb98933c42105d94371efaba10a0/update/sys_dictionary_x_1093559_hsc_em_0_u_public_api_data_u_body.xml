@@ -13,7 +13,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>u_body</column_label>
+        <column_label>Body</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-11 15:31:32</sys_created_on>
-        <sys_id>01230de0977ece1005d3b09ad053af8b</sys_id>
         <sys_name>u_body</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>

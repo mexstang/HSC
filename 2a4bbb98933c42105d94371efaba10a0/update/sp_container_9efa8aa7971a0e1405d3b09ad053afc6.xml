@@ -9,7 +9,7 @@
         <name>HSC My Requests - Container 1</name>
         <order>1</order>
         <semantic_tag/>
-        <sp_page display_value="copy_of_hsc_request_time_off_1">1afa8aa7971a0e1405d3b09ad053afc3</sp_page>
+        <sp_page display_value="hsc_my_requests">1afa8aa7971a0e1405d3b09ad053afc3</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>

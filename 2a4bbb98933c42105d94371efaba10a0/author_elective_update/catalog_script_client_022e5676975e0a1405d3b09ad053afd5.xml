@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>false</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="HSC Time Clock">0f70c9859749c21005d3b09ad053afa6</cat_item>
+        <cat_variable>IO:fd7185899749c21005d3b09ad053af33</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>validateRP</name>
+        <order/>
+        <published_ref/>
+        <script><![CDATA[(function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+   // g_form.addInfoMessage('test');
+    g_form.showFieldMsg('employee_name', 'ERROR: YOUR NAME MUST MATCH IN BOTH FIELDS.', 'error');
+
+})();]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-25 01:24:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>022e5676975e0a1405d3b09ad053afd5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>validateRP</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>catalog_script_client_022e5676975e0a1405d3b09ad053afd5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-25 01:44:24</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <va_supported>true</va_supported>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>96e70bbbdb4701d08aea21c40596199c</instance_id>
+        <instance_name>dev127500</instance_name>
+        <name>catalog_script_client_022e5676975e0a1405d3b09ad053afd5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_script_client"&gt;&lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;false&lt;/applies_target_record&gt;&lt;applies_to&gt;item&lt;/applies_to&gt;&lt;cat_item display_value="HSC Time Clock"&gt;0f70c9859749c21005d3b09ad053afa6&lt;/cat_item&gt;&lt;cat_variable&gt;IO:fd7185899749c21005d3b09ad053af33&lt;/cat_variable&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;validateRP&lt;/name&gt;&lt;order/&gt;&lt;published_ref/&gt;&lt;script&gt;&lt;![CDATA[(function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+   // g_form.addInfoMessage('test');
+    g_form.showFieldMsg('employee_name', 'ERROR: YOUR NAME MUST MATCH IN BOTH FIELDS.', 'error');
+
+})();]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-25 01:24:07&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;022e5676975e0a1405d3b09ad053afd5&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;validateRP&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_script_client_022e5676975e0a1405d3b09ad053afd5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-25 01:44:24&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;va_supported&gt;true&lt;/va_supported&gt;&lt;variable_set/&gt;&lt;view/&gt;&lt;/catalog_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1355166148</payload_hash>
+        <record_name>validateRP</record_name>
+        <reverted_from/>
+        <source>2b7a387c970e8a9005d3b09ad053af11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-25 01:44:24</sys_created_on>
+        <sys_id>c0032afa975e0a1405d3b09ad053afd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fad6ba7130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-25 01:44:24</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>08032afa2a5e0a145e61672d307b9ad8</update_guid>
+        <update_guid_history>08032afa2a5e0a145e61672d307b9ad8:-1355166148,ce82aebafa5e0a1472071c46d953a8ef:-573364551,a05f9eb62a5e0a147903a54f76f75be8:1196133624,780f1ab65e5e0a1401682b8b52be3e41:2025018430,72de9e76155e0a149e29b8d9824ab6f5:2035958611,089e9e76fa5e0a147c6220dfa9a80168:-2082128840,475e5a76bf5e0a14bfa75c1efe6c04ed:-1254783203</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="validateRP">9f2ad3b297924a1405d3b09ad053af93</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-25 05:45:28</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>80ff159530f344a8a7b786b1318e1910</sys_id>
+        <sys_metadata>022e5676975e0a1405d3b09ad053afd5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>validateRP</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>catalog_script_client_022e5676975e0a1405d3b09ad053afd5</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_022e5676975e0a1405d3b09ad053afd5">c0032afa975e0a1405d3b09ad053afd9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-25 05:45:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

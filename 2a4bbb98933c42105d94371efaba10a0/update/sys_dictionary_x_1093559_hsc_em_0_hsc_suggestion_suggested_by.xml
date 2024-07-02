@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="suggested_by" table="x_1093559_hsc_em_0_hsc_suggestion">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true,encode_utf8=false</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-10 22:37:21</sys_created_on>
-        <sys_id>4ea8232a93b486105d94371efaba105d</sys_id>
         <sys_name>Suggested By</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>

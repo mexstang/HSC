@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="79f83a4897e2ce1405d3b09ad053afad" label="HSC Requested Time Off" max_length="40" name="x_1093559_hsc_em_0_hsc_requested_time_off" text_index="true" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Year" max_length="4" name="year" type="string"/>
+        <element label="Month Value" max_length="40" name="month_value" type="integer"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sick Day" sequence="1" value="Sick Day"/>
+                <element inactive_on_update="false" label="Vacation Day" sequence="2" value="Vacation Day"/>
+            </choice>
+        </element>
+        <element choice="3" default="not requested" label="Approval" max_length="40" name="approval" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Requested" sequence="1" value="requested"/>
+                <element inactive_on_update="false" label="Not Yet Requested" value="not requested"/>
+                <element inactive_on_update="false" label="Employee Canceled" sequence="5" value="employee_canceled"/>
+                <element inactive_on_update="false" label="Employer Canceled" sequence="6" value="employer canceled"/>
+                <element inactive_on_update="false" label="No Longer Required" value="not_required"/>
+                <element inactive_on_update="false" label="Pending" sequence="4" value="pending"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="100" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Closed Reason" max_length="40" name="closed_reason" type="string"/>
+        <element label="Employee Name" max_length="32" name="employee_name" reference="sys_user" type="reference"/>
+        <element label="Declined Reason" max_length="40" name="declined_reason" type="string"/>
+        <element label="Month" max_length="15" name="month" type="string"/>
+        <element label="On Hold Reason" max_length="20" name="on_hold_reason" type="string"/>
+        <element label="Day" max_length="2" name="day" type="integer"/>
+        <element label="Parent Record" max_length="40" name="parent_record" read_only="true" type="boolean"/>
+        <element choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Closed" sequence="4" value="6"/>
+                <element inactive_on_update="false" label="On Hold" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="New" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Closed Date" max_length="40" name="closed_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="employee_name"/>
+        </index>
+    </element>
+</database>

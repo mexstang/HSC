@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="DELETE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph/>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Cancel Request</label>
+        <order>1</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="form">ed5f8ec347730200ba13a5554ee49046</sp_page>
+        <sp_rectangle_menu/>
+        <sp_rectangle_menu_item display_value="TIME OFF">43fd682c933082105d94371efaba1083</sp_rectangle_menu_item>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 07:51:40</sys_created_on>
+        <sys_id>812ace67971a0e1405d3b09ad053af65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel Request</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_812ace67971a0e1405d3b09ad053af65</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 07:51:40</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="DELETE" query="documentkey=812ace67971a0e1405d3b09ad053af65"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>96e70bbbdb4701d08aea21c40596199c</instance_id>
+        <instance_name>dev127500</instance_name>
+        <name>sp_rectangle_menu_item_812ace67971a0e1405d3b09ad053af65</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item"><sp_rectangle_menu_item action="INSERT_OR_UPDATE"><active>true</active><color>default</color><condition/><display_1/><display_2/><display_date/><filter/><glyph/><hint/><kb_article/><kb_category/><kb_topic/><label>Cancel Request</label><order>1</order><record_script/><sc_cat_item/><sc_category/><short_description/><sp_page display_value="form">ed5f8ec347730200ba13a5554ee49046</sp_page><sp_rectangle_menu/><sp_rectangle_menu_item display_value="TIME OFF">43fd682c933082105d94371efaba1083</sp_rectangle_menu_item><sys_class_name>sp_rectangle_menu_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-27 07:51:40</sys_created_on><sys_id>812ace67971a0e1405d3b09ad053af65</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Cancel Request</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sp_rectangle_menu_item_812ace67971a0e1405d3b09ad053af65</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-05-27 07:51:40</sys_updated_on><table/><type>page</type><url/><url_target/></sp_rectangle_menu_item><sys_translated_text action="delete_multiple" query="documentkey=812ace67971a0e1405d3b09ad053af65"/></record_update>]]></payload>
+        <payload_hash>170092693</payload_hash>
+        <record_name>Cancel Request</record_name>
+        <reverted_from/>
+        <source>791f2c53975e8a1405d3b09ad053afe1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 07:51:40</sys_created_on>
+        <sys_id>133a06a7971a0e1405d3b09ad053af1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fb9089b420000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 07:51:40</sys_updated_on>
+        <type>Menu Item</type>
+        <update_guid>d33a06a78e1a0e14ed4654b4c67ef019</update_guid>
+        <update_guid_history>d33a06a78e1a0e14ed4654b4c67ef019:170092693</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Cancel Request">7b8d026b971a0e1405d3b09ad053af85</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-27 08:06:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_rectangle_menu_item">sp_rectangle_menu_item</sys_db_object>
+        <sys_id>1c95a1fb7c4e42f0b9fbe3d297e8b100</sys_id>
+        <sys_metadata>812ace67971a0e1405d3b09ad053af65</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel Request</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_rectangle_menu_item_812ace67971a0e1405d3b09ad053af65</sys_update_name>
+        <sys_update_version display_value="sp_rectangle_menu_item_812ace67971a0e1405d3b09ad053af65">133a06a7971a0e1405d3b09ad053af1a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-27 08:06:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

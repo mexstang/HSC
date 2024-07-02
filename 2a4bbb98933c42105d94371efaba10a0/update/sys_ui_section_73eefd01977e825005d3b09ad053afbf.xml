@@ -1,5 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="HSC Time Off Calendar" section_id="73eefd01977e825005d3b09ad053afbf" sys_domain="global" table="x_1093559_hsc_em_0_hsc_time_off_calendar" version="3" view="workspace-hsc-workspace-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>employees</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>month</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>month_value</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>day</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>year</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>slots_assigned</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>slots_available</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>department</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>77eefd01977e825005d3b09ad053afc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>record_date</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 09:08:51</sys_created_on>
+            <sys_id>7feefd01977e825005d3b09ad053afc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HSC Time Off Calendar" display_value="HSC Time Off Calendar" name="x_1093559_hsc_em_0_hsc_time_off_calendar" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">73eefd01977e825005d3b09ad053afbf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 09:08:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>HSC Time Off Calendar</caption>
             <header>false</header>

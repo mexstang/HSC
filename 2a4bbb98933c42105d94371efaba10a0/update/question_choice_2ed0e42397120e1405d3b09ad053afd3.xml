@@ -3,7 +3,7 @@
         <inactive>false</inactive>
         <order>100</order>
         <published_ref/>
-        <question display_value="Month">7190a4ef97deca1405d3b09ad053af9b</question>
+        <question display_value="MONTH">7190a4ef97deca1405d3b09ad053af9b</question>
         <sys_class_name>question_choice</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 00:11:54</sys_created_on>

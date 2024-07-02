@@ -11,6 +11,7 @@
         <copied_from/>
         <copied_from_name/>
         <description/>
+        <display_name_after_preview/>
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>aflowtester1</internal_name>
@@ -27,6 +28,7 @@
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
         <status>draft</status>
+        <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-20 21:36:21</sys_created_on>
@@ -73,16 +75,16 @@
         <table>incident</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>74ea363d9789421005d3b09ad053af7d</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-21 00:40:04</sys_created_on>
         <sys_id>44f4a335978d421005d3b09ad053afb4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-21 00:40:04</sys_updated_on>
+        <sys_updated_on>2024-03-21 00:56:38</sys_updated_on>
         <trigger display_value="">07ecd779974d421005d3b09ad053afa4</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=74ea363d9789421005d3b09ad053af7d^sys_idNOT IN44f4a335978d421005d3b09ad053afb4"/>

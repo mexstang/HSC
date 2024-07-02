@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="HSC2">01564e89977e825005d3b09ad053afbf</application>
+        <application display_value="HSC">01564e89977e825005d3b09ad053afbf</application>
         <assessment/>
         <device_type/>
         <filter table="incident">u_department=hr^EQ<item display_value="HR" endquery="false" field="u_department" goto="false" newquery="false" operator="=" or="false" value="hr"/>

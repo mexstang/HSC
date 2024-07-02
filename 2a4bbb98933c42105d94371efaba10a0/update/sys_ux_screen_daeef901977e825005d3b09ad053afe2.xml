@@ -7,7 +7,7 @@
         <event_mappings>[
     
 ]</event_mappings>
-        <macroponent display_value="HSC Bulletin">5eeef901977e825005d3b09ad053afdd</macroponent>
+        <macroponent display_value="HSC Bulletin Record Page">5eeef901977e825005d3b09ad053afdd</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4637e7a693b486105d94371efaba100d" extends="incident" label="HSC Suggestion" max_length="40" name="x_1093559_hsc_em_0_hsc_suggestion" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" display="true" label="Suggested By" max_length="32" name="suggested_by" reference="sys_user" type="reference"/>
+        <element label="Suggestion" max_length="40" name="suggestion" type="string"/>
+    </element>
+</database>

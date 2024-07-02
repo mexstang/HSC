@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <display_field>description</display_field>
+        <field_list/>
+        <filter table="x_1093559_hsc_em_0_hsc_bulletin">display_location=Other News^EQ<item display_value="Other News" endquery="false" field="display_location" goto="false" newquery="false" operator="=" or="false" value="Other News"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <glyph>comment-o</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">fd24ffe693f486105d94371efaba1089</sp_column>
+        <sp_page/>
+        <sp_widget display_value="News Ticker">a9a0b0dec3623100c8b837659bba8f80</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-10 23:36:49</sys_created_on>
+        <sys_id>b786f3ea93f486105d94371efaba10d9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>OTHER NEWS</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_instance_vlist_b786f3ea93f486105d94371efaba10d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-11 00:24:05</sys_updated_on>
+        <table>x_1093559_hsc_em_0_hsc_bulletin</table>
+        <title>OTHER NEWS</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=b786f3ea93f486105d94371efaba10d9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>96e70bbbdb4701d08aea21c40596199c</instance_id>
+        <instance_name>dev127500</instance_name>
+        <name>sp_instance_vlist_b786f3ea93f486105d94371efaba10d9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist"><sp_instance_vlist action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>primary</color><css/><display_field>description</display_field><field_list/><filter table="x_1093559_hsc_em_0_hsc_bulletin">display_location=Other News^EQ<item display_value="Other News" endquery="false" field="display_location" goto="false" newquery="false" operator="=" or="false" value="Other News"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><glyph>comment-o</glyph><id/><maximum_entries>5</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="2">fd24ffe693f486105d94371efaba1089</sp_column><sp_page/><sp_widget display_value="News Ticker">a9a0b0dec3623100c8b837659bba8f80</sp_widget><sys_class_name>sp_instance_vlist</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-03-10 23:36:49</sys_created_on><sys_id>b786f3ea93f486105d94371efaba10d9</sys_id><sys_mod_count>8</sys_mod_count><sys_name>OTHER NEWS</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sp_instance_vlist_b786f3ea93f486105d94371efaba10d9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-03-11 00:24:05</sys_updated_on><table>x_1093559_hsc_em_0_hsc_bulletin</table><title>OTHER NEWS</title><url/><widget_parameters/></sp_instance_vlist><sys_translated_text action="delete_multiple" query="documentkey=b786f3ea93f486105d94371efaba10d9"/></record_update>]]></payload>
+        <payload_hash>-1056219853</payload_hash>
+        <record_name>OTHER NEWS</record_name>
+        <reverted_from/>
+        <source>1873dc0d9745c21005d3b09ad053af39</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-18 01:30:04</sys_created_on>
+        <sys_id>4793548d9745c21005d3b09ad053af3d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>18e4f2e17ea0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-18 01:30:34</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>586180ba8d388610e226f72c2dc1a173</update_guid>
+        <update_guid_history>586180ba8d388610e226f72c2dc1a173:-1056219853,7441cc3ae9388610f8f6ffb7519efc6e:-1501007004,2660043a35388610a96ea760b7788d80:-1056219853,ffcdf766b2388610fa1776ae3ab787ee:1877282550,d5ad3766a53886103fd1f22975b3172f:-836382762,fa9c37e24a3886107a4fcd0b4d02ef49:875891900,7567f32e59f48610c35faf99fc49f245:-1795252925,7947b32e13f486109a137a61db5a1808:476296484,ff86f3ea5ff486106eb3202a65afecda:2071565088</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="OTHER NEWS">2f4b38c997daced005d3b09ad053af3d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-19 07:41:59</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>1e5c53906b4a4ddaab84fc1feae14fe4</sys_id>
+        <sys_metadata>b786f3ea93f486105d94371efaba10d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OTHER NEWS</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_b786f3ea93f486105d94371efaba10d9</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_b786f3ea93f486105d94371efaba10d9">4793548d9745c21005d3b09ad053af3d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-19 07:41:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
