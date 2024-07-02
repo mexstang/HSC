@@ -3,7 +3,7 @@
         <inactive>false</inactive>
         <order>15</order>
         <published_ref/>
-        <question display_value="ASSIGNMENT DEPARTMENT">3a70854393700a105d94371efaba10c5</question>
+        <question display_value="ASSIGNMENT GROUP">3a70854393700a105d94371efaba10c5</question>
         <sys_class_name>question_choice</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-12 00:00:09</sys_created_on>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_workspace_declarative_action_exclusion">
+    <sys_workspace_declarative_action_exclusion action="INSERT_OR_UPDATE">
+        <action_assignment display_value="open_record">172e2043534310108135ddeeff7b12dd</action_assignment>
+        <exclude_all_child_tables>false</exclude_all_child_tables>
+        <exclude_self>false</exclude_self>
+        <sys_class_name>sys_workspace_declarative_action_exclusion</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-03-04 00:13:05</sys_created_on>
+        <sys_id>86bbb7d8233c4210ce6dcce295421a8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_workspace_declarative_action_exclusion_86bbb7d8233c4210ce6dcce295421a8b</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-03-04 00:13:05</sys_updated_on>
+        <table/>
+        <view display_value="Custom portal (x_1093559_hsc_em_0)" name="custom_portal_approval_x_1093559_hsc_em_0">c2bbb7d8a03c4210405a10521d8c3dc7</view>
+    </sys_workspace_declarative_action_exclusion>
+</record_update>

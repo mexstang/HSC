@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="89febf9c933c42105d94371efaba109d" sys_domain="global" table="x_1093559_hsc_em_0_hsc_incident" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-04 00:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c9fe3fdc933c42105d94371efaba1053</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_incident" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">89febf9c933c42105d94371efaba109d</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">89fe3fdc933c42105d94371efaba1038</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-04 00:27:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-04 00:27:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>05fe3fdc933c42105d94371efaba1038</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_incident" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">89febf9c933c42105d94371efaba109d</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">4dfe3fdc933c42105d94371efaba1030</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-04 00:27:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c5fe3fdc933c42105d94371efaba1030</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_incident" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">89febf9c933c42105d94371efaba109d</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">c9fe3fdc933c42105d94371efaba1029</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-04 00:27:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41fe3fdc933c42105d94371efaba1029</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_incident" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">89febf9c933c42105d94371efaba109d</sys_ui_form>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1093559_hsc_em_0_hsc_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-04 00:27:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>89febf9c933c42105d94371efaba109d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1093559_hsc_em_0_hsc_incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_89febf9c933c42105d94371efaba109d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace" name="workspace">40abf89c9000021087de3cfccdb0d609</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

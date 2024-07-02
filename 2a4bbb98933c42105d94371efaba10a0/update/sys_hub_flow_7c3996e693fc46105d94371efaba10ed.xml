@@ -74,16 +74,16 @@
         <table>incident</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>7c3996e693fc46105d94371efaba10ed</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-10 17:41:43</sys_created_on>
         <sys_id>ce4566ea933086105d94371efaba10a2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-10 17:41:43</sys_updated_on>
+        <sys_updated_on>2024-03-10 18:37:34</sys_updated_on>
         <trigger display_value="">566f56e2933086105d94371efaba1011</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=7c3996e693fc46105d94371efaba10ed^sys_idNOT INce4566ea933086105d94371efaba10a2"/>

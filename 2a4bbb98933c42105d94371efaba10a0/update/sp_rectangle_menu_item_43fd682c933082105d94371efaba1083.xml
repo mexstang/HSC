@@ -15,7 +15,7 @@
         <label>REQUEST TIME OFF</label>
         <order>3</order>
         <record_script/>
-        <sc_cat_item/>
+        <sc_cat_item display_value="HSC Request Time Off">900d9f6f9374ca105d94371efaba106b</sc_cat_item>
         <sc_category/>
         <short_description/>
         <sp_page display_value="hsc_request_time_off">5b0e606c933082105d94371efaba1020</sp_page>
@@ -25,14 +25,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-04 03:53:38</sys_created_on>
         <sys_id>43fd682c933082105d94371efaba1083</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>REQUEST TIME OFF</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_rectangle_menu_item_43fd682c933082105d94371efaba1083</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-10 21:55:51</sys_updated_on>
+        <sys_updated_on>2024-03-14 00:27:51</sys_updated_on>
         <table/>
         <type>sc_cat_item</type>
         <url/>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="INSERT_OR_UPDATE">
+        <applicability display_value="Public">8ebbb7d8753c4210b5d868f408fc0fcc</applicability>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-03-04 00:13:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4abbb7d8bb3c4210bf3402e5c67abace</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>m2m_app_config_theme_4abbb7d8bb3c4210bf3402e5c67abace</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-03-04 00:13:03</sys_updated_on>
+        <theme display_value="Light Theme">42bbb7d8a53c42106ba25b25884d59cd</theme>
+        <ux_app_configuration display_value="Custom Portal App Config">79bbb7d8933c42105d94371efaba1061</ux_app_configuration>
+    </m2m_app_config_theme>
+</record_update>
