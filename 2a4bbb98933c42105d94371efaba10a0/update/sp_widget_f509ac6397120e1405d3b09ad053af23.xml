@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope, $http) {
-	
-	
+        <client_script><![CDATA[api.controller=function($scope, $http) {	
 	/* widget controller */
 	var c = this;
-	
+
 	// Define the months
 	c.months = [
 		{ name: 'January', value: 1 },
@@ -31,11 +29,8 @@
 		c.activeMonths.push(c.months[i]);	
 	}
 	//====================================
-	// Default to the current month
-	//c.selectedMonth = c.activeMonths[new Date().getMonth()].value; 
-	//c.selectedMonthName = c.activeMonths[new Date().getMonth()].name;
 	c.records = []; 
-	
+
 	// REST: Function to fetch records based on the selected month
 	c.fetchRecords = function(selectedMonth) {
 		$http({
@@ -49,10 +44,8 @@
 			}
 		}).then(function(response) {
 			c.records = response.data.result;
-
 			// Sort the array by 'day' property using the compare function
-			c.records.sort(compareByDay);				
-
+			c.records.sort(compareByDay);	
 		});
 	};
 
@@ -101,30 +94,29 @@
 	c.typeSelect = '';
 	c.selectedName ='';
 	c.submitButton = function() { 	
-		
+
 		var monthBox = document.getElementById('monthSelect').value;
-		
+
 		if(monthBox == 0){
 			alert('Please select a month.'); 
 			document.getElementById('monthSelect').style.background = 'pink';
 			return;
 		}
-		
+
 		if(c.selections.length == 0){
 			alert('Please make a selection.'); 
 			return;
-		}
-		
-		
+		}		
+
 		if(c.selections.length == 0){
 			alert('Please make a selection.'); 
 			document.getElementById('monthSelect').style.background = 'pink';
 			return;}
-		
+
 		var RequestObject = {};
 		var selectedName = c.selectedName;
 		var requestType = c.typeSelect;
- 
+
 		//VALIDATE FIELDS
 		if(selectedName == ""){  
 			document.getElementById('nameSelected').style.background = 'pink';
@@ -150,7 +142,7 @@
 		for(var x = 0;x < c.selections.length; x++){
 			message += " \u2022 " + c.selections[x].month + " " + c.selections[x].day + ", " + c.selections[x].year + " " + c.selections[x].type + " \n ";
 		}		
-//=========================================================
+		//=========================================================
 		c.showModal();
 
 		c.submitModal = function() {
@@ -169,8 +161,8 @@
 		};
 
 	}  
-//=============================END SUBMIT============================
-	
+	//=============================END SUBMIT============================
+
 	c.onNameChange=function(){
 		document.getElementById('nameSelected').style.background = 'white';
 	}	
@@ -184,7 +176,6 @@
 	c.closeModal = function() {
 		c.isModalVisible = false;
 	};
-
 
 	// Optional: Close the modal when clicking outside of it
 	window.onclick = function(event) {
@@ -465,14 +456,14 @@ td{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 00:46:56</sys_created_on>
         <sys_id>f509ac6397120e1405d3b09ad053af23</sys_id>
-        <sys_mod_count>1310</sys_mod_count>
+        <sys_mod_count>1312</sys_mod_count>
         <sys_name>HSC Request Time Off</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_f509ac6397120e1405d3b09ad053af23</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-04 08:43:28</sys_updated_on>
+        <sys_updated_on>2024-06-17 14:49:02</sys_updated_on>
         <template><![CDATA[<div id="mainDiv" >
   <div id="wrapperAvailable" >
     <div class="labels" >

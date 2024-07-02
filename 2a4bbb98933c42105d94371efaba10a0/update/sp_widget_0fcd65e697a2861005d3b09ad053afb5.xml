@@ -148,19 +148,34 @@
 
 	//=========== MY SELECTIONS ============== /SUBMIT BUTTON - Pass c.mySelections array to
 	//the $scope.data object in a property(selectedDays)
-	c.submitMySelections = function(){
-		var requestObj = {
-			employee: c.selectedEmployee ,
-			info: c.mySelections
-		}
+	c.submitMySelections = function() { 
+    var requestObj = {
+        employee: c.selectedEmployee,
+        info: c.mySelections
+    }
+ 
+    $scope.data.TimeOff = requestObj;
+	
+    // Check if the update method is defined
+    if (typeof $scope.server.update === 'function') {
+		
+        var serverUpdate = $scope.server.update();
 
-		$scope.data.TimeOff = requestObj;
-		var su = $scope.server.update();
-		if(su){
-			resetWidget();
-
-		}
-	}
+        serverUpdate.then(function() {
+            // Reset or clear any necessary data
+            // resetWidget();
+            c.hideModal();
+            // Show modal with success message
+            c.showServerModal(c.data.recordUpdatedMsg,c.data.recordUpdatedMessage);
+        }).catch(function(error) {
+            // Handle any errors from the server update
+            alert("Server update failed:", error);
+        });
+    } else {
+			
+        alert("The update method is not defined on $scope.server.");
+    }
+};//End function
 	//========= MODAL SECTION ==================
 	c.isVisible = false;
 
@@ -181,6 +196,25 @@
 
 	c.hideAlertModal=function(x){
 		c.isActive = false;		
+	}	
+
+	//------------ SERVER MODAL ----------
+	c.serverUpdated = false;
+
+	c.showServerModal = function(msg,x){
+		c.hideModal();
+		c.serverMsg=msg;
+		c.serverMessage=x;
+		c.serverUpdated = true;
+	}
+
+	c.hideServerModal=function(x){
+		c.serverUpdated = false;
+		if(c.data.recordUpdated){
+			var employeeSysId = c.data.employeeSysId;
+			//Redirect to: https://dev127500.service-now.com/hscecportal?id=hsc_my_requests
+			window.location = "https://dev127500.service-now.com/hscecportal?id=hsc_my_requests&empSysId=" + employeeSysId;
+		}
 	}	
 
 	//==============================================
@@ -255,17 +289,20 @@
 		}	
 
 		//Loop My Selections Type boxes
-		for(var i = 0; i < c.mySelections.length; i++){
-			if(c.mySelections[i].type == ""){				
-				c.showAlertModal("Please select what TYPE of day off you are taking.");
-				document.getElementById(c.mySelections[i].objectName).style.background = "pink";
-        if(i == c.mySelections.length - 1){return;}
+		var typeEmpty = false;
+		for(var i = 0; i < c.mySelections.length; i++){ 
+			if(c.mySelections[i].type == ""){		
+				typeEmpty = true;				
+				document.getElementById(c.mySelections[i].objectName).style.background = "pink";        
 			}	
-		}
-		c.showModal();
+		}//End loop
 
-	}
-	//-----------------------------------------------
+		if(typeEmpty){
+			c.showAlertModal("Please select what TYPE of day off you are taking.");
+		}else{
+			c.showModal();
+		}
+	}//End Function
 
 	//============== MY SELECTIONS ==================== On Change Type
 
@@ -279,13 +316,13 @@
 	}//End Function
 
 	//RESET FUNCTION
-	function resetWidget(){
-		c.hideModal();		
-		c.mySelections = [];
-		c.calendarDays = [];	
-		c.selectedMonth ="";	
-		c.selectedEmployee="";
-	}
+	//function resetWidget(){
+	//	c.hideModal();		
+	//	c.mySelections = [];
+	//	c.calendarDays = [];	
+	//	c.selectedMonth ="";	
+	//	c.selectedEmployee="";
+	//}
 
 	// +++++++++++++++++++++++ END FUNCTIONS +++++++++++++++++++++++++++++
 
@@ -549,6 +586,58 @@ h4{
 
 
 
+/* =========== SERVER MODAL ========== */
+.serverModalContainer{
+  position: absolute;
+  top: -500px;
+  left: center;
+  z-index: 1;
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  transition: top 0.9s ease;
+}
+
+.serverModalContainer.active {
+  top: 0;
+}
+
+.serverModal{
+  color:black;
+  text-align:center;
+  margin:10px auto;
+  width:400px;
+  height:150px;
+  background:white;
+  border-radius:3px;
+  box-shadow: 1px 2px 3px black;  
+}
+
+.server{
+  color:black;
+  font-weight:bold;
+  margin:5px;
+}
+
+.serverBtn{
+  margin:5px;
+  color:green;
+  border-radius:3px;
+  font-weight:bold;
+  border:none;
+  box-shadow: 1px 1px 3px gray;
+}
+
+
+.serverBtn:hover{  
+  box-shadow: 1px 1px 13px gray;
+}
+
+
+
+
+
+
 
 
 
@@ -575,6 +664,7 @@ h4{
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
+
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	//EMPLOYEE NAME SELECT BOX - LOAD IT 
@@ -596,8 +686,9 @@ h4{
 
 	//========= INSERT RECORDS INTO TABLE FROM INPUT OBJECT ====
 	var dataObj = input;
-
+  
 	if(input){
+		data.employeeSysId = empObj[dataObj.TimeOff.employee];
 		var table = "x_1093559_hsc_em_0_hsc_requested_time_off";
 		var empName = 	empObj[dataObj.TimeOff.employee];
 		var empArray = dataObj.TimeOff.info;	
@@ -610,7 +701,7 @@ h4{
 			var recYear = empArray[i].year;
 			var rectype = empArray[i].type;
 
-			var recExists = recordExists(recMonth, recDay, recYear);	
+			var recExists = recordExists(empName, recMonth, recDay, recYear);	
 
 			if(!recExists){
 				var msGr = new GlideRecord(table);
@@ -635,23 +726,27 @@ h4{
 		}//End Loop
 
 		if(recNumber.length > 0){ 
-			var recNumberSplit = recNumber.join(",");
-			gs.addInfoMessage("SUCCESS. The following requests were submitted. " + recNumberSplit);
+			var recNumberSplit = recNumber.join(" , ");
+			data.recordUpdated = true;
+			data.recordUpdatedMsg = recNumberSplit;
+			data.recordUpdatedMessage = "SUCCESS. The following requests were submitted.";
 		}else{
-			gs.addErrorMessage("This request has already been submitted.");
+			data.recordUpdated = false;
+			data.recordUpdatedMessage = "This request has already been submitted.";
 		}
 
 	}//End If
 
-	function recordExists(m,d,y){
+	function recordExists(empName, m,d,y){ 
 		var recGr = new GlideRecord(table);
-		recGr.addActiveQuery();
-		recGr.addQuery('month',m);
+		//recGr.addActiveQuery();
+		recGr.addQuery('employee_name',empName);
+		recGr.addQuery('month_value',m);
 		recGr.addQuery('day',d);
 		recGr.addQuery('year',y);
 		recGr.query();
 
-		while(recGr.next()){
+		while(recGr.next()){  
 			return true;
 		}	
 		return false;
@@ -664,14 +759,14 @@ h4{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-05 13:29:11</sys_created_on>
         <sys_id>0fcd65e697a2861005d3b09ad053afb5</sys_id>
-        <sys_mod_count>1220</sys_mod_count>
+        <sys_mod_count>1325</sys_mod_count>
         <sys_name>HSC_Calendar</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_0fcd65e697a2861005d3b09ad053afb5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-11 05:08:42</sys_updated_on>
+        <sys_updated_on>2024-06-17 20:25:28</sys_updated_on>
         <template><![CDATA[<div class="selectedMonthDiv" >
   <select id="selectedMonthBox" class="selectedMonthBox" ng-model="c.selectedMonth" ng-change="c.changeMonth(c.selectedMonth)" >
     <option ng-repeat="month in c.month" value="{{month}}" >{{month}}</option>
@@ -742,6 +837,17 @@ h4{
   <label class="alert" ng-model="c.alert" >{{c.alert}}</label>
   <br/>
   <button class="alertBtn" ng-click="c.hideAlertModal()" >
+      OK
+    </button>
+  </div>
+</div>
+
+<!-- ===================== SERVER MODAL ========================= -->
+<div id="serverModalContainer" class="serverModalContainer" ng-class="{ 'active': c.serverUpdated }">
+<div id="serverModal" class="serverModal" >
+  <label class="server" ng-model="c.serverMessage" >{{c.serverMessage}}<br/>{{c.serverMsg}}</label>
+  <br/>
+  <button class="serverBtn" ng-click="c.hideServerModal()" >
       OK
     </button>
   </div>

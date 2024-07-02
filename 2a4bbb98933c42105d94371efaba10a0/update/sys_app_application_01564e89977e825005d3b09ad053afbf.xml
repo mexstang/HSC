@@ -14,16 +14,16 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>01564e89977e825005d3b09ad053afbf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>HSC2</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>HSC</sys_name>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sys_app_application_01564e89977e825005d3b09ad053afbf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-13 09:41:27</sys_updated_on>
-        <title>HSC2</title>
+        <sys_updated_on>2024-06-14 20:10:17</sys_updated_on>
+        <title>HSC</title>
         <view_name/>
     </sys_app_application>
 </record_update>
