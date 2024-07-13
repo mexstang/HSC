@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Bulletin">661ec132470f02106c1f5ac5316d4356</application>
+        <filter/>
+        <name>Bulletins</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1093559_hsc_em_0.bulletin_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 02:20:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a1ec132470f02106c1f5ac5316d4359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bulletins</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ui_module_6a1ec132470f02106c1f5ac5316d4359</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 02:20:35</sys_updated_on>
+        <table>x_1093559_hsc_em_0_bulletin</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sys_ui_module_6a1ec132470f02106c1f5ac5316d4359</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Bulletin">661ec132470f02106c1f5ac5316d4356</application><filter/><name>Bulletins</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1093559_hsc_em_0.bulletin_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-01 02:20:35</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6a1ec132470f02106c1f5ac5316d4359</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bulletins</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sys_ui_module_6a1ec132470f02106c1f5ac5316d4359</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-01 02:20:35</sys_updated_on><table>x_1093559_hsc_em_0_bulletin</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-1836502050</payload_hash>
+        <record_name>Bulletins</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 02:20:35</sys_created_on>
+        <sys_id>ea1ec132470f02106c1f5ac5316d435c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906c1811b80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 02:20:35</sys_updated_on>
+        <type>Module</type>
+        <update_guid>ee1ec132780f0210f797592308bee55b</update_guid>
+        <update_guid_history>ee1ec132780f0210f797592308bee55b:-1836502050</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 02:22:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>07d824eda30149af8697bbc815b608a1</sys_id>
+        <sys_metadata>6a1ec132470f02106c1f5ac5316d4359</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bulletins</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sys_ui_module_6a1ec132470f02106c1f5ac5316d4359</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_6a1ec132470f02106c1f5ac5316d4359">ea1ec132470f02106c1f5ac5316d435c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 02:22:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

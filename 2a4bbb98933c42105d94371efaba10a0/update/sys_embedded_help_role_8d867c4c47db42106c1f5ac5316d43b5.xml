@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1093559_hsc_em_0.user_login_user" name="x_1093559_hsc_em_0.user_login_user">41867c4c47db42106c1f5ac5316d43b3</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 21:49:56</sys_created_on>
+        <sys_id>8d867c4c47db42106c1f5ac5316d43b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>41867c4c47db42106c1f5ac5316d43b3</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_embedded_help_role_8d867c4c47db42106c1f5ac5316d43b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 21:49:56</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

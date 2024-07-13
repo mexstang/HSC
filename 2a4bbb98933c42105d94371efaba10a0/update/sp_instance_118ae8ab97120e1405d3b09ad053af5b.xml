@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">f5de532a937486105d94371efaba1009</sp_column>
-        <sp_widget display_value="MonthlyRecordViewer">f509ac6397120e1405d3b09ad053af23</sp_widget>
+        <sp_widget display_value="HSC Request Time Off">f509ac6397120e1405d3b09ad053af23</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 00:53:28</sys_created_on>

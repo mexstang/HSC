@@ -7,7 +7,7 @@
         <event_mappings>[
     
 ]</event_mappings>
-        <macroponent display_value="HSC Time Off Calendar">22ee3d01977e825005d3b09ad053af27</macroponent>
+        <macroponent display_value="HSC Time Off Calendar Record Page">22ee3d01977e825005d3b09ad053af27</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",

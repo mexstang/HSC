@@ -8,7 +8,7 @@
             <sys_id>81fe3fdc933c42105d94371efaba1025</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>4dfe3fdc933c42105d94371efaba1023</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>89fe3fdc933c42105d94371efaba1025</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
@@ -50,7 +50,7 @@
             <sys_id>89fe3fdc933c42105d94371efaba1024</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
@@ -64,7 +64,7 @@
             <sys_id>81fe3fdc933c42105d94371efaba1026</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">49fe3fdc933c42105d94371efaba1022</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
@@ -92,7 +92,7 @@
             <sys_updated_on>2024-03-04 00:27:09</sys_updated_on>
             <sys_user/>
             <title>false</title>
-            <view display_value="Workspace" name="workspace">40abf89c9000021087de3cfccdb0d609</view>
+            <view display_value="Workspace" name="workspace">38d53f8ce412021008dda4ccc40080d7</view>
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>

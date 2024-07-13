@@ -22,6 +22,7 @@
         <ignore_price>true</ignore_price>
         <image/>
         <location/>
+        <make_item_non_conversational>false</make_item_non_conversational>
         <mandatory_attachment>false</mandatory_attachment>
         <meta/>
         <mobile_hide_price>false</mobile_hide_price>
@@ -44,7 +45,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Mr Lo">6816f79cc0a8016401c5a33be04be441</owner>
+        <owner display_value="admin">6816f79cc0a8016401c5a33be04be441</owner>
         <picture>0a5a98fb93b8ca105d94371efaba103b</picture>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=401604739378ca105d94371efaba1059&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>

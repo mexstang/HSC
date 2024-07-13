@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="bdbe09be47cb02106c1f5ac5316d43ed" label="Bulletin" max_length="40" name="x_1093559_hsc_em_0_bulletin" type="collection">
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element label="Name" max_length="32" name="name" reference="sys_user" type="reference"/>
+        <element choice="1" label="Display Location" max_length="40" name="display_location" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Employee Of The Month" value="employee_of_the_month"/>
+                <element inactive_on_update="false" label="Must Read News" value="must_read_news"/>
+                <element inactive_on_update="false" label="Expired" value="expired"/>
+                <element inactive_on_update="false" label="Other News" value="other_news"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="string">
+            <choice/>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Employee Of The Month" max_length="40" name="employee_of_the_month" type="glide_date"/>
+        <index name="index">
+            <element name="name"/>
+        </index>
+    </element>
+</database>

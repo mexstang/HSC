@@ -12,6 +12,7 @@
         <copied_from_name/>
         <description>When an incident is created or updated a BR runs -&gt; If logged in user 
  hasRole of Manager, then change Approval field to 'approved' and trigger this flow. Flow -&gt;Creates an Incident Task</description>
+        <display_name_after_preview/>
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>hsc_ticket_submitted</internal_name>
@@ -28,13 +29,14 @@
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
         <status>published</status>
+        <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-10 16:48:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7c3996e693fc46105d94371efaba10ed</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>HSC Ticket Submitted</sys_name>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
@@ -42,7 +44,7 @@
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sys_hub_flow_7c3996e693fc46105d94371efaba10ed</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-10 18:37:33</sys_updated_on>
+        <sys_updated_on>2024-07-02 00:23:41</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=7c3996e693fc46105d94371efaba10ed"/>
@@ -392,11 +394,11 @@
         <sys_created_on>2024-03-10 16:54:07</sys_created_on>
         <sys_id>096a1eaa93fc46105d94371efaba10d5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_7c3996e693fc46105d94371efaba10ed_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-10 16:54:07</sys_updated_on>
         <url/>
@@ -415,11 +417,11 @@
         <sys_created_on>2024-03-10 16:54:07</sys_created_on>
         <sys_id>c96a922e93fc46105d94371efaba1086</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_7c3996e693fc46105d94371efaba10ed_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-10 16:54:07</sys_updated_on>
         <url/>
@@ -820,11 +822,11 @@
         <sys_created_on>2024-03-10 16:54:08</sys_created_on>
         <sys_id>556ad22e93fc46105d94371efaba1005</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_4d6a922e93fc46105d94371efaba10dd_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-10 16:54:08</sys_updated_on>
         <url/>
@@ -843,11 +845,11 @@
         <sys_created_on>2024-03-10 16:54:08</sys_created_on>
         <sys_id>c56a922e93fc46105d94371efaba10e9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_4d6a922e93fc46105d94371efaba10dd_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-10 16:54:08</sys_updated_on>
         <url/>

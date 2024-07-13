@@ -24,13 +24,14 @@
         <ignore_price>true</ignore_price>
         <image/>
         <location/>
+        <make_item_non_conversational>false</make_item_non_conversational>
         <mandatory_attachment>false</mandatory_attachment>
         <meta/>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>HSC CreateTickets</name>
+        <name>Vehicle Tickets</name>
         <no_attachment_v2>true</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -46,7 +47,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="MR LO">6816f79cc0a8016401c5a33be04be441</owner>
+        <owner display_value="admin">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
         <post_insert_script><![CDATA[/**
 * This script is executed after the record is generated. 
@@ -83,15 +84,23 @@
 
 
 (function() {
+    var grSysId = new GlideRecord('sys_user_group');
+    grSysId.get('name', 'Maintenance');
+    grSysId.query();
+
+    if (grSysId.next()) {
+        var RecSysId = grSysId.sys_id;
+    }
+
     var newRecord = current;
 
-    newRecord.setValue('contact_type', 'Self-service');
-
-    var isManager = gs.getUser().hasRole('hsc_manager_role');
+    newRecord.assignment_group = RecSysId;
+    
+     var isManager = gs.getUser().hasRole('hsc_manager_role');
 
     if (isManager) {
         newRecord.setValue('approval', 'approved');
-    }
+    }  
 
 })();]]></script>
         <short_description>*PLEASE PROVIDE SPECIFIC DETAILS. ONLY CREATE TICKETS FOR YOUR VEHICLE.</short_description>
@@ -102,14 +111,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-04 23:27:06</sys_created_on>
         <sys_id>d81a3478937002105d94371efaba1020</sys_id>
-        <sys_mod_count>114</sys_mod_count>
-        <sys_name>HSC CreateTickets</sys_name>
+        <sys_mod_count>165</sys_mod_count>
+        <sys_name>Vehicle Tickets</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sc_cat_item_producer_d81a3478937002105d94371efaba1020</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-06-05 07:41:47</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 23:16:13</sys_updated_on>
         <table_name>incident</table_name>
         <taxonomy_topic/>
         <template/>
@@ -117,7 +126,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>112</version>
+        <version>163</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

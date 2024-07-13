@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+
+	//=====================================	
+	var employeeObj={};//Global object shared by functions submitForm & resetPassword.
+	c.submitForm = function(rc){
+
+		if(!c.employeeName || !c.employeeDepartment || !c.employeeManager){
+			msg="All fields must be filled out.";
+			c.alertsModal = true;
+			c.alertsModalMessage = msg;
+
+
+			return ;
+		}		
+		employeeObj.sendCodeOrResetPassword = "send_activationCode";
+		employeeObj.name = c.employeeName;
+		employeeObj.department = c.employeeDepartment;
+		employeeObj.manager = c.employeeManager;
+		$scope.data.employeeObj = employeeObj;
+
+		var serverUpdate = $scope.server.update();
+		serverUpdate.then(function() {
+			if($scope.data.match){
+				c.showACmodal = true;		
+
+				if(rc == "resendCode"){		
+					c.codeResent = true;
+					c.ACbox = "";
+					c.password = "";
+					c.confirmPassword = "";
+					setTimeout(function() {
+						c.codeResent = false;
+					}, 100);
+				}
+
+
+			}else{
+				msg="The information that you have entered does not match. Try again.";
+				c.alertsModal = true;
+				c.alertsModalMessage = msg;
+			}
+			// Show alert with the value of data.match
+			// Should alert 'true'
+
+		}).catch(function(error) {
+			// Handle any errors from the server update
+
+			msg="Server update failed: " + error;
+			c.alertsModal = true;
+			c.alertsModalMessage = msg;
+
+		});
+
+	}//End Function
+
+	/* ================ ACTIVATION MODAL ====================== */	
+	c.showACmodal = false;	
+
+	c.closeACmodal = function(){
+		c.showACmodal = false;
+	}
+
+	/* ============ Reset Password ================ */
+	c.resetPassword = function(){ 
+		if(!c.ACbox || !c.password || !c.confirmPassword){
+			msg="Please fill out all boxes. ";
+			c.alertsModal = true;
+			c.alertsModalMessage = msg;
+
+			return;
+		}
+
+		if(c.password != c.confirmPassword){
+			msg="Your password does not match.";
+			c.alertsModal = true;
+			c.alertsModalMessage = msg;
+
+			return;
+		}
+		employeeObj.sendCodeOrResetPassword = "reset_password";
+		employeeObj.Acode = c.ACbox;
+		employeeObj.password1 = c.password;
+		employeeObj.password2 = c.confirmPassword;
+
+		$scope.data.employeeObj = employeeObj;
+
+		var updateServer = $scope.server.update();
+		updateServer.then(function() {
+
+			if($scope.data.PWreset == "Success. Your password has been reset."){
+				msg=$scope.data.PWreset;
+				c.alertsModal = true;
+				c.alertsModalMessage = msg;
+
+				c.showACmodal = false;
+				$scope.data.employeeObj ={};
+				c.ACbox = "";
+				c.password = "";
+				c.confirmPassword = "";
+			}else{
+				msg=$scope.data.PWreset;
+				c.alertsModal = true;
+				c.alertsModalMessage = msg;
+
+			}
+
+		}).catch(function(error) {
+			// Handle any errors from the server update
+			msg="Server update has failed: " + error;
+			c.alertsModal = true;
+			c.alertsModalMessage = msg;
+
+		});
+	}
+
+	/* ================ END ACTIVATION MODAL ====================== */		
+
+	/* ========== Modal to handle alerts. ============= */
+	c.alertsModal = false;
+	c.closeAlertsModal = function(){
+		c.alertsModal = false;
+	}
+
+
+
+	/* ========== END Modal to handle alerts. ============= */
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* ======= Activation Code Modal ========== */ 
+.form{
+color:black;
+}
+
+.ACmodal{
+  z-index:1;
+  position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+}
+
+.codeResent{
+  color:maroon; 
+}
+
+.ACcontent{
+  color:black;
+  text-align:center;
+  margin: 0 auto;
+  background:white;
+  width:30%;
+  height:auto;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px black;
+}
+
+.ACcontent input{
+  text-align:center;
+  margin-bottom: 10px;
+  width:200px;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+}
+
+.ACresetButton{
+  background-color: #4CAF50;
+  text-align:center;
+  margin: 15px;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+  transition: background-color 0.3s ease; 
+}
+
+.ACresetButton:hover{
+  background-color: lightgreen;   
+}
+
+.ACbuttonCancel{
+  background-color: #a8aaad;
+  text-align:center;
+  margin: 15px;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+  transition: background-color 0.3s ease; 
+}
+
+.ACbuttonCancel:hover{
+  background-color: lightgray;   
+}
+
+.ACbuttonResend{
+  background-color: #b05252;
+  text-align:center;
+  margin: 15px;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+  transition: background-color 0.3s ease; 
+}
+
+.ACbuttonResend:hover{
+  background-color: #b87373;   
+}
+
+/* ======= END Activation Code Modal ========== */ 
+
+/* ========== Modal to handle alerts. ============= */
+.alertsModalContainer{
+ position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  z-index:1;
+  background-color:rgba(0,0,0,.4);
+}
+
+.alertsModal-content{
+ margin: auto;
+  width:30%;
+  height:10%;
+  color:black;
+  text-align:center;
+  background:white;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+}
+
+.alertModalOK{
+  background-color: #236af7;
+;
+  text-align:center;
+  margin: 15px;
+  border:solid;
+  border-width:thin;
+  border-radius:3px;
+  box-shadow: 2px 2px 3px gray;
+  transition: background-color 0.3s ease; 
+}
+
+.alertModalOK:hover{
+  background-color: #6193f7; 
+;   
+}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_reset_password</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HSC Reset Password</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+
+	if(!input){
+		//load empNames array to use on employeeNames select box
+		data.empNames = [];
+		data.empDepartment = [];
+		data.empManager = [];
+
+		var grEmpNames = new GlideRecord('sys_user');
+		grEmpNames.addActiveQuery();
+		grEmpNames.addQuery('company','5f39761b470f42106c1f5ac5316d438a')
+		grEmpNames.query();
+
+		while(grEmpNames.next()){
+			if(grEmpNames.getDisplayValue('user_name')){
+				data.empNames.push(grEmpNames.getDisplayValue('user_name'));
+			}
+			if(grEmpNames.getDisplayValue('department')){
+				data.empDepartment.push(grEmpNames.getDisplayValue('department'));
+			}
+			if(grEmpNames.getDisplayValue('manager')){
+				data.empManager.push(grEmpNames.getDisplayValue('manager'));
+			}
+
+			//gs.addErrorMessage(grEmpNames.getValue('department'));
+
+		}//End While
+
+		var uniqueNames = Array.from(new Set(data.empNames));
+		data.empNames = uniqueNames;
+
+		var uniqueDepartment = Array.from(new Set(data.empDepartment));
+		data.empDepartment = uniqueDepartment;
+
+		var uniqueManager = Array.from(new Set(data.empManager));
+		data.empManager = uniqueManager;
+
+
+	} //End main IF
+
+	//====================if(input)==============================
+
+	if(input){	
+		if(input.employeeObj.sendCodeOrResetPassword == "send_activationCode"){
+			var empName = input.employeeObj.name;
+			var empDepartment = input.employeeObj.department;
+			var empManager = input.employeeObj.manager;
+			var empMatch = false;
+
+			//Generate an Activation Code - Call Script Include
+			var generateCode = new HSC_Activation_Code_Generator();
+			var empCode = generateCode.generateActivationCode(6);		
+
+			var grEmp = new GlideRecord('sys_user');
+			grEmp.addQuery('user_name',empName);
+			grEmp.setLimit(1);
+			grEmp.query();
+
+			if(grEmp.next()){ 
+				var dept = grEmp.getDisplayValue('department');
+				var mgr = grEmp.getDisplayValue('manager');
+				var email = grEmp.getDisplayValue('email');
+
+				if(dept == empDepartment && mgr == empManager){
+					var grCode = new GlideRecord('x_1093559_hsc_em_0_user_login');
+					grCode.addQuery('user_id',empName);
+					grCode.setLimit(1);
+					grCode.query();
+
+					if(grCode.next()){
+						grCode.setValue('email',email);
+						grCode.setValue('code',empCode);
+						grCode.update();
+					}else{
+						//Enter NEW EMPLOYEE
+						var grNewUser = new GlideRecord('x_1093559_hsc_em_0_user_login');
+						grNewUser.initialize();
+						grNewUser.setValue('user_id',empName);
+						grNewUser.setValue('email',email);
+						grNewUser.setValue('code',empCode);
+						grNewUser.insert();		
+					}					
+					data.match = true;
+					
+				}else{				
+					data.match = false;
+				}
+			}		
+			input = {};
+			return data.match;
+		}
+		//========================= RESET PASSWORD ======================
+
+		if(input.employeeObj.sendCodeOrResetPassword == "reset_password"){
+			var employeeName = input.employeeObj.name;
+			var employeeCode = input.employeeObj.Acode;
+			var employeePassword = input.employeeObj.password1;
+
+			var grRP = new GlideRecord('x_1093559_hsc_em_0_user_login');
+			grRP.addQuery('user_id',employeeName);
+			grRP.addQuery('code',employeeCode)
+			grRP.query();
+
+			if(grRP.next()){
+				grRP.setValue('current_password',employeePassword);
+				var result = grRP.update();	
+		
+				if(result){
+					data.PWreset = "Success. Your password has been reset."
+				}else{
+					data.PWreset = "Oops. There was a problem resetting your password."
+				}
+			}						
+      input = {};
+			return data.PWreset;
+		}//END IF RESET PASSWORD		
+
+
+	}// End if(input)
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 00:56:41</sys_created_on>
+        <sys_id>f041e90447df42106c1f5ac5316d431d</sys_id>
+        <sys_mod_count>364</sys_mod_count>
+        <sys_name>HSC Reset Password</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_f041e90447df42106c1f5ac5316d431d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-12 02:46:50</sys_updated_on>
+        <template><![CDATA[<div>
+  <form class="form" >    
+    <h3>RESET YOUR PASSWORD</h3>
+    Select your information below and Click Submit.
+    <br/>
+    <b>Do not close this browser window or else you will have to repeat this process.</b>
+    <hr>      
+    <label for='employeeNames' >Name</label>
+    <br/>
+    <select id='employeeNames' name='employeeNames' ng-model="c.employeeName" >
+      <option ></option>
+      <option ng-repeat="name in data.empNames | orderBy:''  track by $index " value="{{name}}" >{{name}}</option>
+    </select>
+    <br/>
+    <label for='employeeDepartment' >Department</label>
+    <br/>
+    <select id='employeeDepartment' name='employeeDepartment' ng-model=" c.employeeDepartment" >
+      <option ></option>
+      <option ng-repeat="department in data.empDepartment | orderBy:''  track by $index " value="{{department}}" >{{department}}</option>
+    </select>
+    <br/>
+    <label for='employeeManager' >Manager</label>
+    <br/>
+    <select id='employeeManager' name='employeeManager' ng-model="c.employeeManager" >
+      <option ></option>
+      <option ng-repeat="manager in data.empManager | orderBy:''  track by $index " value="{{manager}}" >{{manager}}</option>
+    </select>
+    <br/>
+    <label for='passCode'  ng-show='c.showPass' >Code</label>
+    <br/>
+    <input id='passCode' name='passCode' type='text' ng-model = 'c.passCode' ng-show='c.showPass' >
+    <br/>
+    <button id="submit" type="submit" ng-click="c.submitForm()" >
+      Submit
+    </button><br/>
+
+    <!-- {{data.empNameEmail | json}} -->
+
+  </form>
+
+  <div id="ACmodal" ng-show="c.showACmodal" class="ACmodal" >
+    <div id="ACcontent" class="ACcontent" >
+      <label >An Activation Code has been sent to your work email.
+        <br/>
+        Use it to fill out this form to reset your password.
+      </label>
+      <br/>
+      <label class="codeResent" ng-show="c.codeResent" >A new code has been emailed to you.</label>
+      <hr>
+      <label >Activation Code</label>
+      <br/>
+      <input id="ACbox" type="text" ng-model="c.ACbox" value="" >
+      <br/>
+      <label >Password </label>
+      <br/>
+      <input id="ACpassword" type="text" ng-model="c.password" value="" >
+      <br/>
+      <label >Confirm Password </label>
+      <br/>
+      <input id="ACconfirmPassword" type="text" ng-model="c.confirmPassword" value="" >
+      <br/>
+      <button id="ACresetButton" class="ACresetButton" ng-click="c.resetPassword()" >
+        RESET PASSWORD
+      </button>  
+      <br/>
+      <button id="ACbuttonCancel" class="ACbuttonCancel"  ng-click="c.closeACmodal()" >
+        Cancel
+      </button>       
+      <button id="ACbuttonResend" class="ACbuttonResend"  ng-click="c.submitForm('resendCode')"  >
+        Resend Code
+      </button>
+    </div>
+  </div>
+
+<!-- Modal to hanlde Alerts -->
+  <div id="alertsModalContainer" class="alertsModalContainer" ng-show="c.alertsModal" >
+    <div id="alertsModal-content" class="alertsModal-content" >
+      <label id="alertsModalMessage" class="alertsModalMessage" ng-model="c.alertsModalMessage" >
+        {{c.alertsModalMessage}}
+      </label>
+      <br/>
+      <button class="alertModalOK" ng-click="c.closeAlertsModal()" >
+        OK
+      </button>
+    </div>
+    
+    </div> 
+
+
+
+
+
+
+
+
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

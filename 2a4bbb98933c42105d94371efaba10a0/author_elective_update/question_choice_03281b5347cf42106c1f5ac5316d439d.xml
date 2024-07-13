@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>1</order>
+        <published_ref/>
+        <question display_value="DEPARTMENT">b2281b5347cf42106c1f5ac5316d4345</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:40:46</sys_created_on>
+        <sys_id>03281b5347cf42106c1f5ac5316d439d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Commercial</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>question_choice_03281b5347cf42106c1f5ac5316d439d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:40:46</sys_updated_on>
+        <text>Commercial</text>
+        <value>Commercial</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=03281b5347cf42106c1f5ac5316d439d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>question_choice_03281b5347cf42106c1f5ac5316d439d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>1</order><published_ref/><question display_value="DEPARTMENT">b2281b5347cf42106c1f5ac5316d4345</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-03 01:40:46</sys_created_on><sys_id>03281b5347cf42106c1f5ac5316d439d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Commercial</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>question_choice_03281b5347cf42106c1f5ac5316d439d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-03 01:40:46</sys_updated_on><text>Commercial</text><value>Commercial</value></question_choice><fx_price action="delete_multiple" query="id=03281b5347cf42106c1f5ac5316d439d"/></record_update>]]></payload>
+        <payload_hash>-2066822638</payload_hash>
+        <record_name>Commercial</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:40:46</sys_created_on>
+        <sys_id>4b281b5347cf42106c1f5ac5316d43b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190764057fe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:40:46</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>0f281b535dcf4210be2cc50354528eaf</update_guid>
+        <update_guid_history>0f281b535dcf4210be2cc50354528eaf:-2066822638</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Commercial">61191f9347cf42106c1f5ac5316d436f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:44:46</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>6256dde29879484d995a27499b968569</sys_id>
+        <sys_metadata>03281b5347cf42106c1f5ac5316d439d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Commercial</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>question_choice_03281b5347cf42106c1f5ac5316d439d</sys_update_name>
+        <sys_update_version display_value="question_choice_03281b5347cf42106c1f5ac5316d439d">4b281b5347cf42106c1f5ac5316d43b0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:44:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
     <sp_rel_widget_clone action="INSERT_OR_UPDATE">
-        <child display_value="Copy of Form">8176677697d24a1405d3b09ad053aff8</child>
+        <child display_value="HSC-TimeClockForm">8176677697d24a1405d3b09ad053aff8</child>
         <cloned>2024-05-25 06:39:07</cloned>
         <last_validated>2024-05-25 06:39:07</last_validated>
         <parent display_value="Form">fd1f4ec347730200ba13a5554ee490c0</parent>

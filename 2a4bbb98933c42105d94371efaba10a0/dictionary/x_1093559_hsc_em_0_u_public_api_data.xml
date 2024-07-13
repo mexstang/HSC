@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="37f24d68977ece1005d3b09ad053af5c" label="u_public_api_data" max_length="40" name="x_1093559_hsc_em_0_u_public_api_data" type="collection">
+        <element label="u_body" max_length="40" name="u_body" type="string"/>
+        <element label="u_title" max_length="40" name="u_title" type="string"/>
+        <element label="u_id" max_length="40" name="u_id" type="string"/>
+    </element>
+</database>

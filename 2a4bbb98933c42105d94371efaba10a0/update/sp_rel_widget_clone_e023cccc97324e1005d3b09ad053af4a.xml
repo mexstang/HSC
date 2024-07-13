@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
     <sp_rel_widget_clone action="INSERT_OR_UPDATE">
-        <child display_value="Copy of User Profile">e023cccc97324e1005d3b09ad053af47</child>
+        <child display_value="HSC  User Profiles">e023cccc97324e1005d3b09ad053af47</child>
         <cloned>2024-06-09 21:34:02</cloned>
         <last_validated>2024-06-09 21:34:02</last_validated>
         <parent display_value="User Profile">6e6ac664d710120023c84f80de610318</parent>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ba690436937886105d94371efaba10bd" label="HSC Attendance" max_length="40" name="x_1093559_hsc_em_0_hsc_attendance" type="collection">
+        <element label="gender" max_length="40" name="gender" type="string"/>
+        <element label="Time In" max_length="40" name="time_in" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Last Name" max_length="32" name="last_name" reference="sys_user" type="reference"/>
+        <element label="Time Out" max_length="40" name="time_out" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Employee Name" max_length="32" name="first_name" read_only="true" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="UserID" max_length="32" name="userid" read_only="true" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="first_name"/>
+        </index>
+        <index name="index2">
+            <element name="last_name"/>
+        </index>
+        <index name="index3">
+            <element name="userid"/>
+        </index>
+    </element>
+</database>

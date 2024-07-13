@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:16:19</sys_created_on>
+        <sys_id>83da9172474f02106c1f5ac5316d433b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1093559_hsc_em_0_hsc_requested_time_off.</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_security_acl display_value="x_1093559_hsc_em_0_hsc_requested_time_off">47da9172474f02106c1f5ac5316d4338</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_83da9172474f02106c1f5ac5316d433b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:16:19</sys_updated_on>
+        <sys_user_role display_value="">c309ba0097e2ce1405d3b09ad053afcf</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sys_security_acl_role_83da9172474f02106c1f5ac5316d433b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-01 03:16:19</sys_created_on><sys_id>83da9172474f02106c1f5ac5316d433b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1093559_hsc_em_0_hsc_requested_time_off.</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_security_acl display_value="x_1093559_hsc_em_0_hsc_requested_time_off">47da9172474f02106c1f5ac5316d4338</sys_security_acl><sys_update_name>sys_security_acl_role_83da9172474f02106c1f5ac5316d433b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-01 03:16:19</sys_updated_on><sys_user_role display_value="">c309ba0097e2ce1405d3b09ad053afcf</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-250973836</payload_hash>
+        <record_name>x_1093559_hsc_em_0_hsc_requested_time_off.</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:16:19</sys_created_on>
+        <sys_id>0fda9172474f02106c1f5ac5316d433d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906c4b17f80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:16:19</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>03da9172fe4f0210dfe7a4c02247703d</update_guid>
+        <update_guid_history>03da9172fe4f0210dfe7a4c02247703d:-250973836</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1093559_hsc_em_0_hsc_requested_time_off.">2e2b5972474f02106c1f5ac5316d4377</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:17:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>0ca5df2af7434b809167b7c376b61000</sys_id>
+        <sys_metadata>83da9172474f02106c1f5ac5316d433b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1093559_hsc_em_0_hsc_requested_time_off.</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_83da9172474f02106c1f5ac5316d433b</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_83da9172474f02106c1f5ac5316d433b">0fda9172474f02106c1f5ac5316d433d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:17:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

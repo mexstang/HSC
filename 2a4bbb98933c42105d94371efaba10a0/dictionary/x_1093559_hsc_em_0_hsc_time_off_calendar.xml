@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="28795c6797deca1405d3b09ad053af45" label="HSC Time Off Calendar" max_length="40" name="x_1093559_hsc_em_0_hsc_time_off_calendar" text_index="true" type="collection">
+        <element label="Short Description" max_length="40" name="short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Month Value" max_length="2" name="month_value" type="integer"/>
+        <element label="Year" max_length="40" name="year" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Day" max_length="2" name="day" type="integer"/>
+        <element label="Employees" max_length="400" name="employees" type="string"/>
+        <element label="Record Date" max_length="40" name="record_date" type="glide_date"/>
+        <element label="Department" max_length="20" name="department" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Available" max_length="40" name="available" type="boolean"/>
+        <element label="Month" max_length="10" name="month" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Slots Assigned" max_length="2" name="slots_assigned" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Slots Available" max_length="2" name="slots_available" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not Available" sequence="3" value="not_available"/>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+            </choice>
+        </element>
+    </element>
+</database>

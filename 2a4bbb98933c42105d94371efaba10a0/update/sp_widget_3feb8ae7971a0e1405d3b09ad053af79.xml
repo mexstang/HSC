@@ -18,7 +18,7 @@
 		document.getElementById('nameSelect').style.background = 'white';
 		$http({
 			method: 'GET',
-			url: '/api/now/table/x_1093559_hsc_em_0_hsc_requested_time_off?',
+			url: '/api/now/table/x_1093559_hsc_em_0_request_time_off?',
 			params: {
 				sysparm_query: 'employee_name=' + employeeName + '^sys_created_on>=' + formattedDate,
 				sysparm_fields: 'number,month,day,year,type,approval,sys_created_on,closed_date',
@@ -533,7 +533,7 @@ select{
 			var day = requestedDays[i].day;
 			var year = requestedDays[i].year;			
 			
-			var gr = new GlideRecord('x_1093559_hsc_em_0_hsc_requested_time_off');
+			var gr = new GlideRecord('x_1093559_hsc_em_0_request_time_off');
 			gr.addQuery('month',month);
 			gr.addQuery('day',day);
 			gr.addQuery('year',year);
@@ -561,14 +561,14 @@ select{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-27 07:59:04</sys_created_on>
         <sys_id>3feb8ae7971a0e1405d3b09ad053af79</sys_id>
-        <sys_mod_count>562</sys_mod_count>
+        <sys_mod_count>566</sys_mod_count>
         <sys_name>HSC My Requests</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_3feb8ae7971a0e1405d3b09ad053af79</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 20:20:11</sys_updated_on>
+        <sys_updated_on>2024-07-02 05:17:29</sys_updated_on>
         <template><![CDATA[<div id="mainDiv" > 
   <h3>MY REQUESTS</h3> 
   <div class="headerDiv" >  

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4436b08c47db42106c1f5ac5316d4364" label="User Login" max_length="40" name="x_1093559_hsc_em_0_user_login" type="collection">
+        <element label="Current Password" max_length="40" name="current_password" type="string"/>
+        <element label="User Id" max_length="40" name="user_id" type="string"/>
+        <element label="Manager" max_length="40" name="manager" type="string"/>
+        <element label="Department" max_length="40" name="department" type="string"/>
+        <element label="code" max_length="40" name="code" type="string"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+    </element>
+</database>

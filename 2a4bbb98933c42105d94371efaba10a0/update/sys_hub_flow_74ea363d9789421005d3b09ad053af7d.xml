@@ -11,6 +11,7 @@
         <copied_from/>
         <copied_from_name/>
         <description/>
+        <display_name_after_preview/>
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>aflowtester1</internal_name>
@@ -27,13 +28,14 @@
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
         <status>draft</status>
+        <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-20 21:36:21</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>74ea363d9789421005d3b09ad053af7d</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>aFlowTester1</sys_name>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
@@ -41,7 +43,7 @@
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sys_hub_flow_74ea363d9789421005d3b09ad053af7d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-21 00:56:37</sys_updated_on>
+        <sys_updated_on>2024-07-02 00:23:40</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=74ea363d9789421005d3b09ad053af7d"/>
@@ -564,18 +566,6 @@
         <table>var__m_sys_hub_flow_input_f0ff76f197c9421005d3b09ad053afc4</table>
         <value>{{a921f239-3a98-498a-8b68-24d17f487340.item.priority}}</value>
     </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>970bd7b5974d421005d3b09ad053aff5</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-20 23:56:53</sys_created_on>
-        <sys_id>970b1bb5974d421005d3b09ad053af06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-20 23:56:53</sys_updated_on>
-        <table>var__m_sys_hub_sub_flow_instance_inputs_970bd7b5974d421005d3b09ad053aff5</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_970bd7b5974d421005d3b09ad053aff5^id=970bd7b5974d421005d3b09ad053aff5"/>
     <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=970bd7b5974d421005d3b09ad053aff5^sys_idNOT IN530bd7b5974d421005d3b09ad053aff6"/>
     <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
@@ -886,11 +876,11 @@
         <sys_created_on>2024-03-21 00:03:29</sys_created_on>
         <sys_id>489c9f39974d421005d3b09ad053af25</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_74ea363d9789421005d3b09ad053af7d_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-21 00:03:29</sys_updated_on>
         <url/>
@@ -909,11 +899,11 @@
         <sys_created_on>2024-03-21 00:03:29</sys_created_on>
         <sys_id>c09c9f39974d421005d3b09ad053af28</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_74ea363d9789421005d3b09ad053af7d_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-21 00:03:29</sys_updated_on>
         <url/>
@@ -1444,18 +1434,6 @@
         <table>var__m_sys_hub_flow_input_f0ff76f197c9421005d3b09ad053afc4</table>
         <value>{{a921f239-3a98-498a-8b68-24d17f487340.item.priority}}</value>
     </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>b2ecd779974d421005d3b09ad053af30</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-21 00:05:02</sys_created_on>
-        <sys_id>b2ecd779974d421005d3b09ad053af3d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-21 00:05:02</sys_updated_on>
-        <table>var__m_sys_hub_sub_flow_instance_inputs_b2ecd779974d421005d3b09ad053af30</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_b2ecd779974d421005d3b09ad053af30^id=b2ecd779974d421005d3b09ad053af30"/>
     <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=b2ecd779974d421005d3b09ad053af30^sys_idNOT IN72ecd779974d421005d3b09ad053af31"/>
     <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
@@ -1681,11 +1659,11 @@
         <sys_created_on>2024-03-21 00:05:02</sys_created_on>
         <sys_id>6aecd779974d421005d3b09ad053af13</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cf000bf197c9421005d3b09ad053af77_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-21 00:05:02</sys_updated_on>
         <url/>
@@ -1704,11 +1682,11 @@
         <sys_created_on>2024-03-21 00:05:02</sys_created_on>
         <sys_id>beecd779974d421005d3b09ad053af1a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cf000bf197c9421005d3b09ad053af77_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-03-21 00:05:02</sys_updated_on>
         <url/>

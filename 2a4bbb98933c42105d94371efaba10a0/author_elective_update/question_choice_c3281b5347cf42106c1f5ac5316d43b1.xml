@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>2</order>
+        <published_ref/>
+        <question display_value="DEPARTMENT">b2281b5347cf42106c1f5ac5316d4345</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:40:46</sys_created_on>
+        <sys_id>c3281b5347cf42106c1f5ac5316d43b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Recycling</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>question_choice_c3281b5347cf42106c1f5ac5316d43b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:40:46</sys_updated_on>
+        <text>Recycling</text>
+        <value>Recycling</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=c3281b5347cf42106c1f5ac5316d43b1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>question_choice_c3281b5347cf42106c1f5ac5316d43b1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>2</order><published_ref/><question display_value="DEPARTMENT">b2281b5347cf42106c1f5ac5316d4345</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-03 01:40:46</sys_created_on><sys_id>c3281b5347cf42106c1f5ac5316d43b1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Recycling</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>question_choice_c3281b5347cf42106c1f5ac5316d43b1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-03 01:40:46</sys_updated_on><text>Recycling</text><value>Recycling</value></question_choice><fx_price action="delete_multiple" query="id=c3281b5347cf42106c1f5ac5316d43b1"/></record_update>]]></payload>
+        <payload_hash>129542211</payload_hash>
+        <record_name>Recycling</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:40:46</sys_created_on>
+        <sys_id>07281b5347cf42106c1f5ac5316d43b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1907640586a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:40:46</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>c7281b5337cf4210ab023c4231ac08b7</update_guid>
+        <update_guid_history>c7281b5337cf4210ab023c4231ac08b7:129542211</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Recycling">b5191f9347cf42106c1f5ac5316d439d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-03 01:44:47</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>27ebfa72bf79412495727e784464c810</sys_id>
+        <sys_metadata>c3281b5347cf42106c1f5ac5316d43b1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Recycling</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>question_choice_c3281b5347cf42106c1f5ac5316d43b1</sys_update_name>
+        <sys_update_version display_value="question_choice_c3281b5347cf42106c1f5ac5316d43b1">07281b5347cf42106c1f5ac5316d43b8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:44:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

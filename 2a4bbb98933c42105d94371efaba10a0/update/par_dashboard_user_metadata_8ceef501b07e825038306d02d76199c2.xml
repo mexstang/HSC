@@ -3,7 +3,7 @@
         <background_color/>
         <cache_expiration_time>0</cache_expiration_time>
         <card_bg_image/>
-        <created_by_user display_value="MR LO">6816f79cc0a8016401c5a33be04be441</created_by_user>
+        <created_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</created_by_user>
         <created_on>2022-05-29 16:29:20</created_on>
         <dashboard display_value="HSC Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
         <enable_data_cache>false</enable_data_cache>
@@ -39,7 +39,7 @@
         <sys_update_name>par_dashboard_user_metadata_8ceef501b07e825038306d02d76199c2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-06-15 12:21:56</sys_updated_on>
-        <updated_by_user display_value="MR LO">6816f79cc0a8016401c5a33be04be441</updated_by_user>
+        <updated_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
     </par_dashboard_user_metadata>
 </record_update>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $http) {
+	/* widget controller */
+	var c = this;
+
+	var monthNumberToName = {
+		1:"January",
+		2:"February",
+		3:"March",
+		4:"April",
+		5:"May",
+		6:"June",
+		7:"July",
+		8:"August",
+		9:"September",
+		10:"October",
+		11:"November",
+		12:"December"
+	}	
+
+	var months = {
+		"January":{number:1,days:31},
+		"February":{number:2,days:28},
+		"March":{number:3,days:31},
+		"April":{number:4,days:30},
+		"May":{number:5,days:31},
+		"June":{number:6,days:30},
+		"July":{number:7,days:31},
+		"August":{number:8,days:31},
+		"September":{number:9,days:30},
+		"October":{number:10,days:31},
+		"November":{number:11,days:30},
+		"December":{number:12,days:31},
+	}
+
+	/* ============= ONLOAD ================== */	
+	var date = new Date();
+	var cMonth = date.getMonth() + 1;
+	var cMonthPrefixed = "0" + cMonth;
+	var cYear=date.getFullYear();
+
+	//------------------Current Month
+	var currentMonthName = monthNumberToName[cMonth];
+	c.currentMonth = currentMonthName;
+	//------------------Day to start Calendar
+
+	//------------------Fetch all events
+	var eventsTable = "x_1093559_hsc_em_0_hsc_events_calendar";
+	// REST: Function to fetch records based on the selected month
+	c.fetchRecords=function(month,year){
+		$http({
+			method:'GET',
+			url:'/api/now/table/' + eventsTable,
+			params:{
+				sysparm_query:'month=' + month + '^year=' + year,
+				sysparm_fields:'name,details,date,time,am_or_pm,month,day,year',
+				sysparm_limit:31,
+				sysparm_orderby:'time'
+			}
+		}).then(function(response){
+			c.records = response.data.result;	
+
+			// ----- Group records by day ------- //
+
+			var groupByDayObj = c.records.reduce(function(acc,rec){
+				var key = rec.day;
+				if(!acc[key]){
+					acc[key]=[];
+				}								
+				acc[key].push(rec);			
+				return acc;				
+			},{});
+
+			// SORT THE OBJECT - groupByDayObj
+
+			var keysArray = Object.keys(groupByDayObj);
+			keysArray.sort();
+       
+			var	sortedObject = {};
+			keysArray.forEach(function(key){
+				sortedObject[key] = groupByDayObj[key];
+			});
+
+			c.daysArray = sortedObject;			
+		});//End .then
+	};//End fetchRecords function
+
+	c.fetchRecords(cMonthPrefixed,cYear);
+	//=========== End OnLoad ==================
+
+
+
+
+
+
+	c.previousMonth = function(){
+
+	}
+
+	c.nextMonth = function(){
+
+	}
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container{
+  display:grid;
+  grid-template-areas:
+    "header"
+    "days";
+border:none;
+}
+
+.selectedMonth{
+  grid-area:header;
+text-align:center;
+
+}
+.eventsCalendarTitle{
+float:left;
+}
+.currentMonth{
+font-weight:bold;
+  font-size:1.8rem;
+}
+.prevNextArrows{
+ border:none;
+  margin:5px;
+ cursor:pointer; 
+}
+
+.calendar_parent{
+  grid-area:days;
+ display: grid;
+ grid-template-columns:repeat(7, 1fr);
+  
+}
+
+.day_name{
+border:solid;
+  border-width:thin;
+  text-align:center;
+  font-weight:bold;
+  background:lightgray;
+}
+
+.day{
+border:solid;
+  border-width:thin;
+  text-align:center;
+  font-weight:bold;
+  height: 100px;
+  max-height:200px;
+  overflow-y:scroll;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>hsc_events_calendar</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HSC Events Calendar</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-12 04:52:18</sys_created_on>
+        <sys_id>585ad21e479bc2106c1f5ac5316d43ed</sys_id>
+        <sys_mod_count>181</sys_mod_count>
+        <sys_name>HSC Events Calendar</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_585ad21e479bc2106c1f5ac5316d43ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-13 07:08:45</sys_updated_on>
+        <template><![CDATA[<div class="container" >
+  <div class="selectedMonth" >  
+    <h4 class="eventsCalendarTitle" > Events Calendar</h4>
+    <img src="previousArrow.jpg" class="prevNextArrows" ng-click="c.previousMonth()" />
+    <label class="currentMonth" ng-model="c.currentMonth" >
+      {{c.currentMonth}}
+    </label>  
+    <img src="nextArrow.jpg"  class="prevNextArrows"  ng-click="c.nextMonth()" />  
+  </div>
+  <div id="calendar_parent" class="calendar_parent">
+    <div class="day_name" >
+      Sunday
+    </div>
+    <div class="day_name" >
+      Monday
+    </div>
+    <div class="day_name" >
+      Tuesday
+    </div>
+    <div class="day_name" >
+      Wednesday
+    </div>
+    <div class="day_name" >
+      Thursday
+    </div>
+    <div class="day_name" >
+      Friday
+    </div>
+    <div class="day_name" >
+      Saturday
+    </div>
+
+    <div class="day" ng-repeat="(key,value) in c.daysArray" >
+      <label class="dayNumber" >{{key.date}}</label>
+      <div class="dayInfo" >
+          {{key.name}}
+      </div>    
+    </div>
+  </div>
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>

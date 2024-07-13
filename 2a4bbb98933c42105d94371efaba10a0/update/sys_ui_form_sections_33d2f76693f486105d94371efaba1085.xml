@@ -9,8 +9,8 @@
             <sys_id>c4e237a693f486105d94371efaba1034</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">33d2f76693f486105d94371efaba1085</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">cce237a693f486105d94371efaba1025</sys_ui_section>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">33d2f76693f486105d94371efaba1085</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">cce237a693f486105d94371efaba1025</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-10 23:20:43</sys_updated_on>
         </sys_ui_form_section>
@@ -23,8 +23,8 @@
             <sys_id>48e237a693f486105d94371efaba1025</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">33d2f76693f486105d94371efaba1085</sys_ui_form>
-            <sys_ui_section caption="Notes" display_value="Notes" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">77d237a693f486105d94371efaba101e</sys_ui_section>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">33d2f76693f486105d94371efaba1085</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">77d237a693f486105d94371efaba101e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-10 23:20:43</sys_updated_on>
         </sys_ui_form_section>
@@ -37,8 +37,8 @@
             <sys_id>ffd237a693f486105d94371efaba101d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">33d2f76693f486105d94371efaba1085</sys_ui_form>
-            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">77d237a693f486105d94371efaba1017</sys_ui_section>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">33d2f76693f486105d94371efaba1085</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">77d237a693f486105d94371efaba1017</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-10 23:20:43</sys_updated_on>
         </sys_ui_form_section>
@@ -51,8 +51,8 @@
             <sys_id>fbd237a693f486105d94371efaba1016</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
-            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">33d2f76693f486105d94371efaba1085</sys_ui_form>
-            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="40abf89c9000021087de3cfccdb0d609">3fd2f76693f486105d94371efaba1087</sys_ui_section>
+            <sys_ui_form display_value="x_1093559_hsc_em_0_hsc_bulletin" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">33d2f76693f486105d94371efaba1085</sys_ui_form>
+            <sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="x_1093559_hsc_em_0_hsc_bulletin" sys_domain="global" view="38d53f8ce412021008dda4ccc40080d7">3fd2f76693f486105d94371efaba1087</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-10 23:20:42</sys_updated_on>
         </sys_ui_form_section>
@@ -75,7 +75,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-03-10 23:20:42</sys_updated_on>
             <sys_user/>
-            <view display_value="Workspace" name="workspace">40abf89c9000021087de3cfccdb0d609</view>
+            <view display_value="Workspace" name="workspace">38d53f8ce412021008dda4ccc40080d7</view>
             <view_name/>
         </sys_ui_form>
     </sys_ui_form_sections>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="f2ee3d01977e825005d3b09ad053afb4" sys_domain="global" table="x_1093559_hsc_em_0_hsc_incident" version="3" view="">
+    <sys_ui_section caption="" section_id="f2ee3d01977e825005d3b09ad053afb4" sys_domain="global" table="x_1093559_hsc_em_0_hsc_incident" version="3" view="workspace-hsc-workspace-0">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
@@ -8,7 +8,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afb3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>f2ee3d01977e825005d3b09ad053af17</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -50,7 +50,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afb0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -64,7 +64,7 @@
             <sys_id>32ee3d01977e825005d3b09ad053af18</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -78,7 +78,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afb0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -92,7 +92,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -106,7 +106,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afb1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -120,7 +120,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -134,7 +134,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afb1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -148,7 +148,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -162,7 +162,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afb2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -176,7 +176,7 @@
             <sys_id>36ee3d01977e825005d3b09ad053afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -190,7 +190,7 @@
             <sys_id>3eee3d01977e825005d3b09ad053afb2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section display_value="">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1093559_hsc_em_0_hsc_incident" sys_domain="global" view="88eef501527e8250243c1bc6fb6c64c0">f2ee3d01977e825005d3b09ad053afb4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
@@ -218,7 +218,7 @@
             <sys_updated_on>2024-06-13 09:08:47</sys_updated_on>
             <sys_user/>
             <title>true</title>
-            <view display_value="">88eef501527e8250243c1bc6fb6c64c0</view>
+            <view display_value="Workspace HSC Workspace 0" name="workspace-hsc-workspace-0">88eef501527e8250243c1bc6fb6c64c0</view>
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>

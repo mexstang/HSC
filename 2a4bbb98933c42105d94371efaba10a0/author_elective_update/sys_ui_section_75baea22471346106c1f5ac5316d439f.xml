@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Date &amp; Time" section_id="75baea22471346106c1f5ac5316d439f" sys_domain="global" table="x_1093559_hsc_em_0_hsc_events_calendar" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:42:26</sys_created_on>
+            <sys_id>cebaea22471346106c1f5ac5316d43d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-13 00:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>time</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:42:26</sys_created_on>
+            <sys_id>c6baea22471346106c1f5ac5316d43da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-13 00:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:42:26</sys_created_on>
+            <sys_id>cebaea22471346106c1f5ac5316d43da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-13 00:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>am_or_pm</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:42:26</sys_created_on>
+            <sys_id>c6baea22471346106c1f5ac5316d43db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-13 00:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Date &amp; Time</caption>
+            <header>false</header>
+            <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:42:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>75baea22471346106c1f5ac5316d439f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1093559_hsc_em_0_hsc_events_calendar</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+            <sys_update_name>sys_ui_section_75baea22471346106c1f5ac5316d439f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-13 00:42:25</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sys_ui_section_75baea22471346106c1f5ac5316d439f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Date &amp; Time" section_id="75baea22471346106c1f5ac5316d439f" sys_domain="global" table="x_1093559_hsc_em_0_hsc_events_calendar" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>date</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-13 00:42:26</sys_created_on><sys_id>cebaea22471346106c1f5ac5316d43d9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-13 00:42:26</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>time</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-13 00:42:26</sys_created_on><sys_id>c6baea22471346106c1f5ac5316d43da</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-13 00:42:26</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-13 00:42:26</sys_created_on><sys_id>cebaea22471346106c1f5ac5316d43da</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-13 00:42:26</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>am_or_pm</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-13 00:42:26</sys_created_on><sys_id>c6baea22471346106c1f5ac5316d43db</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Date &amp; Time" display_value="Date &amp; Time" name="x_1093559_hsc_em_0_hsc_events_calendar" sys_domain="global" view="Default view">75baea22471346106c1f5ac5316d439f</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-13 00:42:26</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Date &amp; Time</caption><header>false</header><name>x_1093559_hsc_em_0_hsc_events_calendar</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-13 00:42:25</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>75baea22471346106c1f5ac5316d439f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1093559_hsc_em_0_hsc_events_calendar</sys_name><sys_overrides/><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sys_ui_section_75baea22471346106c1f5ac5316d439f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-13 00:42:25</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1783560846</payload_hash>
+        <record_name>HSC Events Calendar</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-13 00:42:26</sys_created_on>
+        <sys_id>8abaea22471346106c1f5ac5316d43dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190a98a879e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-13 00:42:26</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>02baea22f11346100c96186d0b7241dd</update_guid>
+        <update_guid_history>02baea22f11346100c96186d0b7241dd:-1783560846</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-13 00:44:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>96a2b7c1c74a4280b4f3ebbca3034400</sys_id>
+        <sys_metadata>75baea22471346106c1f5ac5316d439f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Date &amp; Time</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent display_value="HSC Events Calendar">d8245ee2479f06106c1f5ac5316d43f9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sys_ui_section_75baea22471346106c1f5ac5316d439f</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_75baea22471346106c1f5ac5316d439f">8abaea22471346106c1f5ac5316d43dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-13 00:44:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

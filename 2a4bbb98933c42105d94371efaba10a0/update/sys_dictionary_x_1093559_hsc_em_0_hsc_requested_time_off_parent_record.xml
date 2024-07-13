@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="parent_record" table="x_1093559_hsc_em_0_hsc_requested_time_off">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-30 10:44:34</sys_created_on>
-        <sys_id>e18e4a64972a425405d3b09ad053afc5</sys_id>
         <sys_name>Parent Record</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>

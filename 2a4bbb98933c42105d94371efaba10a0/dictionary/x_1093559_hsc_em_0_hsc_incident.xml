@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="68fefbdc933c42105d94371efaba10ae" extends="incident" label="HSC Incident" max_length="40" name="x_1093559_hsc_em_0_hsc_incident" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Related Incidents" max_length="32" name="u_reference_1" reference="x_1093559_hsc_em_0_hsc_incident" type="reference"/>
+    </element>
+</database>

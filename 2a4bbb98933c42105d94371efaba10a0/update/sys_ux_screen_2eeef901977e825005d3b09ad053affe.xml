@@ -7,7 +7,7 @@
         <event_mappings>[
     
 ]</event_mappings>
-        <macroponent display_value="HSC Suggestion">9eeef901977e825005d3b09ad053aff9</macroponent>
+        <macroponent display_value="HSC Suggestion Record Page">9eeef901977e825005d3b09ad053aff9</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",

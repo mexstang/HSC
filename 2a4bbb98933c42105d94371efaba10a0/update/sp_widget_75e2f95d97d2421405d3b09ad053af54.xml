@@ -78,8 +78,8 @@
 	data.pastEmpOfMonth = {};
 	var num = 1;
 
-	var grNews = new GlideRecord('x_1093559_hsc_em_0_hsc_bulletin');
-	grNews.addQuery('display_location','Employee Of The Month');
+	var grNews = new GlideRecord('x_1093559_hsc_em_0_bulletin');
+	grNews.addQuery('display_location','employee_of_the_month');
 	grNews.query();
 
 	while(grNews.next()){		
@@ -107,14 +107,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-20 06:23:22</sys_created_on>
         <sys_id>75e2f95d97d2421405d3b09ad053af54</sys_id>
-        <sys_mod_count>228</sys_mod_count>
+        <sys_mod_count>229</sys_mod_count>
         <sys_name>HSC EMPLOYEE OF THE MONTH</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_75e2f95d97d2421405d3b09ad053af54</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-20 16:19:57</sys_updated_on>
+        <sys_updated_on>2024-07-02 01:58:14</sys_updated_on>
         <template><![CDATA[<div id='parentDiv' class='parentDiv' >
   <header class='header' >EMPLOYEE OF THE MONTH</header>
   <ul ng-repeat='(key, val) in data.currentEmpOfMonth' >

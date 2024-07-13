@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="HSC CreateTickets">d81a3478937002105d94371efaba1020</sc_cat_item>
+        <sc_cat_item display_value="Vehicle Tickets">d81a3478937002105d94371efaba1020</sc_cat_item>
         <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
         <sys_class_name>sc_cat_item_catalog</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -8,7 +8,7 @@
         <sys_id>a60db07c937002105d94371efaba1011</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Service Catalog.HSC CreateTickets</sys_name>
-        <sys_package/>
+        <sys_package display_value="Global" source="global">global</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sc_cat_item_catalog_a60db07c937002105d94371efaba1011</sys_update_name>

@@ -3,6 +3,7 @@
         <active>true</active>
         <condition/>
         <datasource display_value="">x_1093559_hsc_em_0_hsc_requested_time_off</datasource>
+        <has_dynamic_filters>false</has_dynamic_filters>
         <name>HSC Requested Time Off</name>
         <sys_class_name>ais_search_source</sys_class_name>
         <sys_created_by>admin</sys_created_by>

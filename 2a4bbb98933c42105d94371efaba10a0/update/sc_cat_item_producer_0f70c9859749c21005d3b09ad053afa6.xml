@@ -24,6 +24,7 @@
         <ignore_price>true</ignore_price>
         <image/>
         <location/>
+        <make_item_non_conversational>false</make_item_non_conversational>
         <mandatory_attachment>false</mandatory_attachment>
         <meta/>
         <mobile_hide_price>false</mobile_hide_price>
@@ -46,7 +47,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="MR LO">6816f79cc0a8016401c5a33be04be441</owner>
+        <owner display_value="admin">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
         <post_insert_script><![CDATA[/**
 * This script is executed after the record is generated. 
@@ -81,24 +82,24 @@
  * Use `producer.var1` to access variables
  */
 (function() {
-    //Check to make sure that user entered their correct name on both fields. 
+    //Check to make sure that user entered the correct logins. 
 
     var empName = producer.getDisplayValue('userid');
     var empID = producer.getValue('userid');
-    var confirmEmpName = producer.getDisplayValue('employee_confirm_name');
+    var pss = producer.getValue('password');
+	
+	var grLogin = new GlideRecord('x_1093559_hsc_em_0_user_login');
+	grLogin.addQuery('user_id',empName);
+	grLogin.addQuery('current_password',pss);
+	grLogin.query();
 
-    if (empName != confirmEmpName) {
-        //current.setAbortAction(true);
-        gs.addErrorMessage('PLEASE MAKE SURE THAT YOUR NAME MATCHES BOTH FIELDS.');
 
-        producer.portal_redirect = "hscecportal?id=hsc_time_clock&sys_id=0f70c9859749c21005d3b09ad053afa6"
-
-        current.userid = '';
-
-        return false;
-    } else {
-
-        //Workaround: Create a dateTime object and use the gs.nowDateTime() method to set it to the start of the day and end of day so you can get all records created on TODAY. Because the global gr.addQuery('sys_created_on','>=',dateTime) filter is not supported here. 
+    if (grLogin.next()){
+		gs.addErrorMessage("Success!!!!");
+         
+        //Workaround: Create a dateTime object and use the gs.nowDateTime() method 
+		//to set it to the start of the day and end of day so you can get all records created on TODAY. 
+		//Because the global gr.addQuery('sys_created_on','>=',dateTime) filter is not supported here. 
         var dateTime = new GlideDateTime();
         var currentDate = dateTime.getDisplayValue().split(' ')[0];
 
@@ -155,9 +156,19 @@
 
         //https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/service-catalog-management/concept/c_PopulatingRecordData.html
 
-    }
+    } else {
+        //current.setAbortAction(true);
+        gs.addErrorMessage('Please make sure you entered the correct information.');
+
+        producer.portal_redirect = "hscecportal?id=hsc_time_clock&sys_id=0f70c9859749c21005d3b09ad053afa6"
+
+        current.userid = '';
+
+        return false;
+    } 
+
 })();]]></script>
-        <short_description>*DO NOT CLOCK IN or OUT FOR ANYONE ELSE BUT YOURSELF.</short_description>
+        <short_description>*If you forgot your password, click 'TIME CLOCK &gt; Reset Password' in the main menu above.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state>published</state>
@@ -165,14 +176,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-18 04:46:08</sys_created_on>
         <sys_id>0f70c9859749c21005d3b09ad053afa6</sys_id>
-        <sys_mod_count>201</sys_mod_count>
+        <sys_mod_count>230</sys_mod_count>
         <sys_name>HSC Time Clock</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sc_cat_item_producer_0f70c9859749c21005d3b09ad053afa6</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-05-26 09:25:21</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-12 04:04:58</sys_updated_on>
         <table_name>x_1093559_hsc_em_0_hsc_attendance</table_name>
         <taxonomy_topic/>
         <template/>
@@ -180,7 +191,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>312</version>
+        <version>341</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

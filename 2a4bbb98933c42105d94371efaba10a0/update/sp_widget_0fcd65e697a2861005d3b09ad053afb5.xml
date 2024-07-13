@@ -213,7 +213,7 @@
 		if(c.data.recordUpdated){
 			var employeeSysId = c.data.employeeSysId;
 			//Redirect to: https://dev127500.service-now.com/hscecportal?id=hsc_my_requests
-			window.location = "https://dev127500.service-now.com/hscecportal?id=hsc_my_requests&empSysId=" + employeeSysId;
+			//window.location = "https://dev127500.service-now.com/hscecportal?id=hsc_my_requests&empSysId=" + employeeSysId;
 		}
 	}	
 
@@ -315,7 +315,7 @@
 		}//End Loop				
 	}//End Function
 
-	//RESET FUNCTION
+	//RESET FUNCTION - 
 	//function resetWidget(){
 	//	c.hideModal();		
 	//	c.mySelections = [];
@@ -664,7 +664,7 @@ h4{
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-
+/* ===================== ADD THE IF(!INPUT){} =======================  */
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	//EMPLOYEE NAME SELECT BOX - LOAD IT 
@@ -689,7 +689,7 @@ h4{
   
 	if(input){
 		data.employeeSysId = empObj[dataObj.TimeOff.employee];
-		var table = "x_1093559_hsc_em_0_hsc_requested_time_off";
+		var table = "x_1093559_hsc_em_0_request_time_off";
 		var empName = 	empObj[dataObj.TimeOff.employee];
 		var empArray = dataObj.TimeOff.info;	
 		var recNumber = [];
@@ -719,7 +719,8 @@ h4{
 				msGr.day = recDay;
 				msGr.year = recYear;
 				msGr.type = rectype;
-				msGr.insert();	
+								
+				msGr.insert(); //Flow is triggered to get manager approval & sets approval field to 'requested' - HSC Request Time Off 2	
 
 				recNumber.push(msGr.number); 
 			}
@@ -759,14 +760,14 @@ h4{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-05 13:29:11</sys_created_on>
         <sys_id>0fcd65e697a2861005d3b09ad053afb5</sys_id>
-        <sys_mod_count>1325</sys_mod_count>
+        <sys_mod_count>1333</sys_mod_count>
         <sys_name>HSC_Calendar</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_0fcd65e697a2861005d3b09ad053afb5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 20:25:28</sys_updated_on>
+        <sys_updated_on>2024-07-10 01:35:38</sys_updated_on>
         <template><![CDATA[<div class="selectedMonthDiv" >
   <select id="selectedMonthBox" class="selectedMonthBox" ng-model="c.selectedMonth" ng-change="c.changeMonth(c.selectedMonth)" >
     <option ng-repeat="month in c.month" value="{{month}}" >{{month}}</option>

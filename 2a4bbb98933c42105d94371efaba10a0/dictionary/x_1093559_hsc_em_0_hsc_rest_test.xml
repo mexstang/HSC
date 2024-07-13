@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="afbf007c97ba025005d3b09ad053af43" label="HSC REST TEST" max_length="40" name="x_1093559_hsc_em_0_hsc_rest_test" type="collection">
+        <element label="ID" max_length="40" name="u_id" type="string"/>
+        <element label="Title" max_length="40" name="u_title" type="string"/>
+        <element label="Body" max_length="40" name="u_body" type="string"/>
+    </element>
+</database>

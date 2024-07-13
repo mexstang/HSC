@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="My Requests">588e9d36474f02106c1f5ac5316d4303</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My Requests</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1093559_hsc_em_0_my_requests</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1093559_hsc_em_0.my_requests_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:32:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>988e9d36474f02106c1f5ac5316d4306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_app_module_988e9d36474f02106c1f5ac5316d4306</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:32:14</sys_updated_on>
+        <timeline_page/>
+        <title>My Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sys_app_module_988e9d36474f02106c1f5ac5316d4306</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="My Requests">588e9d36474f02106c1f5ac5316d4303</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>My Requests</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1093559_hsc_em_0_my_requests</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1093559_hsc_em_0.my_requests_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-01 03:32:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>988e9d36474f02106c1f5ac5316d4306</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Requests</sys_name><sys_overrides/><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sys_app_module_988e9d36474f02106c1f5ac5316d4306</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-01 03:32:14</sys_updated_on><timeline_page/><title>My Requests</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>739671694</payload_hash>
+        <record_name>My Requests</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:32:14</sys_created_on>
+        <sys_id>dc8e91b6474f02106c1f5ac5316d433e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906c59ad420000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:32:14</sys_updated_on>
+        <type>Module</type>
+        <update_guid>d08e91b6c74f021090a958bdd0461f3e</update_guid>
+        <update_guid_history>d08e91b6c74f021090a958bdd0461f3e:739671694</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Requests">55ae95b6474f02106c1f5ac5316d4343</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 03:32:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>11dbc59d87d54fdf9b1a64fb299948c9</sys_id>
+        <sys_metadata>988e9d36474f02106c1f5ac5316d4306</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sys_app_module_988e9d36474f02106c1f5ac5316d4306</sys_update_name>
+        <sys_update_version display_value="sys_app_module_988e9d36474f02106c1f5ac5316d4306">dc8e91b6474f02106c1f5ac5316d433e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 03:32:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

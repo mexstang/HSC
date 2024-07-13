@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">b86d46ad97c1021005d3b09ad053af6e</sp_column>
-        <sp_widget display_value="Quick Order">a46d0e619701021005d3b09ad053afb5</sp_widget>
+        <sp_widget/>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-19 23:39:04</sys_created_on>

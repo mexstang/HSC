@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes/>
-        <macroponent display_value="HSC Requested Time Off">9aeef901977e825005d3b09ad053afe5</macroponent>
+        <macroponent display_value="HSC Requested Time Off Record Page">9aeef901977e825005d3b09ad053afe5</macroponent>
         <name>viewport_gph/initiallyCollapsed</name>
         <preset/>
         <required_translations/>

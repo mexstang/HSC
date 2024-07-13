@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>font-awesome</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Main Yard</label>
+        <order>2</order>
+        <record_script/>
+        <sc_cat_item display_value="Main Yard Tickets">de285f1f478f42106c1f5ac5316d4397</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="main_yard_tickets">fa7a1f9347cf42106c1f5ac5316d43c6</sp_page>
+        <sp_rectangle_menu/>
+        <sp_rectangle_menu_item display_value="CREATE A TICKET">7b9d206c933082105d94371efaba1067</sp_rectangle_menu_item>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 23:04:58</sys_created_on>
+        <sys_id>c0343e13470f42106c1f5ac5316d43bc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Main Yard</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_c0343e13470f42106c1f5ac5316d43bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 01:57:26</sys_updated_on>
+        <table/>
+        <type>sc_cat_item</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=c0343e13470f42106c1f5ac5316d43bc"/>
+</record_update>

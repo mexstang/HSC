@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format>JPEG</format>
+        <height>29</height>
+        <image>5bd90f9e479fc2106c1f5ac5316d4337</image>
+        <name>nextArrow.jpg</name>
+        <size_bytes>766</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-12 08:19:50</sys_created_on>
+        <sys_id>f1c90b9e479fc2106c1f5ac5316d436a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>nextArrow.jpg</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>db_image_f1c90b9e479fc2106c1f5ac5316d436a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-12 08:23:53</sys_updated_on>
+        <thumbnail/>
+        <width>29</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#e3e3e3</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>image</file_name>
+        <hash>6a3cb5bc6119b56d1d690b133e31454f865f1d2dcc1ccac53a56be07ca142166</hash>
+        <image_height>29</image_height>
+        <image_width>29</image_width>
+        <size_bytes>766</size_bytes>
+        <size_compressed>606</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-12 08:20:02</sys_created_on>
+        <sys_id>5bd90f9e479fc2106c1f5ac5316d4337</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-12 08:20:03</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>f1c90b9e479fc2106c1f5ac5316d436a</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="5bd90f9e479fc2106c1f5ac5316d4337">5bd90f9e479fc2106c1f5ac5316d4337</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-12 08:20:02</sys_created_on>
+        <sys_id>9bd90f9e479fc2106c1f5ac5316d4337</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>+3/j/wMGAS83TzcGRkZGhgogZPh/m8GZQYCbh4+HS4CPl09IUEBYQkNKQkxMwlBZVVbDytjWxtLYwtzBI8bPwSXc1dwiIDcwPD4pPSPdzrewsiClIiY1PRlkCKOgkJCEqIS+lJR+spOFUzLJ4P8BBkEOBlkGWWZGJQYmQUZmQcb/RxjkGRgYWRnBgAEKGJmYWVjZ2Dk4ubiBCrYKMDAxMjMzsTCzsrKwAGVrgfIMLIKsQoqGjmzCgYnsSoUiRo0TF3IoO208KBp08YOKcVJREyeXmLiEpJSqmrqGppaJqZm5haWVs4urm7uHp1dwSGhYeERkVHJKalp6RmZWcUlpWXlFZVVzS2tbe0dn16TJU6ZOmz5j5qxFi5csXbZ8xcpVmzZv2bpt+46duw4dPnL02PETJ09dunzl6rXrN27eevjo8ZOnz56/ePnq46fPX75++/7j5y+QvxgZmBlhAKu/BIH+YmJhYWZhB/mLkakcpECQhVXRkE3IMZA9sVBYyaiRQ8Rp4sKNBzmVjYM+iCYVXeQSUzF5qPoR5DWwz4jzWBNZPoN7DOGvWww8zIzAyGMWZLBneH+zqWcjQ8mzaZtrHJeZbVx8PmlTR1TsEkvJYxLyL2OCX8mpfqjWittTPm3mofeTy5/UffjjpsF88cWau+zh/TGXwz5pzFOIWBmm8KDr0gKet3Xcr+fKVZScrFm9/Jbg99zjZ4zPXzY99/IfQ/OZz19n78xPs5nK4/RPfeVf7c2LGhS2bNm+scExk8tZ6EuIhKitSAD7/5sA7QlGz/4CAAA=</data>
+        <length>796</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="5bd90f9e479fc2106c1f5ac5316d4337">5bd90f9e479fc2106c1f5ac5316d4337</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-12 08:20:02</sys_created_on>
+        <sys_id>1fd90f9e479fc2106c1f5ac5316d4337</sys_id>
+    </sys_attachment_doc>
+</record_update>
