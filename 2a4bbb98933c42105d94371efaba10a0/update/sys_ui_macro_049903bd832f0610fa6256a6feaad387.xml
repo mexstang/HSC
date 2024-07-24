@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>HSC Truck</name>
+        <scoped_name>x_1093559_hsc_em_0_HSC Truck</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-23 05:19:39</sys_created_on>
+        <sys_id>049903bd832f0610fa6256a6feaad387</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>HSC Truck</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_ui_macro_049903bd832f0610fa6256a6feaad387</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-23 06:17:10</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide">
+  <g:evaluate var="isRefurbished">${current.short_description}</g:evaluate>
+  <img id="truckIcon" src="/sys_attachment.do?sys_id=0ae54b79832f0610fa6256a6feaad31b" alt="icon" style="width: 16px; height: 16px; margin-left: 5px;" />
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sp_page action="DELETE">
+<category>standard</category>
+<css>.location {
+  margin-left: 1px;
+  padding-left: 8px;
+  border-left: 1px solid #b1b1b1;
+}
+
+.send-message {
+  margin-top: 20px;
+}</css>
+<draft>false</draft>
+<dynamic_title_structure/>
+<human_readable_url_structure/>
+<id>hsc_our_team</id>
+<internal>false</internal>
+<omit_watcher>false</omit_watcher>
+<public>false</public>
+<roles>snc_external,snc_internal</roles>
+<seo_script display_value=""/>
+<short_description>Profile page of a user</short_description>
+<sys_class_name>sp_page</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2024-06-09 21:33:12</sys_created_on>
+<sys_id>1cf24ccc97324e1005d3b09ad053af40</sys_id>
+<sys_mod_count>1</sys_mod_count>
+<sys_name>hsc_our_team</sys_name>
+<sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+<sys_policy/>
+<sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+<sys_update_name>sp_page_1cf24ccc97324e1005d3b09ad053af40</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2024-06-09 21:33:47</sys_updated_on>
+<title>HSC Our Team</title>
+<use_seo_script>false</use_seo_script>
+</sp_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sp_page_1cf24ccc97324e1005d3b09ad053af40</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sp_page action="INSERT_OR_UPDATE">
+<category>standard</category>
+<css>.location {
+  margin-left: 1px;
+  padding-left: 8px;
+  border-left: 1px solid #b1b1b1;
+}
+
+.send-message {
+  margin-top: 20px;
+}</css>
+<draft>false</draft>
+<dynamic_title_structure/>
+<human_readable_url_structure/>
+<id>hsc_our_team</id>
+<internal>false</internal>
+<omit_watcher>false</omit_watcher>
+<public>false</public>
+<roles>snc_external,snc_internal</roles>
+<seo_script display_value=""/>
+<short_description>Profile page of a user</short_description>
+<sys_class_name>sp_page</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2024-06-09 21:33:12</sys_created_on>
+<sys_id>1cf24ccc97324e1005d3b09ad053af40</sys_id>
+<sys_mod_count>1</sys_mod_count>
+<sys_name>hsc_our_team</sys_name>
+<sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+<sys_policy/>
+<sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+<sys_update_name>sp_page_1cf24ccc97324e1005d3b09ad053af40</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2024-06-09 21:33:47</sys_updated_on>
+<title>HSC Our Team</title>
+<use_seo_script>false</use_seo_script>
+</sp_page></record_update>]]></payload>
+        <payload_hash>-807271022</payload_hash>
+        <record_name>hsc_our_team</record_name>
+        <reverted_from/>
+        <source>c128370ce492021008dda4ccc4008064</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 22:38:20</sys_created_on>
+        <sys_id>833b18be47c702106c1f5ac5316d4341</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906b4c99960000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 22:38:20</sys_updated_on>
+        <type>Page</type>
+        <update_guid>0b3bd03e30c7021010c2c3979db5279e</update_guid>
+        <update_guid_history>0b3bd03e30c7021010c2c3979db5279e:-807271022</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="hsc_our_team">b8bcd432470b02106c1f5ac5316d4377</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 22:44:44</sys_created_on>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>8413f295a72c4f1584d6ef9293ac0df1</sys_id>
+        <sys_metadata>1cf24ccc97324e1005d3b09ad053af40</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hsc_our_team</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_page_1cf24ccc97324e1005d3b09ad053af40</sys_update_name>
+        <sys_update_version display_value="sp_page_1cf24ccc97324e1005d3b09ad053af40">833b18be47c702106c1f5ac5316d4341</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 22:44:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

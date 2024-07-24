@@ -20,7 +20,67 @@
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>1</label>
+            <label>12:15am</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 02:28:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 02:45:08</sys_updated_on>
+            <u_order/>
+            <value>12:15am</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>12:30am</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 02:29:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 02:45:14</sys_updated_on>
+            <u_order/>
+            <value>12:30am</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>12:45am</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 02:29:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 02:45:22</sys_updated_on>
+            <u_order/>
+            <value>12:45am</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>12am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -29,17 +89,18 @@
             <sys_created_on>2024-07-13 00:20:45</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:29:58</sys_updated_on>
-            <value>1</value>
+            <sys_updated_on>2024-07-15 02:45:29</sys_updated_on>
+            <u_order/>
+            <value>12am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>1:15</label>
+            <label>1:15am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -48,17 +109,18 @@
             <sys_created_on>2024-07-13 00:26:54</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:06</sys_updated_on>
-            <value>1:15</value>
+            <sys_updated_on>2024-07-15 02:45:38</sys_updated_on>
+            <u_order/>
+            <value>1:15am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>1:30</label>
+            <label>1:30am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -67,17 +129,18 @@
             <sys_created_on>2024-07-13 00:27:10</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:14</sys_updated_on>
-            <value>1:30</value>
+            <sys_updated_on>2024-07-15 02:45:45</sys_updated_on>
+            <u_order/>
+            <value>1:30am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>1:45</label>
+            <label>1:45am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -86,36 +149,38 @@
             <sys_created_on>2024-07-13 00:27:17</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:21</sys_updated_on>
-            <value>1:45</value>
+            <sys_updated_on>2024-07-15 02:45:53</sys_updated_on>
+            <u_order/>
+            <value>1:45am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>2</label>
+            <label>1am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-07-13 00:27:26</sys_created_on>
+            <sys_created_on>2024-07-15 02:30:04</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:28</sys_updated_on>
-            <value>2</value>
+            <sys_updated_on>2024-07-15 02:46:02</sys_updated_on>
+            <u_order/>
+            <value>1am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>2:15</label>
+            <label>2:15am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -124,17 +189,18 @@
             <sys_created_on>2024-07-13 00:28:42</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:34</sys_updated_on>
-            <value>2:15</value>
+            <sys_updated_on>2024-07-15 02:46:16</sys_updated_on>
+            <u_order/>
+            <value>2:15am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>2:30</label>
+            <label>2:30am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -143,17 +209,18 @@
             <sys_created_on>2024-07-13 00:28:54</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:41</sys_updated_on>
-            <value>2:30</value>
+            <sys_updated_on>2024-07-15 02:46:22</sys_updated_on>
+            <u_order/>
+            <value>2:30am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>2:45</label>
+            <label>2:45am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -162,36 +229,38 @@
             <sys_created_on>2024-07-13 00:29:01</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:48</sys_updated_on>
-            <value>2:45</value>
+            <sys_updated_on>2024-07-15 02:48:30</sys_updated_on>
+            <u_order/>
+            <value>2:45am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3</label>
+            <label>2am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-07-13 00:29:23</sys_created_on>
+            <sys_created_on>2024-07-13 00:27:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:30:53</sys_updated_on>
-            <value>3</value>
+            <sys_updated_on>2024-07-15 02:48:37</sys_updated_on>
+            <u_order/>
+            <value>2am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3:15</label>
+            <label>3:15am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -200,17 +269,18 @@
             <sys_created_on>2024-07-13 00:29:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:31:00</sys_updated_on>
-            <value>3:15</value>
+            <sys_updated_on>2024-07-15 02:48:42</sys_updated_on>
+            <u_order/>
+            <value>3:15am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3:30</label>
+            <label>3:30am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -219,17 +289,18 @@
             <sys_created_on>2024-07-13 00:29:36</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:31:07</sys_updated_on>
-            <value>3:30</value>
+            <sys_updated_on>2024-07-15 02:48:48</sys_updated_on>
+            <u_order/>
+            <value>3:30am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3:45</label>
+            <label>3:45am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -238,17 +309,38 @@
             <sys_created_on>2024-07-13 00:29:43</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:31:13</sys_updated_on>
-            <value>3:45</value>
+            <sys_updated_on>2024-07-15 02:48:54</sys_updated_on>
+            <u_order/>
+            <value>3:45am</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>time</element>
             <hint/>
             <inactive>false</inactive>
-            <label>4</label>
+            <label>3am</label>
+            <language>en</language>
+            <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-13 00:29:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 02:49:01</sys_updated_on>
+            <u_order/>
+            <value>3am</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4am</label>
             <language>en</language>
             <name>x_1093559_hsc_em_0_hsc_events_calendar</name>
             <sequence/>
@@ -257,10 +349,11 @@
             <sys_created_on>2024-07-13 00:29:48</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-07-13 00:31:19</sys_updated_on>
-            <value>4</value>
+            <sys_updated_on>2024-07-15 02:49:06</sys_updated_on>
+            <u_order/>
+            <value>4am</value>
         </sys_choice>
     </sys_choice>
 </record_update>

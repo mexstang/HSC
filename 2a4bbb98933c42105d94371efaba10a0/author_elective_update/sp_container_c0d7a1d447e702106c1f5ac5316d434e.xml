@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>HSC Home - Container 3</name>
+        <order>3</order>
+        <semantic_tag/>
+        <sp_page display_value="hsc_home">6c537024937082105d94371efaba108c</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-18 06:19:29</sys_created_on>
+        <sys_id>c0d7a1d447e702106c1f5ac5316d434e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC Home - Container 3</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_container_c0d7a1d447e702106c1f5ac5316d434e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-18 06:19:29</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sp_container_c0d7a1d447e702106c1f5ac5316d434e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>HSC Home - Container 3</name><order>3</order><semantic_tag/><sp_page display_value="hsc_home">6c537024937082105d94371efaba108c</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-18 06:19:29</sys_created_on><sys_id>c0d7a1d447e702106c1f5ac5316d434e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>HSC Home - Container 3</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sp_container_c0d7a1d447e702106c1f5ac5316d434e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-18 06:19:29</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1285934663</payload_hash>
+        <record_name>HSC Home - Container 3</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-18 06:19:29</sys_created_on>
+        <sys_id>80d7a1d447e702106c1f5ac5316d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190c47ee63f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-18 06:19:29</sys_updated_on>
+        <type>Container</type>
+        <update_guid>84d7a1d4e5e702108621cdf589bd494f</update_guid>
+        <update_guid_history>84d7a1d4e5e702108621cdf589bd494f:-1285934663</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HSC Home - Container 3">76d761d447e702106c1f5ac5316d4376</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-18 06:19:41</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>08a3edacd620492c885aaf594f305b71</sys_id>
+        <sys_metadata>c0d7a1d447e702106c1f5ac5316d434e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC Home - Container 3</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_container_c0d7a1d447e702106c1f5ac5316d434e</sys_update_name>
+        <sys_update_version display_value="sp_container_c0d7a1d447e702106c1f5ac5316d434e">80d7a1d447e702106c1f5ac5316d4350</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-18 06:19:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

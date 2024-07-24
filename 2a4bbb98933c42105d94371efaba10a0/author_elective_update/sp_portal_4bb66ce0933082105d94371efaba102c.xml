@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sp_portal action="DELETE">
+<css_variables>$brand-primary:#0574DE;
+$body-bg:white;
+$state-success-text:#5cb85c;
+$sp-homepage-bg:#fff;
+$sp-navbar-divider-color:maroon;
+$text-color:#717171;
+$sp-logo-margin-y:2px;
+white$navbar-inverse-link-hover-color:;
+$panel-bg:white;
+$brand-success:#0a5d0c;
+$navbar-inverse-bg:#000000;
+$brand-warning:#9E6817;
+$brand-danger:#B12F2C;
+$sp-tagline-color:#717171;
+$navbar-inverse-link-color:white;
+$brand-info:#0F7D8B;
+$link-color:blue;
+$sp-logo-margin-x:6px;
+$btn-default-bg:white;
+$text-muted:#646567;
+</css_variables>
+<dark_theme display_value=""/>
+<default>false</default>
+<enable_ais>false</enable_ais>
+<enable_certificate_based_authentication>false</enable_certificate_based_authentication>
+<enable_favorites>false</enable_favorites>
+<hide_portal_name>false</hide_portal_name>
+<homepage display_value="hsc_home">6c537024937082105d94371efaba108c</homepage>
+<icon>a536dfd09776ce1005d3b09ad053afa4</icon>
+<kb_knowledge_base display_value=""/>
+<kb_knowledge_page display_value=""/>
+<login_page display_value=""/>
+<logo>4f2613149776ce1005d3b09ad053af75</logo>
+<notfound_page display_value=""/>
+<quick_start_config/>
+<rtl_enabled>false</rtl_enabled>
+<sc_catalog display_value=""/>
+<sc_catalog_page display_value=""/>
+<sc_category_page display_value=""/>
+<search_application display_value=""/>
+<search_results_configuration display_value=""/>
+<sp_chat_queue display_value=""/>
+<sp_rectangle_menu display_value="HSC Menu">eb9aa068933082105d94371efaba1074</sp_rectangle_menu>
+<sys_class_name>sp_portal</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2024-03-04 03:21:37</sys_created_on>
+<sys_id>4bb66ce0933082105d94371efaba102c</sys_id>
+<sys_mod_count>54</sys_mod_count>
+<sys_name>HSC PORTAL</sys_name>
+<sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+<sys_policy/>
+<sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+<sys_update_name>sp_portal_4bb66ce0933082105d94371efaba102c</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2024-06-22 13:19:04</sys_updated_on>
+<theme display_value="Stock - High Contrast">f84873986711320023c82e08f585ef6a</theme>
+<title>HSC PORTAL</title>
+<ts_index_group display_value=""/>
+<url_suffix>hscecportal</url_suffix>
+</sp_portal>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sp_portal_4bb66ce0933082105d94371efaba102c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sp_portal action="INSERT_OR_UPDATE">
+<css_variables>$brand-primary:#0574DE;
+$body-bg:white;
+$state-success-text:#5cb85c;
+$sp-homepage-bg:#fff;
+$sp-navbar-divider-color:maroon;
+$text-color:#717171;
+$sp-logo-margin-y:2px;
+white$navbar-inverse-link-hover-color:;
+$panel-bg:white;
+$brand-success:#0a5d0c;
+$navbar-inverse-bg:#000000;
+$brand-warning:#9E6817;
+$brand-danger:#B12F2C;
+$sp-tagline-color:#717171;
+$navbar-inverse-link-color:white;
+$brand-info:#0F7D8B;
+$link-color:blue;
+$sp-logo-margin-x:6px;
+$btn-default-bg:white;
+$text-muted:#646567;
+</css_variables>
+<dark_theme display_value=""/>
+<default>false</default>
+<enable_ais>false</enable_ais>
+<enable_certificate_based_authentication>false</enable_certificate_based_authentication>
+<enable_favorites>false</enable_favorites>
+<hide_portal_name>false</hide_portal_name>
+<homepage display_value="hsc_home">6c537024937082105d94371efaba108c</homepage>
+<icon>a536dfd09776ce1005d3b09ad053afa4</icon>
+<kb_knowledge_base display_value=""/>
+<kb_knowledge_page display_value=""/>
+<login_page display_value=""/>
+<logo>4f2613149776ce1005d3b09ad053af75</logo>
+<notfound_page display_value=""/>
+<quick_start_config/>
+<rtl_enabled>false</rtl_enabled>
+<sc_catalog display_value=""/>
+<sc_catalog_page display_value=""/>
+<sc_category_page display_value=""/>
+<search_application display_value=""/>
+<search_results_configuration display_value=""/>
+<sp_chat_queue display_value=""/>
+<sp_rectangle_menu display_value="HSC Menu">eb9aa068933082105d94371efaba1074</sp_rectangle_menu>
+<sys_class_name>sp_portal</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2024-03-04 03:21:37</sys_created_on>
+<sys_id>4bb66ce0933082105d94371efaba102c</sys_id>
+<sys_mod_count>54</sys_mod_count>
+<sys_name>HSC PORTAL</sys_name>
+<sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+<sys_policy/>
+<sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+<sys_update_name>sp_portal_4bb66ce0933082105d94371efaba102c</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2024-06-22 13:19:04</sys_updated_on>
+<theme display_value="Stock - High Contrast">f84873986711320023c82e08f585ef6a</theme>
+<title>HSC PORTAL</title>
+<ts_index_group display_value=""/>
+<url_suffix>hscecportal</url_suffix>
+</sp_portal></record_update>]]></payload>
+        <payload_hash>-1107691591</payload_hash>
+        <record_name>HSC PORTAL</record_name>
+        <reverted_from/>
+        <source>c128370ce492021008dda4ccc4008064</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 22:28:42</sys_created_on>
+        <sys_id>f509507647c702106c1f5ac5316d4302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906b43c60e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 22:28:42</sys_updated_on>
+        <type>Service Portal</type>
+        <update_guid>b90950761fc70210b035ea7f65496b01</update_guid>
+        <update_guid_history>b90950761fc70210b035ea7f65496b01:-1107691591</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HSC PORTAL">9b7c9032470b02106c1f5ac5316d4332</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-30 22:43:49</sys_created_on>
+        <sys_db_object display_value="" name="sp_portal">sp_portal</sys_db_object>
+        <sys_id>038d1d346c4c4a88800eb928d7a65f29</sys_id>
+        <sys_metadata>4bb66ce0933082105d94371efaba102c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HSC PORTAL</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_portal_4bb66ce0933082105d94371efaba102c</sys_update_name>
+        <sys_update_version display_value="sp_portal_4bb66ce0933082105d94371efaba102c">f509507647c702106c1f5ac5316d4302</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-30 22:43:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

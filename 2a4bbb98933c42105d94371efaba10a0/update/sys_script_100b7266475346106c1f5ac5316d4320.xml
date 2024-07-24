@@ -32,7 +32,11 @@
 var cDate = current.date.split("-");
 current.month = cDate[1];
 current.year = cDate[0];
+if(cDate[2] < 10){
+current.day = cDate[2].slice(1);
+}else{
 current.day = cDate[2];
+}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -41,7 +45,7 @@ current.day = cDate[2];
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>100b7266475346106c1f5ac5316d4320</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Parse Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
@@ -49,7 +53,7 @@ current.day = cDate[2];
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sys_script_100b7266475346106c1f5ac5316d4320</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-07-13 02:26:59</sys_updated_on>
+        <sys_updated_on>2024-07-15 00:49:07</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

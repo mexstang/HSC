@@ -6,19 +6,23 @@
         <element label="Year" max_length="40" name="year" read_only="true" type="string"/>
         <element choice="1" label="Time" max_length="40" name="time" type="choice">
             <choice>
-                <element inactive_on_update="false" label="2:15" value="2:15"/>
-                <element inactive_on_update="false" label="1:45" value="1:45"/>
-                <element inactive_on_update="false" label="1:30" value="1:30"/>
-                <element inactive_on_update="false" label="4" value="4"/>
-                <element inactive_on_update="false" label="3:15" value="3:15"/>
-                <element inactive_on_update="false" label="2" value="2"/>
-                <element inactive_on_update="false" label="3" value="3"/>
-                <element inactive_on_update="false" label="2:30" value="2:30"/>
-                <element inactive_on_update="false" label="1:15" value="1:15"/>
-                <element inactive_on_update="false" label="3:30" value="3:30"/>
-                <element inactive_on_update="false" label="3:45" value="3:45"/>
-                <element inactive_on_update="false" label="1" value="1"/>
-                <element inactive_on_update="false" label="2:45" value="2:45"/>
+                <element inactive_on_update="false" label="12:15am" value="12:15am"/>
+                <element inactive_on_update="false" label="2:15am" value="2:15am"/>
+                <element inactive_on_update="false" label="1:45am" value="1:45am"/>
+                <element inactive_on_update="false" label="1:30am" value="1:30am"/>
+                <element inactive_on_update="false" label="4am" value="4am"/>
+                <element inactive_on_update="false" label="3:15am" value="3:15am"/>
+                <element inactive_on_update="false" label="2am" value="2am"/>
+                <element inactive_on_update="false" label="12:30am" value="12:30am"/>
+                <element inactive_on_update="false" label="3am" value="3am"/>
+                <element inactive_on_update="false" label="1am" value="1am"/>
+                <element inactive_on_update="false" label="2:30am" value="2:30am"/>
+                <element inactive_on_update="false" label="1:15am" value="1:15am"/>
+                <element inactive_on_update="false" label="3:30am" value="3:30am"/>
+                <element inactive_on_update="false" label="3:45am" value="3:45am"/>
+                <element inactive_on_update="false" label="12:45am" value="12:45am"/>
+                <element inactive_on_update="false" label="12am" value="12am"/>
+                <element inactive_on_update="false" label="2:45am" value="2:45am"/>
             </choice>
         </element>
         <element label="Details" max_length="400" name="details" type="string"/>
@@ -28,6 +32,7 @@
                 <element inactive_on_update="false" label="pm" value="pm"/>
             </choice>
         </element>
+        <element label="Order" max_length="40" name="order" type="integer"/>
         <element label="Month" max_length="40" name="month" read_only="true" type="string"/>
     </element>
 </database>

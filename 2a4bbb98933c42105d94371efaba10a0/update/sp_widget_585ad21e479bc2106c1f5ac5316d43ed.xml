@@ -44,27 +44,36 @@
 	//------------------Current Month
 	var currentMonthName = monthNumberToName[cMonth];
 	c.currentMonth = currentMonthName;
-	//------------------Day to start Calendar
+	c.currentYear = cYear;
 
-	//------------------Fetch all events
+	//======================== FETCH =========================================
 	var eventsTable = "x_1093559_hsc_em_0_hsc_events_calendar";
-	// REST: Function to fetch records based on the selected month
-	c.fetchRecords=function(month,year){
+
+	c.fetchRecords=function(month,year){		
+		//------------------Day to start Calendar
+
+		var newDate = new Date(year,month - 1,1);
+		var startDay = newDate.getDay();
+
+		//Get the total days in the month
+		var daysInMonth = months[c.currentMonth].days;
+
+		//--------------------------------------------			
+
 		$http({
 			method:'GET',
 			url:'/api/now/table/' + eventsTable,
 			params:{
 				sysparm_query:'month=' + month + '^year=' + year,
-				sysparm_fields:'name,details,date,time,am_or_pm,month,day,year',
-				sysparm_limit:31,
+				sysparm_fields:'name,details,date,time,order,month,day,year',
 				sysparm_orderby:'time'
 			}
 		}).then(function(response){
 			c.records = response.data.result;	
 
-			// ----- Group records by day ------- //
+			// ----- Group the records by day column ------- //
 
-			var groupByDayObj = c.records.reduce(function(acc,rec){
+			c.groupByDayObj = c.records.reduce(function(acc,rec){
 				var key = rec.day;
 				if(!acc[key]){
 					acc[key]=[];
@@ -72,36 +81,171 @@
 				acc[key].push(rec);			
 				return acc;				
 			},{});
+			//------------------------------------------------------------
+			///The Calendar has 31 days, but not all days have records.
+			//So we need to fill in the calendar for the days without records.
+			//so that our total is always the same.
+			//Ex-> July has 31 days, but only 10 days have items
+			//Since ng-repeat loops through the array, we need to add 21 elements
+			//So that it creates 31 days on the calendar.
 
-			// SORT THE OBJECT - groupByDayObj
 
-			var keysArray = Object.keys(groupByDayObj);
+			for(var i = 1; i <= daysInMonth; i++){
+				var prop=i;
+				//if( i < 10){prop = "0" + i}		
+
+				if(!c.groupByDayObj.hasOwnProperty(prop)){
+					c.groupByDayObj[prop]=[{
+						"date": "",
+						"am_or_pm": "",
+						"month": "",
+						"year": "",
+						"name": "",
+						"details": "",
+						"time": "",
+						"day": prop,
+						"class":"",
+						"order":"0"
+					}];
+				}
+			}
+
+			// SORT THE OBJECT ----- c.groupByDayObj -------------------
+
+			var keysArray = Object.keys(c.groupByDayObj);
 			keysArray.sort();
-       
-			var	sortedObject = {};
-			keysArray.forEach(function(key){
-				sortedObject[key] = groupByDayObj[key];
-			});
 
-			c.daysArray = sortedObject;			
+			c.sortedObject = {};
+			keysArray.forEach(function(key){
+				c.sortedObject[key] = c.groupByDayObj[key];
+			});			
+			//---------------------------------------
+
+			//Array of objects -> push the startDay(days before the calendar starts)
+			c.addStartDayToSortedObject = [];
+
+			for(i=0;i < startDay;i++){
+				c.addStartDayToSortedObject.push([{
+					"date": "",
+					"am_or_pm": "",
+					"month": "",
+					"year": "",
+					"name": "",
+					"details": "",
+					"time": "",
+					"day": "",
+					"class":"startDays",
+					"order":"0"
+				}])
+			}
+
+			//c.addStartDayToSortedObject array -> Push each entry of c.sortedObject  
+			//into addStartDayToSortedObject array.
+			for(var key in c.sortedObject){ 
+				c.addStartDayToSortedObject.push(c.sortedObject[key]);
+			} 
+
+			//Add empty days to the end of the Calendar
+			var endDays = 35 - c.addStartDayToSortedObject.length;
+			if(c.addStartDayToSortedObject.length > 35){
+				endDays = 42 - c.addStartDayToSortedObject.length;
+			}
+
+			for(i=0;i < endDays;i++){
+				c.addStartDayToSortedObject.push([{
+					"date": "",
+					"am_or_pm": "",
+					"month": "",
+					"year": "",
+					"name": "",
+					"details": "",
+					"time": "",
+					"day": "",
+					"class":"startDays",
+					"order":"0"
+				}])
+			}			
+
+			//c.addStartDayToSortedObject -> Convert the 'order' key to a number so ng-repeat orderBy
+			//will sort the array numerically intstead of lexicographically.
+			//Outer & Inner loops needed - [[{},{},{}]]
+			for (var a = 0; a < c.addStartDayToSortedObject.length; a++) {
+				for (var b = 0; b < c.addStartDayToSortedObject[a].length; b++) {
+					c.addStartDayToSortedObject[a][b].order = parseInt(c.addStartDayToSortedObject[a][b].order, 10)// Convert string to integer
+				} 
+			} 
+
+			c.daysArray = c.addStartDayToSortedObject;			
+
 		});//End .then
 	};//End fetchRecords function
+	//======================== END FETCH =========================================
 
 	c.fetchRecords(cMonthPrefixed,cYear);
 	//=========== End OnLoad ==================
 
-
-
-
-
+	//=========== Change Months ==================
 
 	c.previousMonth = function(){
+		var prevMonth = months[c.currentMonth].number - 1;
+		if(prevMonth == 0){prevMonth = 12}
+		var prevMonthName = monthNumberToName[prevMonth];
+		if(prevMonth < 10){
+			prevMonth = "0" + prevMonth;
+		}
 
+		var cYear = c.currentYear;
+		if(prevMonth == 12){
+			cYear = cYear - 1;
+		}
+
+		c.currentMonth = prevMonthName;
+		c.currentYear = cYear;
+		c.fetchRecords(prevMonth,cYear);
 	}
 
 	c.nextMonth = function(){
+		var currYear = c.currentYear;
+		var nextMonth = months[c.currentMonth].number + 1;
+		if(nextMonth == 13){nextMonth = 1}
+		var nextMonthName = monthNumberToName[nextMonth];
+		if(nextMonth < 10){
+			nextMonth = "0" + nextMonth;
+		}
 
+
+		var cYear = c.currentYear;
+		if(nextMonth == 1){
+			cYear = cYear + 1;
+		}
+
+		c.currentMonth = nextMonthName;
+		c.currentYear = cYear;
+		c.fetchRecords(nextMonth,cYear);
 	}
+
+	/* ============== EVENTS MODAL================== */
+	c.eventsModalDiv = false;
+
+	c.eventsModal = function(x,en,et,ev){
+		if(x ==  'show'){
+			c.eventsModalDiv = true;
+			c.eventName = en;
+			c.eventTime = et;
+			c.eventDetails = ev;
+		}
+		else{
+			c.eventsModalDiv = false;
+		}
+	}
+
+
+
+
+
+
+
+
 
 };]]></client_script>
         <controller_as>c</controller_as>
@@ -110,51 +254,133 @@
   grid-template-areas:
     "header"
     "days";
-border:none;
+  border:none;
+  margin-bottom:20px;
 }
 
 .selectedMonth{
   grid-area:header;
-text-align:center;
+  text-align:center;
 
 }
 .eventsCalendarTitle{
-float:left;
+  position:absolute;
+  top:0px;  
+  float:left;
+  margin-left:15px;
 }
 .currentMonth{
-font-weight:bold;
+  width:150px;
+  font-weight:600;
   font-size:1.8rem;
 }
 .prevNextArrows{
- border:none;
+  border:none;
   margin:5px;
- cursor:pointer; 
+  cursor:pointer; 
 }
 
 .calendar_parent{
   grid-area:days;
- display: grid;
- grid-template-columns:repeat(7, 1fr);
-  
+  display: grid;
+  grid-template-columns:repeat(7, 1fr);
 }
 
 .day_name{
-border:solid;
+  padding:1px;
+  border:solid;
   border-width:thin;
   text-align:center;
-  font-weight:bold;
+  font-weight:600;
   background:lightgray;
 }
-
+.startDays{
+  background:lightgray;
+  height:100%;
+}
 .day{
-border:solid;
+  border:solid;
   border-width:thin;
   text-align:center;
   font-weight:bold;
   height: 100px;
   max-height:200px;
   overflow-y:scroll;
-}</css>
+}
+
+.events{
+  margin:auto;
+  font-weight:400;
+  background:white;
+  border-radius:3px;
+  box-shadow: 1px 2px 2px gray;
+}
+
+/* Events Modal  */
+.eventsModalDiv{
+  display:flex;
+  justify-content:center;
+  z-index:1;
+  position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+
+}
+
+.eventsModal-content{
+  width: 300px;
+  height:300px;
+  text-align:center;
+  background:white;  
+  border-radius:3px;
+  box-shadow:1px 2px 2px black;
+ cursor:default;
+}
+
+.eventsModalHeader{
+font-weight:bold;
+
+}
+
+.closeModal{
+  font-weight:bold;
+float:right;
+  border:none;
+  background:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -174,23 +400,26 @@ border:solid;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-07-12 04:52:18</sys_created_on>
         <sys_id>585ad21e479bc2106c1f5ac5316d43ed</sys_id>
-        <sys_mod_count>181</sys_mod_count>
+        <sys_mod_count>497</sys_mod_count>
         <sys_name>HSC Events Calendar</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_585ad21e479bc2106c1f5ac5316d43ed</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-07-13 07:08:45</sys_updated_on>
+        <sys_updated_on>2024-07-17 01:43:11</sys_updated_on>
         <template><![CDATA[<div class="container" >
-  <div class="selectedMonth" >  
-    <h4 class="eventsCalendarTitle" > Events Calendar</h4>
+  
+<h4 class="eventsCalendarTitle" > Events Calendar</h4>
+  <!-- Previous & Next arrows  -->
+  <div class="selectedMonth" >      
     <img src="previousArrow.jpg" class="prevNextArrows" ng-click="c.previousMonth()" />
     <label class="currentMonth" ng-model="c.currentMonth" >
-      {{c.currentMonth}}
-    </label>  
+      {{c.currentMonth}}  {{c.currentYear}}
+    </label> 
     <img src="nextArrow.jpg"  class="prevNextArrows"  ng-click="c.nextMonth()" />  
   </div>
+
   <div id="calendar_parent" class="calendar_parent">
     <div class="day_name" >
       Sunday
@@ -214,14 +443,71 @@ border:solid;
       Saturday
     </div>
 
-    <div class="day" ng-repeat="(key,value) in c.daysArray" >
-      <label class="dayNumber" >{{key.date}}</label>
-      <div class="dayInfo" >
-          {{key.name}}
-      </div>    
+    <div class="day" ng-repeat="rec in c.daysArray " >
+      <div ng-class="{'startDays': rec[0].class === 'startDays' }" >
+        {{rec[0].day}}<br/>
+        <button class="events" 
+                ng-repeat="event in rec | orderBy:'order' " 
+                ng-if="event.name"
+                ng-click="c.eventsModal('show',event.name,event.time,event.details)" >
+          {{event.time}} {{event.name}}       
+        </button>
+        <br/>        
+      </div>
+    </div><!-- End day div -->
+    
+  </div> <!-- End Parent -->
+  <!-- <pre>{{c.daysArray | json}}</pre>
+  <br/>------------------------------<br/> -->
+ 
+  <!-- Modal -Event Information   -->
+  <div class="eventsModalDiv" 
+       ng-show="c.eventsModalDiv" 
+       ng-click="c.eventsModal('close')" >
+    <div class="eventsModal-content" ng-click="$event.stopPropagation()" >
+      <span  >
+        <label class="eventsModalHeader" >Event Details</label>
+      </span>
+      <br/>
+       <label class="eventName" ng-model="c.eventName" >
+      {{c.eventName}}
+      </label> <br/>
+       <label class="eventTime" ng-model="c.eventTime" >
+      {{c.eventTime}}
+      </label> <br/>
+      <label class="eventDetails" ng-model="c.eventDetails" >
+      {{c.eventDetails}}
+      </label>
     </div>
+    
   </div>
   
-</div>]]></template>
+  
+  
+</div> <!-- End Container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></template>
     </sp_widget>
 </record_update>

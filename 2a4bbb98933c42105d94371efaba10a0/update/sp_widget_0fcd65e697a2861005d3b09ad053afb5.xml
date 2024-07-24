@@ -75,15 +75,37 @@
 			// Sort the records ASC
 			c.records.sort(compareByDay);	
 
+			//This gets the current day, month & year
+			//Converts month name to a number so it can be compared to the chosen month & year.
+			//dateMatch is a flag that is true if selectedMonth & year == current month & year.
+			//This is to make sure only available days are added to the calendar after today's date.
+			//Employees cannot sign up for days that have already past.
+			var today = new Date();
+			var year = today.getFullYear()
+			var month = today.getMonth();
+			var date = today.getDate();
+			var dateMatch = false;
+
+			var monthNameToNumber = c.monthNameToNumber[selectedMonth] - 1;
+			if(monthNameToNumber == month && selectedYear == year){
+				dateMatch = true;
+			}
+		
 			for(var r = 0;r < c.records.length;r++){
-				if(c.records[r].slots_available > 0){
+				if(c.records[r].slots_available > 0 && c.records[r].day > date && dateMatch == true) { 
 					c.myArray.push({number:r + 1, slots:'Slots(' + c.records[r].slots_available + ')' , class:"availableDay",year:c.records[r].year,month:c.records[r].month});
 
-				}else{
+				}else if(c.records[r].slots_available >= 0  && c.records[r].day <= date && dateMatch == true) { 
 					c.myArray.push({number:r  + 1, slots:'Slots(' + 0 + ')', class:"NotAvailableDay"});
+					
+				}else if(c.records[r].slots_available > 0  && dateMatch == false){
+					c.myArray.push({number:r + 1, slots:'Slots(' + c.records[r].slots_available + ')' , class:"availableDay",year:c.records[r].year,month:c.records[r].month});
 
+				}else if(c.records[r].slots_available <= 0  && dateMatch == false) { 
+					c.myArray.push({number:r  + 1, slots:'Slots(' + 0 + ')', class:"NotAvailableDay"});
+					
 				}				
-			}
+			}//END FOR
 
 			//=================ON LOAD - CALENDAR ==================================
 			c.calendarDays = [];
@@ -149,33 +171,33 @@
 	//=========== MY SELECTIONS ============== /SUBMIT BUTTON - Pass c.mySelections array to
 	//the $scope.data object in a property(selectedDays)
 	c.submitMySelections = function() { 
-    var requestObj = {
-        employee: c.selectedEmployee,
-        info: c.mySelections
-    }
- 
-    $scope.data.TimeOff = requestObj;
-	
-    // Check if the update method is defined
-    if (typeof $scope.server.update === 'function') {
-		
-        var serverUpdate = $scope.server.update();
+		var requestObj = {
+			employee: c.selectedEmployee,
+			info: c.mySelections
+		}
 
-        serverUpdate.then(function() {
-            // Reset or clear any necessary data
-            // resetWidget();
-            c.hideModal();
-            // Show modal with success message
-            c.showServerModal(c.data.recordUpdatedMsg,c.data.recordUpdatedMessage);
-        }).catch(function(error) {
-            // Handle any errors from the server update
-            alert("Server update failed:", error);
-        });
-    } else {
-			
-        alert("The update method is not defined on $scope.server.");
-    }
-};//End function
+		$scope.data.TimeOff = requestObj;
+
+		// Check if the update method is defined
+		if (typeof $scope.server.update === 'function') {
+
+			var serverUpdate = $scope.server.update();
+
+			serverUpdate.then(function() {
+				// Reset or clear any necessary data
+				// resetWidget();
+				c.hideModal();
+				// Show modal with success message
+				c.showServerModal(c.data.recordUpdatedMsg,c.data.recordUpdatedMessage);
+			}).catch(function(error) {
+				// Handle any errors from the server update
+				alert("Server update failed:", error);
+			});
+		} else {
+
+			alert("The update method is not defined on $scope.server.");
+		}
+	};//End function
 	//========= MODAL SECTION ==================
 	c.isVisible = false;
 
@@ -335,6 +357,7 @@
   border:none;
   width:100%;
   border-radius:3px;
+  background:white;
 }
 .availableDay:hover{
   background:lightblue;
@@ -760,14 +783,14 @@ h4{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-05 13:29:11</sys_created_on>
         <sys_id>0fcd65e697a2861005d3b09ad053afb5</sys_id>
-        <sys_mod_count>1333</sys_mod_count>
+        <sys_mod_count>1367</sys_mod_count>
         <sys_name>HSC_Calendar</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_0fcd65e697a2861005d3b09ad053afb5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-07-10 01:35:38</sys_updated_on>
+        <sys_updated_on>2024-07-24 01:39:25</sys_updated_on>
         <template><![CDATA[<div class="selectedMonthDiv" >
   <select id="selectedMonthBox" class="selectedMonthBox" ng-model="c.selectedMonth" ng-change="c.changeMonth(c.selectedMonth)" >
     <option ng-repeat="month in c.month" value="{{month}}" >{{month}}</option>

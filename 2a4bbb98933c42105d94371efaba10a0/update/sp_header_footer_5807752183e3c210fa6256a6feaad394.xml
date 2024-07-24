@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $window, $location,$http) {
+	/* widget controller */
+	var c = this;
+	var table = "x_1093559_hsc_em_0_hsc_footer";
+
+	c.fetchRecords = function(x){ 
+		$http({
+			method:'GET',
+			url:"/api/now/table/" + table,
+			params:{
+				sysparam_query:"active=true",
+				sysparam_fields:"category, name",
+				//sysparm_orderby: 'day' 
+			}
+
+		}).then(function(response){
+			c.records = response.data.result;
+
+			c.ProductsServices=[];
+			c.customerSupport=[];
+			c.quickInfo=[];
+			c.ourCompany=[];
+			c.workWithUs=[];
+			
+			for(var r = 0;r < c.records.length;r++){
+				
+				if(c.records[r].category == "products_&_services"){
+					c.ProductsServices.push(c.records[r].name);
+				}else if(c.records[r].category == "customer_support"){
+					c.customerSupport.push(c.records[r].name);
+				}else if(c.records[r].category == "quick_info"){
+					c.quickInfo.push(c.records[r].name);
+				}else if(c.records[r].category == "our_company"){
+					c.ourCompany.push(c.records[r].name);
+				}else if(c.records[r].category == "work_with_us"){
+					c.workWithUs.push(c.records[r].name);
+				}
+
+				
+				
+			}//End FOR
+		});//End THEN
+	};
+
+	c.fetchRecords();
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$footer-main-background: #db6068;
+$footer-main-text-color: white ;
+$footer-main-title-color: red ;
+$footer-main-title-font-size: 20px;
+$footer-main-link-color: yellow ;
+$footer-main-link-font-size: 20px;
+$footer-link-color: $navbar-inverse-link-color pink;
+$footer-link-hover-color: $navbar-inverse-link-hover-color gold;
+$footer-focus-ring-color: yellow;
+$footer-bottom-background: maroon;
+$footer-bottom-font-size: 16px; // $font-size-xs
+$sp-space--xxl: 10px ;
+
+.scrub-footer {  
+  position:relative; 
+  z-index:1;
+  width:100%;
+  margin-top:30px;
+  bottom:0;
+  .sf-main {
+    background: $footer-main-background;
+    display: flex;
+    justify-content:center;
+    color: $footer-main-text-color;    
+
+    /* Logo section */
+    .sf-logo-container {      
+      width: 100%;
+      text-align:center;
+      padding: 2rem 0;
+      .sf-logo-img {
+        font-size:25px;
+        color:maroon;
+        text-shadow: 1px 1px 2px gray;
+        max-width: 100%;
+        padding: 1rem 1.4rem;
+
+      }
+      .sf-logo-content {
+
+        padding: 1rem 1.4rem;
+        word-break: break-word;
+        font-size: 1.2rem;
+      }
+    }
+
+    /* ==== sf-logo-content wrapper ====== */
+    .sf-logo-content-wrapper {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-areas: 
+        "ProductsServices CustomerSupport QuickInfo OurCompany WorkWithUs"; 
+      width: 100%;
+
+    }
+
+    .ProductsServices {
+      grid-area: ProductsServices;
+    }
+
+    .CustomerSupport {
+      grid-area: CustomerSupport;
+    }
+
+    .QuickInfo {
+      grid-area: QuickInfo;
+    }
+
+    .OurCompany {
+      grid-area: OurCompany;
+    }
+
+    .WorkWithUs {
+      grid-area: WorkWithUs;
+    }
+
+    .footerCategories{
+      font-size:22px; 
+      color:maroon;
+      font-weight:bold;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    a{
+      color:white;
+      font-size:18px;
+      text-shadow: 1px 1px 1px gray;
+      margin:5px;
+    }
+
+    a:hover{
+      font-size:20px;
+      text-shadow: 1px 1px 3px maroon;
+    }
+
+
+
+
+
+
+
+    /* =================================== */
+
+    /* Group link section */
+    .sf-links-container {
+      flex: 1;
+      padding-top: 3.4rem;
+      .sf-group {
+        width: 22rem;
+        padding: 0 1.4rem 3.2rem;
+        .sf-group-title {
+          color: $footer-main-title-color;
+          font-size: $footer-main-title-font-size;
+          font-weight: bold;
+          padding-bottom: 1.6rem;
+        }
+        .sf-link {
+          padding-bottom: 1.6rem;
+          a {
+            display: inline-block;
+            color: $footer-main-link-color;
+            opacity: 0.7;
+            font-size: $footer-main-link-font-size;
+            word-break: break-word;
+            &amp;:hover {
+              color: $footer-link-hover-color;
+            }
+            &amp;:focus {
+              outline: 2px solid $footer-focus-ring-color;
+              outline-offset: 5px;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer bottom section */
+  .sf-bottom {
+    background: $footer-bottom-background;
+    color: $footer-link-color;
+    font-size: $footer-bottom-font-size;
+    display: flex;
+    .sf-bottom-left {
+      flex: 1;
+      .sf-bottom-link a {
+        color: $footer-link-color;
+        font-size: $footer-bottom-font-size;
+        &amp;:hover {
+          color: $footer-link-hover-color;
+        }
+        &amp;:focus {
+          outline: 2px solid $footer-focus-ring-color;
+          outline-offset: 5px;
+          box-shadow: none;
+        }
+      }
+    }
+    .sf-bottom-right {
+      display: flex;
+      .sf-social-icons {
+        padding: 27px 0;
+        .sf-social-icon {
+          color: #fff;
+          padding: 0;
+          margin: 0 0.8rem;
+          font-size: $font-size-large;
+          &amp;:focus {
+            outline: 2px solid $footer-focus-ring-color;
+            outline-offset: 5px;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .sf-bottom-link,
+  .sf-copyright {
+    display: inline-block;
+    padding: 27px 11.5px;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+}
+
+/* Masonry layout */
+.masonry-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* IE 10-11 specific Class to override */
+@media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    .masonry-root {
+      max-height: 100% !important;
+      .masonry-cell {
+        display: -ms-inline-flexbox;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+
+        .sf-group-title {
+          width: 100%;
+        }
+      }
+
+      &amp;:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    }
+}
+
+@media (max-width: 850px) {
+  .scrub-footer {
+    .sf-main .sf-links-container .sf-group {
+      width: 15rem;
+      padding-bottom: 22px;
+    }
+
+    .sf-bottom {
+      padding: 18px 11px;
+      .sf-bottom-link {
+        padding: 0 8px 11px 8px;
+      }
+      .sf-bottom-right .sf-social-icons {
+        flex: 1;
+        padding: 0;
+        .sf-social-icon {
+          margin: 0 8px 0.8rem 0.8rem;
+        }
+      }
+      .sf-bottom-left {
+        display: block;
+      }
+      .sf-copyright {
+        padding: 0 18px;
+      }
+    }
+    .sf-links-container {
+      padding-top: 3.4rem;
+    }
+    .sf-separator {
+      flex: 0;
+    }
+  }
+}
+
+
+@media (max-width: 430px) {
+  .scrub-footer {
+    .sf-main, .sf-bottom {
+      display: block;
+    }
+    .sf-main {
+      flex-direction: column;
+      .sf-links-container {
+        padding-top: 0;
+        .sf-group {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_employee_center_footer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+    $(element).on("keydown", ".masonry-root", scope.handleFooterKeyboardEvent);
+
+    controller.shiftKeyPressed = false;
+    $(element).on('keydown keyup', function (e) {
+        if (e.keyCode === 16)
+            controller.shiftKeyPressed = (e.type === 'keydown');
+    });
+
+    // Focus link on last column, last row when Shift + Tab is pressed on 1st bottom footer link
+    $(element).on('keydown', '.scrub-footer .sf-bottom a:first', function (keyDownEvent) {
+        scope.$applyAsync(function () {
+            var navMapKeys = Object.keys(scope.navigationMap);
+            if (controller.shiftKeyPressed && keyDownEvent.keyCode === 9) {
+                var rowIndex = scope.navigationMap[navMapKeys[navMapKeys.length - 1]].length - 1;
+                var colIndex = navMapKeys.length - 1;
+
+                scope.keyboardNavColIndex = colIndex;
+                scope.keyboardNavRowIndex = rowIndex;
+
+                scope.navigationMap[navMapKeys[colIndex]][rowIndex].focus();
+            }
+        });
+    });
+}]]></link>
+        <name>HSC Employee Center Footer</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+
+   // if (input && input.action == "loadData") {
+    //    data.footer = new sn_ex_sp.HSC_EmployeeCenterFooterUtil().getFooterDetails($sp);
+   //     data.isFooterFixed = new sn_ex_sp.HSC_EmployeeCenterFooterUtil().isFooterFixed($sp.getPortalRecord().sys_id + '');
+  //  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>true</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-22 04:38:16</sys_created_on>
+        <sys_id>5807752183e3c210fa6256a6feaad394</sys_id>
+        <sys_mod_count>243</sys_mod_count>
+        <sys_name>HSC Employee Center Footer</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_header_footer_5807752183e3c210fa6256a6feaad394</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-23 21:31:50</sys_updated_on>
+        <template><![CDATA[<div class="scrub-footer"  >
+  <!-- ========== Menu Section ================= -->
+  <div class="sf-main"  >
+    <!-- Logo Section -->
+    <div class="sf-logo-container" >
+      <div class="sf-logo-img">
+        <img ng-src="x_1093559_hsc_em_0.hscLogo.jpg" > 
+         "Making the world a cleaner place."
+      </div>
+      <div class="sf-logo-content">
+        <div class="sf-logo-content-wrapper" >
+
+          <div class="ProductsServices " >
+            <label class="footerCategories" >Products & Services</label>
+            <div class="pS" ng-repeat="rec in c.ProductsServices" >
+              <a href="" >{{rec}}</a>
+            </div>            
+          </div>
+
+          <div class="CustomerSupport " >
+            <label class="footerCategories" >Customer Support</label>
+            <div class="p&s" ng-repeat="rec in c.customerSupport"  >
+             <a href="" >{{rec}}</a>
+            </div>            
+          </div>
+
+          <div class="QuickInfo " >
+            <label class="footerCategories" >Quick Info</label>
+            <div class="p&s" ng-repeat="rec in c.quickInfo"  >
+             <a href="" >{{rec}}</a>
+            </div>            
+          </div>
+
+          <div class="OurCompany " >
+            <label class="footerCategories" >Our Company</label>
+            <div class="p&s" ng-repeat="rec in c.ourCompany"  >
+             <a href="" >{{rec}}</a>
+            </div>            
+          </div>
+
+          <div class="WorkWithUs " >
+            <label class="footerCategories" >Work With Us</label>
+            <div class="p&s"  ng-repeat="rec in c.workWithUs" >
+              <a href="" >{{rec}}</a>
+            </div>            
+          </div>      
+
+        </div><!-- END Wrapper -->
+
+
+      </div>
+    </div>
+
+    <!-- Menu links Section -->
+    <div class="sf-links-container" id="sf-links-container">
+      <div class="masonry-root">
+        <div class="sf-group masonry-cell"
+
+             ng-repeat="menu in c.data.footer.menus.navigation_links"
+             on-finish-repeat="ngRepeatFinishedNavLinks" >
+          <div class="sf-group-title" ng-attr-id={{menu.sysId}}>
+            {{menu.title}}
+          </div>
+          <div class="sf-links" role="list" aria-label="{{menu.title}}">
+            <div class="sf-link" role="listitem" ng-repeat="link in menu.menuItems">
+              <a ng-href={{link.href}} ng-class="{'new_window': link.isExternalLink}" ng-attr-target="{{(link.isExternalLink) ? '_blank' : undefined}}">{{link.label}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+  <!-- ========== END  Menu Section ================= -->
+
+
+  <!-- =================== Footer Bottom Section ================= -->
+  <div class="sf-bottom" >
+    <div class="sf-bottom-left">
+      <div ng-repeat="menu in c.data.footer.menus.bottom_links" on-finish-repeat="ngRepeatFinishedNavLinks" class="inline-block">
+        <div class="sf-bottom-link" ng-repeat="link in menu.menuItems">
+          <a ng-href={{link.href}} ng-class="{'external-link': link.isExternalLink}" ng-attr-target="{{(link.isExternalLink) ? '_blank' : undefined}}">{{link.label}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-bottom-right">
+      <div class="sf-social-icons">
+
+        © 2024 WM Intellectual Property Holdings, L.L.C.
+        Sitemap
+        |
+        Privacy Policy
+        |
+        Terms of Use
+        |
+        Disputes/Arbitration
+        |
+        Accessibility
+        Cookie Preferences
+        California Privacy Notice
+
+        <div ng-repeat="menu in c.data.footer.menus.social_icons" on-finish-repeat="ngRepeatFinishedNavLinks" class="inline-block">
+          <a class="sf-social-icon" ng-class="'fa fa-' + link.glyph + (link.isExternalLink ? ' external-link' : '')"
+             ng-attr-target="{{(link.isExternalLink) ? '_blank' : undefined}}"
+             title={{link.label}}
+             ng-href={{link.href}}
+             ng-repeat="link in menu.menuItems"
+             aria-label="{{link.label}}"></a>
+        </div>
+      </div>
+      <div class="sf-copyright">{{c.data.footer.copyright}}</div>
+    </div>
+  </div> 
+  <!-- ================== END Footer Bottom Section ============= -->
+
+</div> <!-- END MAIN DIV -->]]></template>
+    </sp_header_footer>
+</record_update>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+
+	c.leadershipDept = [];
+	c.managerDept = [];
+	c.commercialDept = [];
+	c.residentialDept = [];
+	c.recyclingDept = [];
+	c.utilityDept = [];
+	c.maintenanceDept = [];
+	c.officeDept = [];
+	c.hrDept = [];
+
+	
+	c.leadershipDept = $scope.data.leadershipDept;
+  c.managerDept = $scope.data.managerDept;
+	c.commercialDept = $scope.data.commercialDept;
+	c.residentialDept = $scope.data.residentialDept;
+  c.recyclingDept = $scope.data.recyclingDept;
+	c.utilityDept = $scope.data.utilityDept;
+	c.maintenanceDept = $scope.data.maintenanceDept;
+  c.officeDept = $scope.data.officeDept;
+	c.hrDept = $scope.data.hrDept;
+	
+	
+	
+	
+	
+	
+};//END MAIN FUNCTION]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.mainContainer{
+  display:grid;
+  grid-template-areas: 
+    "leadershipDept"
+    "leadership"
+    "managerDept"
+    "manager"
+    "hrDept"
+    "hr" 
+    "officeDept"
+    "office"    
+    "commercialDept"
+    "Commercial"
+    "residentialDept"
+    "residential"
+    "recyclingDept"
+    "recycling"
+    "utilityDept"
+    "utility"  
+    "maintenanceDept"
+    "maintenance";
+  text-align:center;
+  color:black;
+  font-weight:600;
+  font-family: georgia;
+  font-size:20px;
+  margin: 10px;
+}
+.textShadows{
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  text-shadow:1px 1px 2px gray;
+}
+
+.leadershipDept{
+  grid-area:leadershipDept;
+  
+}
+
+.leadership{
+  grid-area:leadership;
+}
+
+
+.managerDept{
+  grid-area:managerDept;
+  font-size:3rem;
+  font-weight:bold;
+  margin-top:30px;
+  color:#900c0c;
+}
+
+.manager{
+  grid-area:manager;
+}
+
+.commercialDept{
+  grid-area:commercialDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.commercial{
+  grid-area:Commercial;
+}
+
+.residentialDept{
+  grid-area:residentialDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:20px;
+}
+
+.residential{
+  grid-area:residential;
+}
+
+.recyclingDept{
+  grid-area:recyclingDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.recycling{
+  grid-area:recycling;
+}
+
+.utilityDept{
+  grid-area:utilityDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.utility{
+  grid-area:utility;
+}
+
+
+.maintenanceDept{
+  grid-area:maintenanceDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.maintenance{
+  grid-area:maintenance;
+}
+
+.officeDept{
+  grid-area:officeDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.office{
+  grid-area:office;
+}
+
+.hrDept{
+  grid-area:hrDept;
+  font-size:3rem;
+  font-weight:bold;
+  color:#900c0c;
+  margin-top:30px;
+}
+
+.hr{
+  grid-area:hr;
+}
+
+/* =============================== */
+.empName{
+  font-weight: 600;
+  font-size:20px;
+  color:black;
+}
+
+.empImages{
+  width:150px;
+  height:150px;
+}
+.ourTeamContainer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  background:transparent;
+
+
+}
+
+.employee{
+  margin:5px;
+  text-align:center;
+  margin:35px;
+  color:#900c0c;
+  font-weight:bold;
+
+
+}
+
+img{
+  border-radius:50%;
+  box-shadow: 1px 3px 3px gray;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hsc_our_team</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HSC Our Team</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	if(!input){
+
+		var leadershipDept = [];
+		var managerDept = [];
+		var commercialDept = [];
+		var residentialDept = [];
+		var recyclingDept = [];
+		var utilityDept = [];
+		var maintenanceDept = [];
+		var officeDept = [];
+		var hrDept = [];
+
+		var empArray=[];
+		var grEmp = new GlideRecord('sys_user');
+		grEmp.addActiveQuery();
+		grEmp.addQuery('company','5f39761b470f42106c1f5ac5316d438a');
+		grEmp.query();
+
+		while(grEmp.next()){
+			var hireDate = grEmp.getValue('u_hire_date');			
+			var startDate = new GlideDateTime(hireDate);
+			var endDate = new GlideDateTime();			
+			var diff = GlideDateTime.subtract(startDate,endDate).getNumericValue();			
+			var diffInDays = diff / (1000 * 60 * 60 * 24);			
+			var years = Math.floor(diffInDays / 365);
+			var remainingDays = diffInDays % 365;
+			var months = Math.floor(remainingDays / 30);		  
+      var empImg = grEmp.getDisplayValue('avatar');
+			var gender = grEmp.getDisplayValue('gender');
+			
+			if(!empImg && gender == 'Male'){
+				empImg = 'x_1093559_hsc_em_0.malePic.jpg'
+			}else if(!empImg && gender == 'Female'){
+				empImg = 'x_1093559_hsc_em_0.femalePic.jpg';
+			}
+			
+			var obj = {
+				name: grEmp.getDisplayValue('name'),
+				title: grEmp.getDisplayValue('title'),
+				years: years,
+				months: months,
+				department: grEmp.getDisplayValue('department'),
+				img: empImg				
+			}
+
+			if(grEmp.getValue('title') == 'Commercial Manager' || grEmp.getValue('title') == 'Residential Manager' || 
+				 grEmp.getValue('title') == 'Recycling Manager' || grEmp.getValue('title') == 'Utility Manager' || 
+				 grEmp.getValue('title') == 'Maintenance Manager' || grEmp.getValue('title') == 'Office Manager' || grEmp.getValue('title') == 'HR Manager'){
+					managerDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Leadership'){
+				leadershipDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Commercial'){
+				commercialDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Residential'){
+				residentialDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Recycling'){
+				recyclingDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Utility'){
+				utilityDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Maintenance'){
+				maintenanceDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'Office'){
+				officeDept.push(obj);
+			}else if(grEmp.getDisplayValue('department') == 'HR'){
+				hrDept.push(obj);
+			}
+
+		}
+
+		data.leadershipDept = leadershipDept;
+		data.managerDept = managerDept;
+		data.commercialDept = commercialDept;
+		data.residentialDept = residentialDept;
+		data.recyclingDept = recyclingDept;
+		data.utilityDept = utilityDept;
+		data.maintenanceDept = maintenanceDept;
+		data.officeDept = officeDept;
+		data.hrDept = hrDept;
+
+
+	}//End if(!input)
+
+
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-19 05:14:17</sys_created_on>
+        <sys_id>f27226e447ef42106c1f5ac5316d435b</sys_id>
+        <sys_mod_count>356</sys_mod_count>
+        <sys_name>HSC Our Team</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_widget_f27226e447ef42106c1f5ac5316d435b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-22 04:22:23</sys_updated_on>
+        <template><![CDATA[<div class="mainContainer" >
+  
+ <!-- ================== leadershipDept ================ --> 
+  <div class="leadershipDept textShadows " >
+    Leadership
+  </div>
+  <div class="leadership textShadows" >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.leadershipDept"  >   
+        <img ng-src="{{emp.img}}" class="empImages" >
+        <br/>
+        <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+        
+      </div>
+    </div>
+  </div>
+
+ <!-- ================== managerDept ================ --> 
+  <div class="managerDept textShadows " >
+    Managers  
+  </div>
+  <div class="manager textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.managerDept"  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+          <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+        <br/>
+       
+      </div>
+    </div>
+  </div>
+
+ <!-- ================== commercialDept ================ --> 
+  <div class="commercialDept textShadows " >
+    Commercial Department
+  </div>
+  <div class="commercial textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.commercialDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+          <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+       
+      </div>
+    </div>
+  </div>
+
+<!-- ================== residentialDept ================ -->
+  <div class="residentialDept textShadows " >
+    Residential Department
+  </div>
+  <div class="residential textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.residentialDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+        <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+      
+      </div>
+    </div>
+  </div>
+  
+<!-- ================== recyclingDept ================ -->
+  <div class="recyclingDept textShadows " >
+    Recycling Department
+  </div>
+  <div class="recyling textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.recyclingDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}"  class="empImages" >
+        <br/>
+        <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+       
+      </div>
+    </div>
+  </div>
+
+  
+<!-- ================== utilityDept ================ -->
+  <div class="utilityDept textShadows " >
+    Utility Department
+  </div>
+  <div class="utility textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.utilityDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+          <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+        
+      </div>
+    </div>
+  </div>
+
+  
+<!-- ================== maintenanceDept ================ -->
+  <div class="maintenanceDept textShadows " >
+    Maintenance Department
+  </div>
+  <div class="maintenance textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.maintenanceDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+        <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+       
+      </div>
+    </div>
+  </div>
+
+  
+<!-- ================== officeDept ================ -->
+  <div class="officeDept textShadows " >
+    Office Department
+  </div>
+  <div class="office textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.officeDept  | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+          <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+       
+      </div>
+    </div>
+  </div>
+
+  
+<!-- ================== hrDept ================ -->
+  <div class="hrDept textShadows " >
+    HR Department
+  </div>
+  <div class="hr textShadows " >
+    <div class="ourTeamContainer" >
+      <div class="employee" ng-repeat="emp in c.hrDept | orderBy:'title' "  >   
+        <img ng-src="{{emp.img}}" class="empImages"  >
+        <br/>
+         <label class="empName" >{{emp.name}}</label>
+        <br/>
+        <label>{{emp.title}}</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

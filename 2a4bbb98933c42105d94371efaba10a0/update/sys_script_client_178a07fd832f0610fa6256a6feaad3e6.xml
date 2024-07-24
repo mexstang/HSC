@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>impact</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>HSC Macro Truck Icon</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Define the UI Macro name
+    var macroName = 'HSC truck';
+
+    // Clear any existing icon to avoid duplicates
+    var existingIcon = document.getElementById('truckIcon');
+    if (existingIcon) {
+        existingIcon.remove();
+    }
+
+    // Function to get the macro content
+    function getMacroContent(macroName, callback) {
+        var ga = new GlideAjax('GetMacroContent');
+        ga.addParam('sysparm_name', macroName);
+        ga.getXMLAnswer(callback);
+    }
+
+    // Callback function to handle the fetched macro content
+    function handleMacroContent(response) {
+        if (response) {
+            var spanElement = document.createElement('span');
+            spanElement.innerHTML = response;
+
+            // Find the field element and insert the macro content next to it
+            var fieldElement = g_form.getControl('short_description');
+            if (fieldElement) {
+                fieldElement.parentNode.insertBefore(spanElement, fieldElement.nextSibling);
+            }
+        }
+    }
+
+    // Fetch the macro content and handle it
+    getMacroContent(macroName, handleMacroContent);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-23 05:24:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>178a07fd832f0610fa6256a6feaad3e6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>HSC Macro Truck Icon</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_script_client_178a07fd832f0610fa6256a6feaad3e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-23 06:09:12</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
