@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_ais">
+    <sp_instance_ais action="DELETE">
+        <active>true</active>
+        <ai_search_source_filter display_value="Service Portal Catalogs">e1f88209772300102d71af6168106172</ai_search_source_filter>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <disable_all_suggestions>false</disable_all_suggestions>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <placeholder/>
+        <roles/>
+        <search_application/>
+        <search_results_configuration/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">dfc85f568377c210fa6256a6feaad3eb</sp_column>
+        <sp_widget display_value="Typeahead Search">fa20ec02cb31020000f8d856634c9ce9</sp_widget>
+        <spell_check_font_size>xl</spell_check_font_size>
+        <sys_class_name>sp_instance_ais</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 05:56:41</sys_created_on>
+        <sys_id>57c85f568377c210fa6256a6feaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_instance_ais_57c85f568377c210fa6256a6feaad3ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 05:56:41</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"title": {
+		"value": "Search Catalog",
+		"displayValue": "Search Catalog"
+	},
+	"placeholder": {
+		"value": "Search Catalog",
+		"displayValue": "Search Catalog"
+	},
+	"color": {
+		"value": "",
+		"displayValue": ""
+	},
+	"glyph": {
+		"value": "",
+		"displayValue": ""
+	},
+	"size": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": null,
+		"displayValue": ""
+	},
+	"contextual_search_sources": {
+		"value": "c96eb1686721220023c82e08f585efff",
+		"displayValue": "Service Catalog"
+	}
+}]]></widget_parameters>
+    </sp_instance_ais>
+    <sys_translated_text action="DELETE" query="documentkey=57c85f568377c210fa6256a6feaad3ee"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sp_instance_ais_57c85f568377c210fa6256a6feaad3ee</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_ais"&gt;&lt;sp_instance_ais action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;ai_search_source_filter display_value="Service Portal Catalogs"&gt;e1f88209772300102d71af6168106172&lt;/ai_search_source_filter&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;disable_all_suggestions&gt;false&lt;/disable_all_suggestions&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;placeholder/&gt;&lt;roles/&gt;&lt;search_application/&gt;&lt;search_results_configuration/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;dfc85f568377c210fa6256a6feaad3eb&lt;/sp_column&gt;&lt;sp_widget display_value="Typeahead Search"&gt;fa20ec02cb31020000f8d856634c9ce9&lt;/sp_widget&gt;&lt;spell_check_font_size&gt;xl&lt;/spell_check_font_size&gt;&lt;sys_class_name&gt;sp_instance_ais&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-08-06 05:56:41&lt;/sys_created_on&gt;&lt;sys_id&gt;57c85f568377c210fa6256a6feaad3ee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HSC Employee Center"&gt;2a4bbb98933c42105d94371efaba10a0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_ais_57c85f568377c210fa6256a6feaad3ee&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-08-06 05:56:41&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"title": {
+		"value": "Search Catalog",
+		"displayValue": "Search Catalog"
+	},
+	"placeholder": {
+		"value": "Search Catalog",
+		"displayValue": "Search Catalog"
+	},
+	"color": {
+		"value": "",
+		"displayValue": ""
+	},
+	"glyph": {
+		"value": "",
+		"displayValue": ""
+	},
+	"size": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": null,
+		"displayValue": ""
+	},
+	"contextual_search_sources": {
+		"value": "c96eb1686721220023c82e08f585efff",
+		"displayValue": "Service Catalog"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_ais&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=57c85f568377c210fa6256a6feaad3ee"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1905246834</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 05:56:41</sys_created_on>
+        <sys_id>53c85f568377c210fa6256a6feaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1912642db390000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 05:56:41</sys_updated_on>
+        <type>Instance with Search</type>
+        <update_guid>57c85f56bf77c210013799c8f751d6f0</update_guid>
+        <update_guid_history>57c85f56bf77c210013799c8f751d6f0:1905246834</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d12a1f568377c210fa6256a6feaad303</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 06:02:33</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_ais">sp_instance_ais</sys_db_object>
+        <sys_id>1dd9a5f7aa7e41c683ab6293ee4b9d84</sys_id>
+        <sys_metadata>57c85f568377c210fa6256a6feaad3ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_instance_ais_57c85f568377c210fa6256a6feaad3ee</sys_update_name>
+        <sys_update_version display_value="sp_instance_ais_57c85f568377c210fa6256a6feaad3ee">53c85f568377c210fa6256a6feaad3f1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 06:02:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

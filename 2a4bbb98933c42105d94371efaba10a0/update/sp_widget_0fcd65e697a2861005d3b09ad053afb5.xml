@@ -383,6 +383,7 @@
 }
 
 .selectedMonthBox{
+   background:white;
   border:none;
   border-radius:3px;
   box-shadow: 1px 2px 4px gray;
@@ -407,6 +408,7 @@
 
 
 .employeesList{
+  background:white;
   border:none;
   border-radius:3px;
   box-shadow: 1px 2px 4px gray;  
@@ -425,7 +427,7 @@
   color:black;
   font-weight: bold;
   padding: 2px;
-  background-color: #ddd;
+  background-color: #C8102E;
   border-radius:3px;
 }
 
@@ -450,6 +452,7 @@
 
 h4{
   color:black;
+  text-shadow:1px 1px 2px gray;
   font-weight:bold;
 }
 
@@ -783,14 +786,14 @@ h4{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-05 13:29:11</sys_created_on>
         <sys_id>0fcd65e697a2861005d3b09ad053afb5</sys_id>
-        <sys_mod_count>1367</sys_mod_count>
+        <sys_mod_count>1379</sys_mod_count>
         <sys_name>HSC_Calendar</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>sp_widget_0fcd65e697a2861005d3b09ad053afb5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-07-24 01:39:25</sys_updated_on>
+        <sys_updated_on>2024-07-24 04:54:15</sys_updated_on>
         <template><![CDATA[<div class="selectedMonthDiv" >
   <select id="selectedMonthBox" class="selectedMonthBox" ng-model="c.selectedMonth" ng-change="c.changeMonth(c.selectedMonth)" >
     <option ng-repeat="month in c.month" value="{{month}}" >{{month}}</option>

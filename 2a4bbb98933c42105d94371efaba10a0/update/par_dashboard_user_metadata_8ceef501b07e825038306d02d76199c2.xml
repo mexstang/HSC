@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata">
     <par_dashboard_user_metadata action="INSERT_OR_UPDATE">
-        <background_color/>
+        <background_color>--now-color_background--tertiary</background_color>
         <cache_expiration_time>0</cache_expiration_time>
         <card_bg_image/>
         <created_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</created_by_user>
         <created_on>2022-05-29 16:29:20</created_on>
-        <dashboard display_value="HSC Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
+        <dashboard display_value="Manager Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
         <enable_data_cache>false</enable_data_cache>
         <include_custom_insights>false</include_custom_insights>
         <include_key_contributors>false</include_key_contributors>
@@ -17,7 +17,7 @@
         <include_target>false</include_target>
         <include_thresholds>false</include_thresholds>
         <include_trends>false</include_trends>
-        <last_updated_on>2024-06-15 12:21:56</last_updated_on>
+        <last_updated_on>2024-07-28 03:34:37</last_updated_on>
         <po_project_id_list/>
         <refresh_information>true</refresh_information>
         <refresh_interval/>
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8ceef501b07e825038306d02d76199c2</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_8ceef501b07e825038306d02d76199c2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-15 12:21:56</sys_updated_on>
+        <sys_updated_on>2024-07-28 03:34:37</sys_updated_on>
         <updated_by_user display_value="admin">6816f79cc0a8016401c5a33be04be441</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
     </par_dashboard_user_metadata>

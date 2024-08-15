@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="HSC Order Guide">32b9035d837f4650fa6256a6feaad334</sc_cat_item>
+        <sc_category display_value="Uniforms">c8345fd983bf4650fa6256a6feaad354</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-03 03:03:01</sys_created_on>
+        <sys_id>ce445fd983bf4650fa6256a6feaad3f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Uniforms.HSC Order Guide</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sc_cat_item_category_ce445fd983bf4650fa6256a6feaad3f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-03 03:03:01</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sc_cat_item_category_ce445fd983bf4650fa6256a6feaad3f0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="HSC Order Guide">32b9035d837f4650fa6256a6feaad334</sc_cat_item><sc_category display_value="Uniforms">c8345fd983bf4650fa6256a6feaad354</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-03 03:03:01</sys_created_on><sys_id>ce445fd983bf4650fa6256a6feaad3f0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Uniforms.HSC Order Guide</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sc_cat_item_category_ce445fd983bf4650fa6256a6feaad3f0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-08-03 03:03:01</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>1087855540</payload_hash>
+        <record_name>Uniforms.HSC Order Guide</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-03 03:03:01</sys_created_on>
+        <sys_id>8644931d83bf4650fa6256a6feaad33b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1911630c8720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-03 03:03:01</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>82445fd9a1bf465031e169705c3a9ff4</update_guid>
+        <update_guid_history>82445fd9a1bf465031e169705c3a9ff4:1087855540</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Uniforms.HSC Order Guide">e464171d83bf4650fa6256a6feaad3ab</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-03 03:03:27</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>0283a56fc20f475f80173d9bf4ccc2e9</sys_id>
+        <sys_metadata>ce445fd983bf4650fa6256a6feaad3f0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Uniforms.HSC Order Guide</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_ce445fd983bf4650fa6256a6feaad3f0</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_ce445fd983bf4650fa6256a6feaad3f0">8644931d83bf4650fa6256a6feaad33b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-03 03:03:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

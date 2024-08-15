@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>success</color>
+        <css/>
+        <display_field>question</display_field>
+        <field_list>question,answer</field_list>
+        <filter/>
+        <glyph>search</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description>Frequently Asked Question</short_description>
+        <size>md</size>
+        <sp_column display_value="1">0acfa2b59749421005d3b09ad053aff6</sp_column>
+        <sp_page display_value="details">9c6e44755b2322003d1c484c11f91a0c</sp_page>
+        <sp_widget display_value="List Respond">539a0381cb13020000f8d856634c9cdb</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-31 04:41:58</sys_created_on>
+        <sys_id>262e48ac83374250fa6256a6feaad3f1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FAQ</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sp_instance_vlist_262e48ac83374250fa6256a6feaad3f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-31 04:44:09</sys_updated_on>
+        <table>x_1093559_hsc_em_0_hsc_faq</table>
+        <title>FAQ</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=262e48ac83374250fa6256a6feaad3f1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</application>
+        <file_path/>
+        <instance_id>dcdf70e0db9a7d1802022a5913961976</instance_id>
+        <instance_name>dev199738</instance_name>
+        <name>sp_instance_vlist_262e48ac83374250fa6256a6feaad3f1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist"><sp_instance_vlist action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>success</color><css/><display_field>question</display_field><field_list>question,answer</field_list><filter/><glyph>search</glyph><id/><maximum_entries>5</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description>Frequently Asked Question</short_description><size>md</size><sp_column display_value="1">0acfa2b59749421005d3b09ad053aff6</sp_column><sp_page display_value="details">9c6e44755b2322003d1c484c11f91a0c</sp_page><sp_widget display_value="List Respond">539a0381cb13020000f8d856634c9cdb</sp_widget><sys_class_name>sp_instance_vlist</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-31 04:41:58</sys_created_on><sys_id>262e48ac83374250fa6256a6feaad3f1</sys_id><sys_mod_count>1</sys_mod_count><sys_name>FAQ</sys_name><sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package><sys_policy/><sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope><sys_update_name>sp_instance_vlist_262e48ac83374250fa6256a6feaad3f1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-31 04:44:09</sys_updated_on><table>x_1093559_hsc_em_0_hsc_faq</table><title>FAQ</title><url/><widget_parameters/></sp_instance_vlist><sys_translated_text action="delete_multiple" query="documentkey=262e48ac83374250fa6256a6feaad3f1"/></record_update>]]></payload>
+        <payload_hash>-1591236842</payload_hash>
+        <record_name>FAQ</record_name>
+        <reverted_from/>
+        <source>b22b853e47cb02106c1f5ac5316d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-31 04:44:09</sys_created_on>
+        <sys_id>daae04ec83374250fa6256a6feaad387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>191071a4c880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-31 04:44:09</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>52ae04ec7c374250bb852be79ae05c87</update_guid>
+        <update_guid_history>52ae04ec7c374250bb852be79ae05c87:-1591236842,a22e48acf7374250d3b3fdb1324497f3:2402552</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="FAQ">59ceccec83374250fa6256a6feaad34f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-31 04:44:37</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>0de7f2294a6444ba961c0ea251bbffb9</sys_id>
+        <sys_metadata>262e48ac83374250fa6256a6feaad3f1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FAQ</sys_name>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_scope_delete display_value="">9f979b47c5ad46ab9896b64d4dc3eec1</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_262e48ac83374250fa6256a6feaad3f1</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_262e48ac83374250fa6256a6feaad3f1">daae04ec83374250fa6256a6feaad387</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-31 04:44:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

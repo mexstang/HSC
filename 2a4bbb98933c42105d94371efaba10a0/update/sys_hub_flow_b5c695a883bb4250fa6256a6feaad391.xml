@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>create_a_user_group</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Create a user group</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-31 09:59:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b5c695a883bb4250fa6256a6feaad391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create a user group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
+        <sys_update_name>sys_hub_flow_b5c695a883bb4250fa6256a6feaad391</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-31 09:59:14</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b5c695a883bb4250fa6256a6feaad391^sys_idNOT INf1c695a883bb4250fa6256a6feaad393"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b5c695a883bb4250fa6256a6feaad391</id>
+        <name>Create a user group</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-31 09:59:14</sys_created_on>
+        <sys_id>f1c695a883bb4250fa6256a6feaad393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-31 09:59:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f1c695a883bb4250fa6256a6feaad393"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b5c695a883bb4250fa6256a6feaad391"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b5c695a883bb4250fa6256a6feaad391"/>
+</record_update>

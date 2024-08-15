@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e68748a483374250fa6256a6feaad326" label="HSC faq" max_length="40" name="x_1093559_hsc_em_0_hsc_faq" type="collection">
+        <element label="Question" max_length="300" name="question" type="string"/>
+        <element label="Show" max_length="40" name="show" type="boolean"/>
+        <element label="Answer" max_length="1000" name="answer" type="string"/>
+    </element>
+</database>

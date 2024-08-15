@@ -2,8 +2,8 @@
     <par_dashboard_tab action="INSERT_OR_UPDATE">
         <active>true</active>
         <background_color/>
-        <dashboard display_value="HSC Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
-        <name>Tab</name>
+        <dashboard display_value="Manager Workspace">88eef5015f7e8250f2ce9e4e235bd5c3</dashboard>
+        <name>Overview</name>
         <order>0</order>
         <sys_class_name>par_dashboard_tab</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -11,14 +11,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04eef501fd7e8250b8fa6cf8ac88cbc3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Tab</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Overview</sys_name>
         <sys_overrides/>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
         <sys_update_name>par_dashboard_tab_04eef501fd7e8250b8fa6cf8ac88cbc3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-13 09:08:38</sys_updated_on>
+        <sys_updated_on>2024-07-27 06:32:43</sys_updated_on>
     </par_dashboard_tab>
 </record_update>

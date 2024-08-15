@@ -6,23 +6,23 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>Order Items - Container 1</name>
-        <order>1</order>
+        <name>HSC SC Cat Item - Container 3</name>
+        <order>3</order>
         <semantic_tag/>
-        <sp_page display_value="hsc_order_items">1d8ea4ac933082105d94371efaba1008</sp_page>
+        <sp_page display_value="hsc_sc_cat_item">97c81f968337c210fa6256a6feaad365</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-14 00:55:32</sys_created_on>
-        <sys_id>5e5567e793b4ca105d94371efaba10d3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Order Items - Container 1</sys_name>
+        <sys_created_on>2024-08-06 05:56:41</sys_created_on>
+        <sys_id>dfc89f568377c210fa6256a6feaad309</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>HSC SC Cat Item - Container 3</sys_name>
         <sys_package display_value="HSC Employee Center" source="x_1093559_hsc_em_0">2a4bbb98933c42105d94371efaba10a0</sys_package>
         <sys_policy/>
         <sys_scope display_value="HSC Employee Center">2a4bbb98933c42105d94371efaba10a0</sys_scope>
-        <sys_update_name>sp_container_5e5567e793b4ca105d94371efaba10d3</sys_update_name>
+        <sys_update_name>sp_container_dfc89f568377c210fa6256a6feaad309</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-14 00:55:32</sys_updated_on>
+        <sys_updated_on>2024-08-06 05:57:56</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>
